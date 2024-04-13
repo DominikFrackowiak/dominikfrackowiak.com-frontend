@@ -1,0 +1,22 @@
+@import '../styles/colors';
+
+.header {
+	position: fixed;
+	top: 0;
+	// width: 95%;
+	width: 100%;
+
+	padding: 0 2.5%;
+	height: 60px;
+	background-color: $background;
+	z-index: 100;
+
+
+}
+
+	.headerH1 {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 16px;
+	}

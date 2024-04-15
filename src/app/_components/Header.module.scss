@@ -1,22 +1,48 @@
 @import '../styles/colors';
 
 .header {
-	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	// position: fixed;
+ position: relative;
 	top: 0;
+	left: 0;
 	// width: 95%;
 	width: 100%;
-
+	height: 200px;
 	padding: 0 2.5%;
-	height: 60px;
+	// height: 60px;
 	background-color: $background;
 	z-index: 100;
-
-
+	// border: 1px solid $dark;
+	// height: 140px;
+	// border: 2px solid $dark;
 }
 
-	.headerH1 {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		margin-top: 16px;
-	}
+.headerH1 {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	width: 100%;
+	// height:50vh;
+	// display: flex;
+	// align-items: center;
+	// justify-content: space-between;
+	
+	// margin-top: 16px;
+	padding-bottom: 60px;
+}
+
+.logo{
+	height: 100%;
+	// padding: 20vh 0;
+	// line-height: 50vh;
+	font-size: 60px;
+}
+
+.hamburger{
+	position: fixed;
+	top: 60px;
+	right: 2.5%;
+	cursor: pointer;
+}

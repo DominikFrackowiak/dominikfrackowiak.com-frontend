@@ -6,17 +6,20 @@
 	width: 100%;
 	bottom: 0;
 	padding-top: 20px;
-	background-color: $background;
+ background-color: $background;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+}
 
-	
+.socialsLocalesWrapper{
+	display: flex;
+	gap: 20px;
 }
 
 .footerBtn {
-		padding: 10px;
-		background-color: transparent;
-		border: 2px solid transparent;
-		cursor: pointer;
-	}
+	padding: 10px;
+	background-color: transparent;
+	border: 2px solid transparent;
+	cursor: pointer;
+}

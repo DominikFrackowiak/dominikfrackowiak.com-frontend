@@ -1,7 +1,8 @@
 import { HiMiniBolt } from 'react-icons/hi2'
 import TextToAnimate from '../_components/TextToAnimate'
 
-export default async function Home({ params: { locale } }) {
+export default async function Home({ params: { locale }}, searchParams) {
+	console.log(searchParams)
 	const res = await fetch('http://localhost:1410/api/main-page?populate=*', {
 		next: { revalidate: 10 },
 	})

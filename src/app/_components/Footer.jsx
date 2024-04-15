@@ -1,5 +1,8 @@
+'use client'
+
 // Next modules
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 // Font
 import { Roboto_Mono } from 'next/font/google'
@@ -44,24 +47,34 @@ const socials = [
 const locales = ['en', 'es', 'pl']
 
 export default function Footer({ locale }) {
+	const pathname = usePathname()
+	const pdf = pathname.includes('pdf')
+	console.log(pdf)
+	let delayBase = 1.8
 	return (
-		<footer className={`${styles.footer} ${robotoMono.className}`}>
-			<div>
-				<TextToAnimate>
-					{socials.map(social => (
-						<Link key={social.url} target='blank' href={social.url}>
+		<footer
+			className={`${styles.footer} ${robotoMono.className}`}
+			style={{ display: pdf ? 'none' : 'flex' }}
+		>
+			<div className={styles.socialsLocalesWrapper}>
+				{socials.map(social => (
+					<Link key={social.url} target='_blank' href={social.url}>
+						<TextToAnimate delay={(delayBase += 0.1)}>
 							{social.icon}
-						</Link>
-					))}
-				</TextToAnimate>
+						</TextToAnimate>
+					</Link>
+				))}
 			</div>
-			<div>
+
+			<div className={styles.socialsLocalesWrapper}>
 				{locales.map(loc => (
-					<button 
+					<button
 						key={loc}
 						className={`${styles.footerBtn}  ${robotoMono.className}`}
 					>
-						<LanguagePicker lang={loc} locale={locale} />
+						<TextToAnimate delay={(delayBase += 0.1)}>
+							<LanguagePicker lang={loc} locale={locale} />
+						</TextToAnimate>
 					</button>
 				))}
 			</div>

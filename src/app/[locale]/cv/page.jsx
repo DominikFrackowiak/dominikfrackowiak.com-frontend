@@ -15,10 +15,7 @@ const InvoicePDF = dynamic(() => import('./pdf'), {
 })
 
 export default function View() {
-	// const router = useRouter()
 
-	// const number = router.query.number
-	// const locale = router.query.locale
 
 	const [client, setClient] = useState(false)
 
@@ -31,10 +28,10 @@ export default function View() {
 	}
 
 	return (
-		<>
+		<div style={{width: '80vw', zIndex: 10}}>
 			{/* <InvoicePDF locale={locale} number={number} /> */}
 			<InvoicePDF locale='en' number='666' />
 			{/* <PDFDownloadLink document={<InvoicePDF/>} filename="Immortalitypass">Download</PDFDownloadLink> */}
-		</>
+		</div>
 	)
 }

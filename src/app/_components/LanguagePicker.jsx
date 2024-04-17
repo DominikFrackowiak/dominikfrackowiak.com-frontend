@@ -3,28 +3,39 @@
 import { useRouter, usePathname } from 'next/navigation'
 import TextToAnimate from './TextToAnimate'
 
-export default function LanguagePicker({ lang }) {
+function useLocale() {
 	const pathname = usePathname()
-	const router = useRouter()
-
 	const pathElements = pathname.split('/')
-	const locale = pathElements[1]
+	return pathElements[1] // Assuming the locale is always the second segment.
+}
 
+function LanguageSwitcher({ lang, isActive, onSwitchLanguage }) {
 	return (
 		<TextToAnimate>
 			<span
-				style={{
-					fontWeight: locale === lang ? '600' : '100',
-				}}
-				onClick={() => {
-					pathElements.splice(1, 1, lang)
-
-					const newUrl = pathElements.join('/')
-					router.push(newUrl)
-				}}
+				style={{ fontWeight: isActive ? '600' : '100' }}
+				onClick={() => onSwitchLanguage(lang)}
 			>
 				{lang}
 			</span>
 		</TextToAnimate>
+	)
+}
+
+export default function LanguagePicker({ lang }) {
+	const locale = useLocale()
+	const router = useRouter()
+
+	const handleLanguageSwitch = newLang => {
+		const newPath = `/${newLang}${location.pathname.slice(locale.length + 1)}`
+		router.push(newPath)
+	}
+
+	return (
+		<LanguageSwitcher
+			lang={lang}
+			isActive={locale === lang}
+			onSwitchLanguage={handleLanguageSwitch}
+		/>
 	)
 }

@@ -1,29 +1,15 @@
 import { HiMiniBolt } from 'react-icons/hi2'
 import TextToAnimate from '../_components/TextToAnimate'
+import getMainPageData from '@/lib/getMainPageData'
 
-export default async function Home({ params: { locale }}, searchParams) {
-	console.log(searchParams)
-	const res = await fetch('http://localhost:1410/api/main-page?populate=*', {
-		next: { revalidate: 10 },
-	})
-	const data = await res.json()
+export default async function Home({ params }) {
+	const { locale } = params
+	
+	
+	const textData = await getMainPageData(locale)
 
-	const handleLocaleText = locale => {
-		switch (locale) {
-			case 'es':
-				return data.data.attributes.localizations.data[1].attributes
-				break
-			case 'pl':
-				return data.data.attributes.localizations.data[0].attributes
-				break
-			default:
-				return data.data.attributes
-		}
-	}
 
-	let textData = handleLocaleText(locale)
-
-	const items = [
+	const items = textData ?  [
 		textData.welcome,
 		textData.technologies,
 		textData.followMe,
@@ -33,7 +19,7 @@ export default async function Home({ params: { locale }}, searchParams) {
 		textData.hobbies,
 		textData.music,
 		textData.films,
-	]
+	] : []
 
 	return (
 		<main className='main'>

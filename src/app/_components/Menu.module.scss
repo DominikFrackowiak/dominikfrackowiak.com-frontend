@@ -1,0 +1,28 @@
+@import '../styles/colors';
+
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 100;
+	background-color: $background;
+}
+
+.nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	gap: 20px;
+}
+
+.closeIcon {
+	position: fixed;
+	top: 40px;
+ right: 2.5vw;
+	cursor: pointer;
+}

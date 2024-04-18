@@ -1,14 +1,13 @@
 'use client'
 
-import Link from 'next/link'
 import styles from './Header.module.scss'
 import { FaBars } from 'react-icons/fa6'
 import { usePathname } from 'next/navigation'
 
 // Components
-import TextToAnimate from './TextToAnimate'
-import Logo from './Logo' 
-import HamburgerIcon from './HamburgerIcon' 
+
+import Logo from './Logo'
+import HamburgerIcon from './HamburgerIcon'
 
 export default function Header({ locale }) {
 	const pathname = usePathname()

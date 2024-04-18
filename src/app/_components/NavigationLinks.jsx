@@ -1,9 +1,9 @@
 import Link from 'next/link'
 
 const links = [
+	{ path: '/', label: '// start' },
 	{ path: '/cv', label: '// curriculum_vitae' },
 	{ path: '/blog', label: '// blog' },
-	{ path: '/', label: '// start' },
 ]
 
 export default function NavigationLinks({ locale }) {

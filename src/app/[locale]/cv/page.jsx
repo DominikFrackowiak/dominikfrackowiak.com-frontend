@@ -15,8 +15,6 @@ const InvoicePDF = dynamic(() => import('./pdf'), {
 })
 
 export default function View() {
-
-
 	const [client, setClient] = useState(false)
 
 	useEffect(() => {
@@ -28,9 +26,9 @@ export default function View() {
 	}
 
 	return (
-		<div style={{width: '80vw', zIndex: 10}}>
+		<div style={{ width: '80vw', zIndex: 10 }}>
 			{/* <InvoicePDF locale={locale} number={number} /> */}
-			<InvoicePDF locale='en' number='666' />
+			<InvoicePDF locale='en' />
 			{/* <PDFDownloadLink document={<InvoicePDF/>} filename="Immortalitypass">Download</PDFDownloadLink> */}
 		</div>
 	)

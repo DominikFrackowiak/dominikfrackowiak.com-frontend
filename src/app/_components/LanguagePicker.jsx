@@ -26,6 +26,8 @@ export default function LanguagePicker({ lang }) {
 	const locale = useLocale()
 	const router = useRouter()
 
+	console.log(locale)
+
 	const handleLanguageSwitch = newLang => {
 		const newPath = `/${newLang}${location.pathname.slice(locale.length + 1)}`
 		router.push(newPath)

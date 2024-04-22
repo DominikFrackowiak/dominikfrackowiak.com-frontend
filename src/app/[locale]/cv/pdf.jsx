@@ -37,9 +37,10 @@ function getPDFTranslations(locale) {
 				hobbies: 'Pasatiempos',
 				music:
 					'Música (soy totalmente poliamórico: escucho desde synth-pop hasta noise rock, y desde ambient hasta hardcore punk)',
-				film: 'Cine (Buñuel, Wajda, Visconti, Lynch, hermanos Cohen etc.)',
-				nature: 'Naturaleza, perros (comparto mi vida con dos bodegueros andaluces), bicicleta, viajar en mi furgoneta',
-				books: 'Literatura (non-fiction, reportaje, ensayo de temática social)'
+				film: 'Cine (Buñuel, Wajda, Visconti, Lynch, hermanos Coen etc.)',
+				nature:
+					'Naturaleza, perros (comparto mi vida con dos bodegueros andaluces), bicicleta, viajar en mi furgoneta',
+				books: 'Literatura (non-fiction, reportaje, ensayo de temática social)',
 			}
 
 		case 'pl':
@@ -70,7 +71,6 @@ function getPDFTranslations(locale) {
 					'Natura, psy (dzielię życie z dwoma bodegueros andaluzyjskimi), rower, podróże moją furgonetką',
 				books: 'Literatura (non-fiction, reportaż, esej o tematyce społecznej)',
 			}
-
 
 		default:
 			return {
@@ -104,25 +104,25 @@ function getPDFTranslations(locale) {
 }
 
 Font.register({
-	family: 'Lato',
+	family: 'Roboto',
 	fonts: [
-		{ src: '/assets/fonts/Lato-Regular.ttf', fontWeight: 400 },
-		{ src: '/assets/fonts/Lato-Bold.ttf', fontWeight: 700 },
-		{ src: '/assets/fonts/Lato-Black.ttf', fontWeight: 900 },
+		{ src: '/assets/fonts/Roboto-Regular.ttf', fontWeight: 400 },
+		{ src: '/assets/fonts/Roboto-Medium.ttf', fontWeight: 500 },
+		{ src: '/assets/fonts/Roboto-Bold.ttf', fontWeight: 700 },
 	],
 })
 
-function PDF({ locale = 'en' }) {
+export function PDF({ locale }) {
 	const translations = getPDFTranslations(locale)
 
 	return (
-		<Document>
+		<Document title='DominikFrackowiak_CV'>
 			<Page
 				style={{
 					display: 'flex',
 					flexDirection: 'column',
 					padding: '15px',
-					gap: '15px',
+					gap: '10px',
 				}}
 			>
 				<View
@@ -132,7 +132,7 @@ function PDF({ locale = 'en' }) {
 						flexDirection: 'row',
 						justifyContent: 'space-around',
 						alignContent: 'center',
-						height: '80px',
+						height: '75px',
 						padding: '20px',
 						backgroundColor: '#ed4b32cf',
 						borderRadius: '20px',
@@ -143,13 +143,15 @@ function PDF({ locale = 'en' }) {
 							style={{
 								color: 'white',
 								fontSize: '24px',
-								fontWeight: '900',
+								fontFamily: 'Roboto',
+								fontWeight: '700',
 							}}
 						>
 							Dominik Frackowiak
 						</Text>
 						<Text
 							style={{
+								fontFamily: 'Roboto',
 								color: 'white',
 								fontSize: '12px',
 							}}
@@ -160,6 +162,7 @@ function PDF({ locale = 'en' }) {
 					<View style={{ width: '40%', height: '100%', gap: '4px' }}>
 						<Text
 							style={{
+								fontFamily: 'Roboto',
 								color: 'white',
 								fontSize: '10px',
 								textAlign: 'right',
@@ -169,6 +172,7 @@ function PDF({ locale = 'en' }) {
 						</Text>
 						<Text
 							style={{
+								fontFamily: 'Roboto',
 								color: 'white',
 								fontSize: '10px',
 								textAlign: 'right',
@@ -178,6 +182,7 @@ function PDF({ locale = 'en' }) {
 						</Text>
 						<Text
 							style={{
+								fontFamily: 'Roboto',
 								color: 'white',
 								fontSize: '9px',
 								textAlign: 'right',
@@ -198,10 +203,17 @@ function PDF({ locale = 'en' }) {
 							width: '60vw',
 							padding: '15px',
 							display: 'flex',
-							gap: '15px',
+							gap: '16px',
 						}}
 					>
-						<Text style={{ fontSize: '12px', fontWeight: '700' }}>
+						<Text
+							style={{
+								fontFamily: 'Roboto',
+								fontSize: '11px',
+								fontWeight: '500',
+								color: '#ed4b32cf',
+							}}
+						>
 							{translations.skills}
 						</Text>
 
@@ -214,9 +226,8 @@ function PDF({ locale = 'en' }) {
 								borderBottom: '1px dotted black',
 							}}
 						>
-							<Text style={{ fontSize: '10px' }}>React.js</Text>
-							<Text style={{ fontSize: '10px', color: '#ed4b32cf' }}>
-								{translations.level1}
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								React.js
 							</Text>
 						</View>
 
@@ -229,9 +240,8 @@ function PDF({ locale = 'en' }) {
 								borderBottom: '1px dotted black',
 							}}
 						>
-							<Text style={{ fontSize: '10px' }}>Next.js</Text>
-							<Text style={{ fontSize: '10px', color: '#ed4b32cf' }}>
-								{translations.level1}
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								Next.js
 							</Text>
 						</View>
 						<View
@@ -243,9 +253,8 @@ function PDF({ locale = 'en' }) {
 								borderBottom: '1px dotted black',
 							}}
 						>
-							<Text style={{ fontSize: '10px' }}>TypeScript</Text>
-							<Text style={{ fontSize: '10px', color: '#ed4b32cf' }}>
-								{translations.level2}
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								Astro.js
 							</Text>
 						</View>
 						<View
@@ -257,9 +266,8 @@ function PDF({ locale = 'en' }) {
 								borderBottom: '1px dotted black',
 							}}
 						>
-							<Text style={{ fontSize: '10px' }}>JavaScript</Text>
-							<Text style={{ fontSize: '10px', color: '#ed4b32cf' }}>
-								{translations.level1}
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								TypeScript
 							</Text>
 						</View>
 						<View
@@ -271,9 +279,8 @@ function PDF({ locale = 'en' }) {
 								borderBottom: '1px dotted black',
 							}}
 						>
-							<Text style={{ fontSize: '10px' }}>SASS/SCSS</Text>
-							<Text style={{ fontSize: '10px', color: '#ed4b32cf' }}>
-								{translations.level1}
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								JavaScript
 							</Text>
 						</View>
 						<View
@@ -285,9 +292,8 @@ function PDF({ locale = 'en' }) {
 								borderBottom: '1px dotted black',
 							}}
 						>
-							<Text style={{ fontSize: '10px' }}>Tailwind</Text>
-							<Text style={{ fontSize: '10px', color: '#ed4b32cf' }}>
-								{translations.level2}
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								SASS/SCSS
 							</Text>
 						</View>
 						<View
@@ -299,9 +305,8 @@ function PDF({ locale = 'en' }) {
 								borderBottom: '1px dotted black',
 							}}
 						>
-							<Text style={{ fontSize: '10px' }}>GIT</Text>
-							<Text style={{ fontSize: '10px', color: '#ed4b32cf' }}>
-								{translations.level1}
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								Tailwind
 							</Text>
 						</View>
 						<View
@@ -313,9 +318,19 @@ function PDF({ locale = 'en' }) {
 								borderBottom: '1px dotted black',
 							}}
 						>
-							<Text style={{ fontSize: '10px' }}>Strapi</Text>
-							<Text style={{ fontSize: '10px', color: '#ed4b32cf' }}>
-								{translations.level1}
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>GIT</Text>
+						</View>
+						<View
+							style={{
+								display: 'flex',
+								flexDirection: 'row',
+								justifyContent: 'space-between',
+								paddingBottom: '8px',
+								borderBottom: '1px dotted black',
+							}}
+						>
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								Strapi
 							</Text>
 						</View>
 						<View
@@ -327,9 +342,8 @@ function PDF({ locale = 'en' }) {
 								borderBottom: '1px dotted black',
 							}}
 						>
-							<Text style={{ fontSize: '10px' }}>Wordpress</Text>
-							<Text style={{ fontSize: '10px', color: '#ed4b32cf' }}>
-								{translations.level2}
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								Wordpress
 							</Text>
 						</View>
 						<View
@@ -341,9 +355,8 @@ function PDF({ locale = 'en' }) {
 								borderBottom: '1px dotted black',
 							}}
 						>
-							<Text style={{ fontSize: '10px' }}>Prisma</Text>
-							<Text style={{ fontSize: '10px', color: '#ed4b32cf' }}>
-								{translations.level3}
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								Prisma
 							</Text>
 						</View>
 						<View
@@ -355,9 +368,19 @@ function PDF({ locale = 'en' }) {
 								borderBottom: '1px dotted black',
 							}}
 						>
-							<Text style={{ fontSize: '10px' }}>BEM</Text>
-							<Text style={{ fontSize: '10px', color: '#ed4b32cf' }}>
-								{translations.level1}
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>BEM</Text>
+						</View>
+						<View
+							style={{
+								display: 'flex',
+								flexDirection: 'row',
+								justifyContent: 'space-between',
+								paddingBottom: '8px',
+								borderBottom: '1px dotted black',
+							}}
+						>
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								Node.js / Express.js
 							</Text>
 						</View>
 						<View
@@ -369,27 +392,19 @@ function PDF({ locale = 'en' }) {
 								borderBottom: '1px dotted black',
 							}}
 						>
-							<Text style={{ fontSize: '10px' }}>Node.js / Express.js</Text>
-							<Text style={{ fontSize: '10px', color: '#ed4b32cf' }}>
-								{translations.level3}
-							</Text>
-						</View>
-						<View
-							style={{
-								display: 'flex',
-								flexDirection: 'row',
-								justifyContent: 'space-between',
-								paddingBottom: '8px',
-								borderBottom: '1px dotted black',
-							}}
-						>
-							<Text style={{ fontSize: '10px' }}>MongoDB / Mongoose</Text>
-							<Text style={{ fontSize: '10px', color: '#ed4b32cf' }}>
-								{translations.level3}
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								MongoDB / Mongoose
 							</Text>
 						</View>
 
-						<Text style={{ fontSize: '12px', fontWeight: '700' }}>
+						<Text
+							style={{
+								fontFamily: 'Roboto',
+								fontSize: '11px',
+								fontWeight: '500',
+								color: '#ed4b32cf',
+							}}
+						>
 							{translations.experience}
 						</Text>
 
@@ -403,16 +418,21 @@ function PDF({ locale = 'en' }) {
 							}}
 						>
 							<View style={{ display: 'flex', gap: '4px' }}>
-								<Text style={{ fontSize: '10px' }}>
+								<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
 									Frontend Developer Junior
 								</Text>
-								<Text style={{ fontSize: '8px' }}>
+								<Text style={{ fontFamily: 'Roboto', fontSize: '8px' }}>
 									{translations.duration1}
 								</Text>
 							</View>
 							<Text
 								style={{
-									fontSize: '10px',
+									display: 'flex',
+									justifyContent: 'center',
+									alignItems: 'center',
+									height: '90%',
+									fontFamily: 'Roboto',
+									fontSize: '9px',
 									lineHeight: '1',
 									padding: '5px 10px',
 									borderRadius: '10px',
@@ -434,16 +454,21 @@ function PDF({ locale = 'en' }) {
 							}}
 						>
 							<View style={{ display: 'flex', gap: '4px' }}>
-								<Text style={{ fontSize: '10px' }}>
+								<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
 									Freelance Frontend Developer
 								</Text>
-								<Text style={{ fontSize: '8px' }}>
+								<Text style={{ fontFamily: 'Roboto', fontSize: '8px' }}>
 									{translations.duration2}
 								</Text>
 							</View>
 							<Text
 								style={{
-									fontSize: '10px',
+									display: 'flex',
+									justifyContent: 'center',
+									alignItems: 'center',
+									height: '90%',
+									fontFamily: 'Roboto',
+									fontSize: '9px',
 									lineHeight: '1',
 									padding: '5px 10px',
 									borderRadius: '10px',
@@ -454,54 +479,46 @@ function PDF({ locale = 'en' }) {
 								Freelance
 							</Text>
 						</View>
-
-						<Text style={{ fontSize: '12px', fontWeight: '700' }}>
-							{translations.links}
-						</Text>
-						<View
-							style={{
-								display: 'flex',
-								flexDirection: 'column',
-								justifyContent: 'space-between',
-								paddingBottom: '8px',
-								borderBottom: '1px dotted black',
-								gap: '3px',
-							}}
-						>
-							<Text style={{ fontSize: '10px' }}>
-								https://github.com/DominikFrackowiak
-							</Text>
-							<Text style={{ fontSize: '10px' }}>
-								https://www.linkedin.com/in/dominik-frackowiak/
-							</Text>
-							<Text style={{ fontSize: '10px' }}>
-								https://dominikfrackowiak.com
-							</Text>
-						</View>
 					</View>
 
 					<View
 						id='rightSide'
 						style={{
-							width: '40%',
+							width: '45%',
 							padding: '15px',
 							display: 'flex',
-							gap: '15px',
+							gap: '14px',
 						}}
 					>
-						<Text style={{ fontSize: '12px', fontWeight: '700' }}>
+						<Text
+							style={{
+								fontFamily: 'Roboto',
+								fontSize: '11px',
+								fontWeight: '500',
+								color: '#ed4b32cf',
+							}}
+						>
 							{translations.profile}
 						</Text>
 						<Text
 							style={{
-								fontSize: '10px',
+								fontFamily: 'Roboto',
+								fontSize: '9px',
 								paddingBottom: '8px',
 								borderBottom: '1px dotted black',
+								lineHeight: '1.5',
 							}}
 						>
 							{translations.description}
 						</Text>
-						<Text style={{ fontSize: '12px', fontWeight: '800' }}>
+						<Text
+							style={{
+								fontFamily: 'Roboto',
+								fontSize: '11px',
+								fontWeight: '500',
+								color: '#ed4b32cf',
+							}}
+						>
 							{translations.languages}
 						</Text>
 						<View
@@ -513,8 +530,16 @@ function PDF({ locale = 'en' }) {
 								borderBottom: '1px dotted black',
 							}}
 						>
-							<Text style={{ fontSize: '10px' }}>{translations.PL}</Text>
-							<Text style={{ fontSize: '10px', color: '#ed4b32cf' }}>
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								{translations.PL}
+							</Text>
+							<Text
+								style={{
+									fontFamily: 'Roboto',
+									fontSize: '9px',
+									color: '#ed4b32cf',
+								}}
+							>
 								{translations.langLevel1}
 							</Text>
 						</View>
@@ -527,8 +552,16 @@ function PDF({ locale = 'en' }) {
 								borderBottom: '1px dotted black',
 							}}
 						>
-							<Text style={{ fontSize: '10px' }}>{translations.ES}</Text>
-							<Text style={{ fontSize: '10px', color: '#ed4b32cf' }}>
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								{translations.ES}
+							</Text>
+							<Text
+								style={{
+									fontFamily: 'Roboto',
+									fontSize: '9px',
+									color: '#ed4b32cf',
+								}}
+							>
 								{translations.langLevel2}
 							</Text>
 						</View>
@@ -541,51 +574,108 @@ function PDF({ locale = 'en' }) {
 								borderBottom: '1px dotted black',
 							}}
 						>
-							<Text style={{ fontSize: '10px' }}>{translations.EN}</Text>
-							<Text style={{ fontSize: '10px', color: '#ed4b32cf' }}>
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								{translations.EN}
+							</Text>
+							<Text
+								style={{
+									fontFamily: 'Roboto',
+									fontSize: '9px',
+									color: '#ed4b32cf',
+								}}
+							>
 								{translations.langLevel3}
 							</Text>
 						</View>
-						<Text style={{ fontSize: '12px', fontWeight: '800' }}>
+						<Text
+							style={{
+								fontFamily: 'Roboto',
+								fontSize: '11px',
+								fontWeight: '500',
+								color: '#ed4b32cf',
+							}}
+						>
 							{translations.hobbies}
 						</Text>
 
 						<Text
 							style={{
-								fontSize: '10px',
+								fontFamily: 'Roboto',
+								fontSize: '9px',
 								paddingBottom: '8px',
 								borderBottom: '1px dotted black',
+								lineHeight: '1.5',
 							}}
 						>
 							{translations.music}
 						</Text>
 						<Text
 							style={{
-								fontSize: '10px',
+								fontFamily: 'Roboto',
+								fontSize: '9px',
 								paddingBottom: '8px',
 								borderBottom: '1px dotted black',
+								lineHeight: '1.5',
 							}}
 						>
 							{translations.film}
 						</Text>
 						<Text
 							style={{
-								fontSize: '10px',
+								fontFamily: 'Roboto',
+								fontSize: '9px',
 								paddingBottom: '8px',
 								borderBottom: '1px dotted black',
+								lineHeight: '1.5',
 							}}
 						>
 							{translations.nature}
 						</Text>
 						<Text
 							style={{
-								fontSize: '10px',
+								fontFamily: 'Roboto',
+								fontSize: '9px',
 								paddingBottom: '8px',
-								borderBottom: '1px dotted black',
+								lineHeight: '1.5',
 							}}
 						>
 							{translations.books}
 						</Text>
+
+						<Text
+							style={{
+								fontFamily: 'Roboto',
+								fontSize: '11px',
+								fontWeight: '500',
+								color: '#ed4b32cf',
+							}}
+						>
+							{translations.links}
+						</Text>
+						<View
+							style={{
+								display: 'flex',
+								flexDirection: 'column',
+								justifyContent: 'space-between',
+								paddingBottom: '8px',
+
+								gap: '3px',
+							}}
+						>
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								https://github.com/DominikFrackowiak
+							</Text>
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								https://www.linkedin.com/in/dominik-frackowiak/
+							</Text>
+
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								https://codepen.io/MarianKoniuszko/pens/popular
+							</Text>
+							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+								https://dominikfrackowiak.com
+							</Text>
+						</View>
 					</View>
 				</View>
 			</Page>
@@ -593,7 +683,7 @@ function PDF({ locale = 'en' }) {
 	)
 }
 
-export default function PDFView({ locale, number }) {
+export default function PDFView({ locale }) {
 	const [client, setClient] = useState(false)
 
 	useEffect(() => {
@@ -605,7 +695,10 @@ export default function PDFView({ locale, number }) {
 	}
 
 	return (
-		<PDFViewer style={{ width: '100%', minHeight: '100vh' }}>
+		<PDFViewer
+			style={{ width: '100%', minHeight: '100vh' }}
+			fileName='DominikFRackowiak_CV'
+		>
 			<PDF locale={locale} />
 		</PDFViewer>
 	)

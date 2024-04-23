@@ -1,7 +1,8 @@
-1. PDF CREATION
-- tytul PDF przy sciaganiu
+0. PDF CREATION
 
-. DARK MODE
+- CSS do osobnego pliku
+
+1. DARK MODE
 2. SEO
 3. TEXTS: BACKEND
 4. CREATE BLOG ENTRY DATA MODEL: BACKEND

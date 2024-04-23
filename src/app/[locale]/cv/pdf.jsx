@@ -36,7 +36,7 @@ function getPDFTranslations(locale) {
 				langLevel3: 'C1',
 				hobbies: 'Pasatiempos',
 				music:
-					'Música (soy totalmente poliamórico: escucho desde synth-pop hasta noise rock, y desde ambient hasta hardcore punk)',
+					'Música (soy totalmente poliamoroso: escucho desde synth-pop hasta noise rock, y desde ambient hasta hardcore punk)',
 				film: 'Cine (Buñuel, Wajda, Visconti, Lynch, hermanos Coen etc.)',
 				nature:
 					'Naturaleza, perros (comparto mi vida con dos bodegueros andaluces), bicicleta, viajar en mi furgoneta',
@@ -68,7 +68,7 @@ function getPDFTranslations(locale) {
 					'Muzyka (jestem zupełnie poliamoryczny: słucham od synth-popu po noise rock, od ambientu po hardcore punk)',
 				film: 'Film (Buñuel, Wajda, Visconti, Lynch, bracia Coen itp.)',
 				nature:
-					'Natura, psy (dzielię życie z dwoma bodegueros andaluzyjskimi), rower, podróże moją furgonetką',
+					'Natura, psy (dzielię życie z dwoma psami rasy bodeguero andaluz), rower, podróże moją furgonetką',
 				books: 'Literatura (non-fiction, reportaż, esej o tematyce społecznej)',
 			}
 

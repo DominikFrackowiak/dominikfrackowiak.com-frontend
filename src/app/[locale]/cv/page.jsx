@@ -45,23 +45,29 @@ export default function View() {
 	}
 
 	return (
-		<div
-			style={{
-				display: 'flex',
-				flexDirection: 'column',
-				alignItems: 'center',
-				width: '80vw',
-				zIndex: 10,
-			}}
-		>
-			<InvoicePDF locale={locale} />
-
-			<PDFDownloadLink
-				document={<PDF locale={locale} />}
-				fileName='DominikFrackowiak_CV.pdf'
+		
+			<div
+				style={{
+					display: 'flex',
+					flexDirection: 'column',
+					alignItems: 'center',
+					width: '80vw',
+					zIndex: 10,
+					paddingBottom: '60px'
+				}}
 			>
-				<div className='bold underlined'>{handleTranslation(locale)}</div>
-			</PDFDownloadLink>
-		</div>
+				
+					<PDFDownloadLink
+						document={<PDF locale={locale} />}
+						fileName='DominikFrackowiak_CV.pdf'
+					><div
+					style={{ margin: '30px 0 30px 0', zIndex: '100', cursor: 'pointer', fontSize: '25px' }}
+					className='bold underlined'
+				>
+					{handleTranslation(locale)}</div></PDFDownloadLink>
+				
+				<InvoicePDF locale={locale} />
+			</div>
+		
 	)
 }

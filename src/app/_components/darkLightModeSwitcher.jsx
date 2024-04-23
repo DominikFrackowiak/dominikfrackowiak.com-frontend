@@ -10,6 +10,10 @@ export default function DarkLightModeSwitcher() {
 
 	useEffect(() => setMounted(true), [])
 
+	useEffect(() => {
+		setTheme('light')
+	}, [])
+
 	if (!mounted) return null
 
 	if (theme === 'dark') {

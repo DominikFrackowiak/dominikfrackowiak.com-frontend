@@ -20,11 +20,11 @@ export default function Header({ locale }) {
 			<div
 				style={{
 					display: 'flex',
+					justifyContent: 'space-between',
 					position: 'fixed',
 					right: '2.5vw',
 					top: '40px',
-					width: '160px',
-					gap: '20px',
+					width: '130px',
 					cursor: 'pointer',
 				}}
 			>

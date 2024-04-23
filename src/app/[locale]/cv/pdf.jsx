@@ -508,6 +508,7 @@ export function PDF({ locale }) {
 								borderBottom: '1px dotted black',
 								lineHeight: '1.5',
 							}}
+							lang={locale}
 						>
 							{translations.description}
 						</Text>

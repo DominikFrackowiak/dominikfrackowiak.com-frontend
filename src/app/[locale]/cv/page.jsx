@@ -9,6 +9,8 @@ import { usePathname } from 'next/navigation'
 
 import { useEffect, useState } from 'react'
 
+import styles from './cv.module.scss'
+
 const InvoicePDF = dynamic(() => import('./pdf'), {
 	ssr: false,
 })
@@ -34,7 +36,6 @@ export default function View() {
 	const [client, setClient] = useState(false)
 	const pathname = usePathname()
 	const locale = pathname.split('/')[1]
-	console.log(locale)
 
 	useEffect(() => {
 		setClient(true)
@@ -45,29 +46,17 @@ export default function View() {
 	}
 
 	return (
-		
-			<div
-				style={{
-					display: 'flex',
-					flexDirection: 'column',
-					alignItems: 'center',
-					width: '80vw',
-					zIndex: 10,
-					paddingBottom: '60px'
-				}}
+		<div className={styles.pdfWrapper}>
+			<PDFDownloadLink
+				document={<PDF locale={locale} />}
+				fileName='DominikFrackowiak_CV.pdf'
 			>
-				
-					<PDFDownloadLink
-						document={<PDF locale={locale} />}
-						fileName='DominikFrackowiak_CV.pdf'
-					><div
-					style={{ margin: '30px 0 30px 0', zIndex: '100', cursor: 'pointer', fontSize: '25px' }}
-					className='bold underlined'
-				>
-					{handleTranslation(locale)}</div></PDFDownloadLink>
-				
-				<InvoicePDF locale={locale} />
-			</div>
-		
+				<div className={`${styles.pdfDownloadLink} bold underlined`}>
+					{handleTranslation(locale)}
+				</div>
+			</PDFDownloadLink>
+
+			<InvoicePDF locale={locale} />
+		</div>
 	)
 }

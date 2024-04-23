@@ -10,6 +10,11 @@
 	background-color: $background;
 }
 
+[data-theme='dark'] .menu {
+	background-color: $nightmodebg;
+	color: $nightmodetxt;
+}
+
 .nav {
 	display: flex;
 	flex-direction: column;

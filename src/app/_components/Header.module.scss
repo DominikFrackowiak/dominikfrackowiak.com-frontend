@@ -3,50 +3,49 @@
 .header {
 	display: flex;
 	justify-content: space-between;
-	// position: fixed;
+
 	position: absolute;
 	top: 0;
 	left: 0;
-	// width: 95%;
+
 	width: 100%;
-	// height: 200px;
+
 	padding: 0 2.5%;
-	// height: 60px;
+
 	background-color: $background;
 	z-index: 100;
-	// border: 1px solid $dark;
-	// height: 140px;
-	// border: 2px solid $dark;
+}
+
+[data-theme='dark'] .header {
+	background-color: $nightmodebg;
+	color: $nightmodetxt;
 }
 
 .headerH1 {
 	position: absolute;
 	top: 40px;
 	left: 2.5vw;
-	// width: 100%;
-	// height:50vh;
-	// display: flex;
-	// align-items: center;
-	// justify-content: space-between;
 
-	// margin-top: 16px;
 	padding-bottom: 60px;
-	// border: 1px solid $dark;
 }
 
 .logo {
 	height: 100%;
-	// padding: 20vh 0;
-	// line-height: 50vh;
+
 	margin-right: 2.5vw;
 	font-size: 25px;
 }
 
-.hamburger {
-	position: fixed;
-	top: 40px;
- right: 2.5vw;
-	cursor: pointer;
+// .hamburger {
+// 	position: fixed;
+// 	top: 40px;
+// 	right: 2.5vw;
+// 	cursor: pointer;
+	
+// }
+
+.hamburger a {
+	padding: none;
 }
 
 @media (min-width: 768px) {

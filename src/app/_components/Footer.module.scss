@@ -6,15 +6,25 @@
 	width: 100%;
 	bottom: 0;
 	padding-top: 20px;
- background-color: $background;
+	background-color: $background;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.socialsLocalesWrapper{
+[data-theme='dark'] .footer {
+	background-color: $nightmodebg;
+	color: $nightmodetxt;
+}
+
+.socialsLocalesWrapper {
 	display: flex;
 	gap: 20px;
+}
+
+[data-theme='dark'] .socialsLocalesWrapper {
+	background-color: $nightmodebg;
+	color: $nightmodetxt;
 }
 
 .footerBtn {
@@ -22,4 +32,9 @@
 	background-color: transparent;
 	border: 2px solid transparent;
 	cursor: pointer;
+}
+
+[data-theme='dark'] .footerBtn {
+	background-color: $nightmodebg;
+	color: $nightmodetxt;
 }

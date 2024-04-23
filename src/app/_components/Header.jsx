@@ -1,8 +1,9 @@
 'use client'
 
 import styles from './Header.module.scss'
-import { FaBars } from 'react-icons/fa6'
+import { FaBars, FaRegSun, FaRegMoon } from 'react-icons/fa6'
 import { usePathname } from 'next/navigation'
+import DarkLightModeSwitcher from './darkLightModeSwitcher'
 
 // Components
 
@@ -16,11 +17,24 @@ export default function Header({ locale }) {
 	return (
 		<header className={styles.header}>
 			{!cv && <Logo locale={locale} />}
-			<HamburgerIcon
-				href={`${pathname}/?menu=true`}
-				icon={<FaBars />}
-				className={styles.hamburger}
-			/>
+			<div
+				style={{
+					display: 'flex',
+					position: 'fixed',
+					right: '2.5vw',
+					top: '40px',
+					width: '160px',
+					gap: '20px',
+					cursor: 'pointer',
+				}}
+			>
+				<DarkLightModeSwitcher />
+				<HamburgerIcon
+					href={`${pathname}/?menu=true`}
+					icon={<FaBars />}
+					className={styles.hamburger}
+				/>
+			</div>
 		</header>
 	)
 }

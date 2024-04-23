@@ -18,10 +18,15 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	width: 100vw;
- min-height: 100vh;
+	min-height: 100vh;
 	background-color: $background;
 	color: $dark;
 	overflow-x: hidden;
+}
+
+[data-theme='dark'] body {
+	background-color: $nightmodebg;
+	color: $nightmodetxt;
 }
 
 .icon {
@@ -55,6 +60,11 @@ body {
 	color: $background;
 }
 
+[data-theme='dark'] .dark {
+	background-color: $nightmodebg;
+	color: $nightmodetxt;
+}
+
 .underlined {
 	text-decoration: underline;
 
@@ -67,7 +77,12 @@ a {
 	text-decoration: none;
 	color: $dark;
 	font-weight: 500;
-	padding: 10px 10px 10px 0;
+	// padding: 10px 10px 10px 0;
+}
+
+[data-theme='dark'] a {
+background-color: $nightmodebg;
+	color: $nightmodetxt;
 }
 
 p {
@@ -86,7 +101,7 @@ p {
 
 .main {
 	position: relative;
- margin: 100px 0 100px 0;
+	margin: 100px 0 100px 0;
 	width: 100%;
 	// max-width: 1300px;
 	display: flex;
@@ -109,7 +124,7 @@ p {
 	}
 
 	.icon {
-		font-size: 30px;
+		font-size: 33px;
 	}
 
 	.header {
@@ -118,6 +133,5 @@ p {
 
 	.main {
 		margin: 200px 0;
-		
 	}
 }

@@ -697,8 +697,8 @@ export default function PDFView({ locale }) {
 
 	return (
 		<PDFViewer
-			style={{ width: '100%', minHeight: '100vh' }}
-			fileName='DominikFRackowiak_CV'
+			style={{ width: '100%', minHeight: '140vh' }}
+			filename='DominikFRackowiak_CV'
 		>
 			<PDF locale={locale} />
 		</PDFViewer>

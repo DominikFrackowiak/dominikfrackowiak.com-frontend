@@ -8,6 +8,7 @@ import dynamic from 'next/dynamic'
 import { usePathname } from 'next/navigation'
 
 import { useEffect, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 
 import styles from './cv.module.scss'
 
@@ -36,6 +37,10 @@ export default function View() {
 	const [client, setClient] = useState(false)
 	const pathname = usePathname()
 	const locale = pathname.split('/')[1]
+	const searchParams = useSearchParams()
+	const menu = searchParams.get('menu')
+
+
 
 	useEffect(() => {
 		setClient(true)
@@ -46,17 +51,20 @@ export default function View() {
 	}
 
 	return (
-		<div className={styles.pdfWrapper}>
-			<PDFDownloadLink
+		<>
+			{!menu && <PDFDownloadLink
 				document={<PDF locale={locale} />}
 				fileName='DominikFrackowiak_CV.pdf'
+				style={{ position: 'fixed', top: 0, marginInline: 'auto', zIndex: '100'}}
 			>
 				<div className={`${styles.pdfDownloadLink} bold underlined`}>
 					{handleTranslation(locale)}
 				</div>
-			</PDFDownloadLink>
+			</PDFDownloadLink>}
 
-			<InvoicePDF locale={locale} />
-		</div>
+			<div className={styles.pdfWrapper}>
+				<InvoicePDF locale={locale} />
+			</div>
+		</>
 	)
 }

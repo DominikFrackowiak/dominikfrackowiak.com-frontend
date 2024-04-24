@@ -3,15 +3,13 @@
 .header {
 	display: flex;
 	justify-content: space-between;
-
-	position: absolute;
+	align-items: center;
+	position: fixed;
 	top: 0;
 	left: 0;
-
+	height: 9%;
 	width: 100%;
-
 	padding: 0 2.5%;
-
 	background-color: $background;
 	z-index: 100;
 }
@@ -21,41 +19,55 @@
 	color: $nightmodetxt;
 }
 
-.headerH1 {
-	position: absolute;
-	top: 40px;
-	left: 2.5vw;
-
-	padding-bottom: 60px;
-}
-
 .logo {
 	height: 100%;
-
 	margin-right: 2.5vw;
-	font-size: 25px;
+	font-size: 20px;
 }
 
-// .hamburger {
-// 	position: fixed;
-// 	top: 40px;
-// 	right: 2.5vw;
-// 	cursor: pointer;
-	
-// }
+.headerIconsWrapper {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 25px;
+	position: fixed;
+	right: 2.5vw;
+	width: 15%;
+	cursor: pointer;
+}
+
+.hamburger {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 .hamburger a {
 	padding: none;
 }
 
 @media (min-width: 768px) {
+	.header {
+		height: 10%;
+	}
 	.logo {
-		font-size: 40px;
+		font-size: 30px;
+	}
+
+	.headerIconsWrapper {
+		width: 12%;
 	}
 }
 
 @media (min-width: 992px) {
+	.header {
+		height: 12%;
+	}
 	.logo {
-		font-size: 50px;
+		font-size: 45px;
+	}
+
+	.headerIconsWrapper {
+		width: 9%;
 	}
 }

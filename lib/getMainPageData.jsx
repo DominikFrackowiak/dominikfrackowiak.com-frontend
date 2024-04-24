@@ -11,6 +11,8 @@ function handleLocaleText(data, locale) {
 	}
 }
 
+
+
 export default async function getMainPageData(locale) {
 	const res = await fetch(
 		'http://192.168.1.132:1410/api/main-page?populate=*',

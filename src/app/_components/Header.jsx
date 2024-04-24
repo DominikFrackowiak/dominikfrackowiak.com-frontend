@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './Header.module.scss'
-import { FaBars, FaRegSun, FaRegMoon } from 'react-icons/fa6'
+
 import { usePathname } from 'next/navigation'
 import DarkLightModeSwitcher from './darkLightModeSwitcher'
 
@@ -17,21 +17,11 @@ export default function Header({ locale }) {
 	return (
 		<header className={styles.header}>
 			{!cv && <Logo locale={locale} />}
-			<div
-				style={{
-					display: 'flex',
-					justifyContent: 'space-between',
-					position: 'fixed',
-					right: '2.5vw',
-					top: '40px',
-					width: '130px',
-					cursor: 'pointer',
-				}}
-			>
+
+			<div className={styles.headerIconsWrapper}>
 				<DarkLightModeSwitcher />
 				<HamburgerIcon
 					href={`${pathname}/?menu=true`}
-					icon={<FaBars />}
 					className={styles.hamburger}
 				/>
 			</div>

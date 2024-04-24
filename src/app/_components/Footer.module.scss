@@ -2,14 +2,16 @@
 
 .footer {
 	position: fixed;
-	padding: 0 2.5%;
+	padding: 70px 2.5vw 0 2.5vw;
 	width: 100%;
 	bottom: 0;
-	padding-top: 20px;
+	left: 0;
+	
 	background-color: $background;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	
 }
 
 [data-theme='dark'] .footer {
@@ -28,7 +30,8 @@
 }
 
 .footerBtn {
-	padding: 10px;
+	// padding: 10px;
+	font-weight: 100;
 	background-color: transparent;
 	border: 2px solid transparent;
 	cursor: pointer;

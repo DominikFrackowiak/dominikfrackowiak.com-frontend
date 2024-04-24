@@ -1,3 +1,5 @@
+1. ICONS HEADER to be animated, it got lost in refactoring
+
 5. DEPLOYMENT: BACKEND - where?, FRONT - VERCEL - ?h
 
 ____

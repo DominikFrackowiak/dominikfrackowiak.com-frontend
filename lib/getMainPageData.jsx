@@ -1,26 +1,24 @@
-function handleLocaleText(data, locale) {
-	switch (locale) {
-		case 'es':
-			return data.data.attributes.localizations.data[1].attributes
-			break
-		case 'pl':
-			return data.data.attributes.localizations.data[0].attributes
-			break
-		default:
-			return data.data.attributes
-	}
-}
-
-
+import client from '@/client'
+import { gql } from '@apollo/client'
 
 export default async function getMainPageData(locale) {
-	const res = await fetch(
-		'http://192.168.1.132:1410/api/main-page?populate=*',
-		{
-			next: { revalidate: 10 },
-		}
-	)
-	const data = await res.json()
-	const textData = handleLocaleText(data, locale)
- return textData
+	// const res = await fetch(
+	// 	'http://192.168.1.132:1410/api/main-page?populate=*',
+	// 	{
+	// 		next: { revalidate: 10 },
+	// 	}
+	console.log(locale)
+	const { data } = await client.query({
+		query: gql`
+  query NewQuery {
+    nodeByUri(uri: "/${locale}/") {
+      ... on Page {
+        blocks(postTemplate: false)
+      }
+    }
+  }
+`,
+	})
+
+	return data.nodeByUri.blocks
 }

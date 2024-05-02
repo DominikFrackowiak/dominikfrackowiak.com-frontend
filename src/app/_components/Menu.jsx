@@ -16,7 +16,7 @@ export default function Menu({ locale }) {
 	const menu = searchParams.get('menu')
 
 	return (
-		// <FadeOutAnimation>
+		
 		<main
 			className={styles.menu}
 			style={{

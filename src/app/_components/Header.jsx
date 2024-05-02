@@ -29,4 +29,4 @@ export default function Header({ locale }) {
 	)
 }
 
-// 		<Link href={`/${locale}/blog`}>
+

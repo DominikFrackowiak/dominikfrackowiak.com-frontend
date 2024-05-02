@@ -1,4 +1,5 @@
 1. ICONS HEADER to be animated, it got lost in refactoring
+2. FOOTER - padding responsiveness
 2. FAVICONS I SEO
 3. DODANIE TRESCI - PROJEKTY
 4. DODANIE STRINY STACK

@@ -12,6 +12,20 @@ import { useSearchParams } from 'next/navigation'
 
 import styles from './cv.module.scss'
 
+// export async function metadata({ params, searchParams }) {
+// 	console.log(searchParams)
+// 	const theme = searchParams?.theme || 'light'
+
+// 	return {
+// 		icons: {
+// 			icon:
+// 				theme === 'dark'
+// 					? '/favicon-dark/favicon.ico'
+// 					: '/favicon-light/favicon.ico',
+// 		},
+// 	}
+// }
+
 const InvoicePDF = dynamic(() => import('./pdf'), {
 	ssr: false,
 })

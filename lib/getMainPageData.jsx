@@ -7,18 +7,30 @@ export default async function getMainPageData(locale) {
 	// 	{
 	// 		next: { revalidate: 10 },
 	// 	}
-	console.log(locale)
+
 	const { data } = await client.query({
 		query: gql`
-  query NewQuery {
-    nodeByUri(uri: "/${locale}/") {
-      ... on Page {
-        blocks(postTemplate: false)
-      }
-    }
-  }
-`,
+			query NewQuery {
+				nodeByUri(uri: "/homepage/${locale}/") {
+					... on Homepage {
+						homepage {
+						    email
+        film
+        followme
+        hobbies
+        languages
+        music
+        technologies
+        telephone
+        welcome
+        metadescription
+        metatitle
+						}
+					}
+				}
+			}
+		`,
 	})
 
-	return data.nodeByUri.blocks
+	return data?.nodeByUri?.homepage
 }

@@ -9,7 +9,7 @@
 }
 
 html {
-	scroll-behavior: smooth;
+	scroll-behavior: smooth !important;
 }
 
 body {
@@ -103,7 +103,8 @@ p {
 
 .main {
 	position: relative;
-	margin: 70px 0 100px 0;
+	// top: 140px;
+	padding: 70px 0 100px 0;
 	width: 100%;
 	// max-width: 1300px;
 	display: flex;
@@ -119,7 +120,7 @@ p {
 	}
 
 	.main {
-		margin: 100px 0;
+		padding: 100px 0;
 	}
 }
 
@@ -138,6 +139,6 @@ p {
 	}
 
 	.main {
-		margin: 150px 0;
+		padding: 150px 0;
 	}
 }

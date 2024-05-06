@@ -3,37 +3,31 @@
 import { FaRegSun, FaRegMoon } from 'react-icons/fa6'
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
-
 import { useRouter, usePathname } from 'next/navigation'
+import TextToAnimate from './TextToAnimate'
 
-export default function DarkLightModeSwitcher() {
+export default function DarkLightModeSwitcher({ className }) {
 	const [mounted, setMounted] = useState(false)
-	const { theme, setTheme } = useTheme()
+	const { theme, setTheme } = useTheme('')
+
 	const router = useRouter()
 	const path = usePathname()
 
-	useEffect(() => setMounted(true), [])
-
 	useEffect(() => {
-		setTheme('light')
-		router.push(`${path}/?theme=${theme}`)
+		setMounted(true)
 	}, [])
-
-	useEffect(() => {
-		router.push(`${path}/?theme=${theme}`)
-	}, [theme])
-
-	useEffect(() => {
-		router.push(`${path}/?theme=${theme}`)
-	}, [path])
 
 	if (!mounted) return null
 
-	if (theme === 'dark') {
-		return <FaRegSun onClick={() => setTheme('light')} />
-	}
-
-	if (theme === 'light') {
-		return <FaRegMoon onClick={() => setTheme('dark')} />
-	}
+	return (
+		<TextToAnimate delay={0.4}>
+			<div className={className}>
+				{theme === 'light' ? (
+					<FaRegMoon onClick={() => setTheme('dark')} />
+				) : (
+					<FaRegSun onClick={() => setTheme('light')} />
+				)}
+			</div>
+		</TextToAnimate>
+	)
 }

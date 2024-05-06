@@ -5,7 +5,7 @@ import { FaBars } from 'react-icons/fa6'
 
 export default function HamburgerIcon({ href, className }) {
 	return (
-		<TextToAnimate delay={0.4}>
+		<TextToAnimate delay={0.6}>
 			<Link href={href} className={className}                                                      >
 				<FaBars />
 			</Link>

@@ -19,7 +19,7 @@ export default function Header({ locale }) {
 			{!cv && <Logo locale={locale} />}
 
 			<div className={styles.headerIconsWrapper}>
-				<DarkLightModeSwitcher />
+				<DarkLightModeSwitcher className={styles.hamburger} />
 				<HamburgerIcon
 					href={`${pathname}/?menu=true`}
 					className={styles.hamburger}

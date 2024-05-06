@@ -17,7 +17,7 @@ export default function Menu({ locale }) {
 
 	return (
 		
-		<main
+		<div
 			className={styles.menu}
 			style={{
 				opacity: menu === 'true' ? 1 : 0,
@@ -32,6 +32,6 @@ export default function Menu({ locale }) {
 					<NavigationLinks locale={locale}/>
 				</nav>
 			</AnimatedMenu>
-		</main>
+		</div>
 	)
 }

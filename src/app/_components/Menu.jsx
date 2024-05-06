@@ -16,7 +16,6 @@ export default function Menu({ locale }) {
 	const menu = searchParams.get('menu')
 
 	return (
-		
 		<div
 			className={styles.menu}
 			style={{
@@ -29,7 +28,7 @@ export default function Menu({ locale }) {
 					<Link href={`${pathname}`}>
 						<FaXmark className={styles.closeIcon} />
 					</Link>
-					<NavigationLinks locale={locale}/>
+					<NavigationLinks locale={locale} />
 				</nav>
 			</AnimatedMenu>
 		</div>

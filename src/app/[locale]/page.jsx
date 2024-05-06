@@ -21,7 +21,9 @@ export async function generateMetadata({ params: { locale }, searchParams }) {
 	}
 }
 
-export default async function Home({ params }) {
+export default async function Home({ params, searchParams }) {
+	const menu = searchParams?.menu
+
 	const { locale } = params
 	const textData = await getMainPageData(locale)
 	const items = textData
@@ -38,28 +40,31 @@ export default async function Home({ params }) {
 		  ]
 		: []
 
-	const htmlTagRegex = /<[^>]+>/ 
+	const htmlTagRegex = /<[^>]+>/
 
-	return (
-		<main className='main'>
-			{items.length > 0 &&
-				items.map((item, index) => (
-					<TextToAnimate
-						delay={1 + index * 0.1}
-						key={index}
-						style={{ width: '100%' }}
-					>
-						{htmlTagRegex.test(item) ? (
-							<p
-								className='paragraph'
-								dangerouslySetInnerHTML={{ __html: item }}
-							></p>
-						) : (
-							<p className='paragraph'>{item}</p>
-						)}
-						{index < items.length - 1 && <HiMiniBolt className='icon' />}
-					</TextToAnimate>
-				))}
-		</main>
-	)
+	const main =
+		menu !== 'true' ? (
+			<main className='main'>
+				{items.length > 0 &&
+					items.map((item, index) => (
+						<TextToAnimate
+							delay={1 + index * 0.1}
+							key={index}
+							style={{ width: '100%' }}
+						>
+							{htmlTagRegex.test(item) ? (
+								<p
+									className='paragraph'
+									dangerouslySetInnerHTML={{ __html: item }}
+								></p>
+							) : (
+								<p className='paragraph'>{item}</p>
+							)}
+							{index < items.length - 1 && <HiMiniBolt className='icon' />}
+						</TextToAnimate>
+					))}
+			</main>
+		) : null
+
+	return  main 
 }

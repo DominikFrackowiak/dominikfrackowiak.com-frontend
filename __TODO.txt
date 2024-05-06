@@ -1,8 +1,9 @@
-1. ICONS HEADER to be animated, it got lost in refactoring
+1. MAIN PAGE COMPONENT refactoring
+2. MENU x button on the same level as hamburger menu
 2. FOOTER - padding responsiveness
 2. FAVICONS I SEO
 3. DODANIE TRESCI - PROJEKTY
-4. DODANIE STRINY STACK
+4. DODANIE STRONY STACK
 
 5. DEPLOYMENT: FRONT - VERCEL
 

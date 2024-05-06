@@ -44,15 +44,17 @@ export default async function Home({ params }) {
 		<main className='main'>
 			{items.length &&
 				items.map((item, index) => (
-					<div key={index} style={{ width: '100%' }}>
-						<TextToAnimate delay={1 + index * 0.1}>
-							<div
-								className='paragraph'
-								dangerouslySetInnerHTML={{ __html: item }}
-							></div>
-							{index < items.length - 1 && <HiMiniBolt className='icon' />}
-						</TextToAnimate>
-					</div>
+					<TextToAnimate
+						delay={1 + index * 0.1}
+						key={index}
+						style={{ width: '100%' }}
+					>
+						<p
+							className='paragraph'
+							dangerouslySetInnerHTML={{ __html: item }}
+						></p>
+						{index < items.length - 1 && <HiMiniBolt className='icon' />}
+					</TextToAnimate>
 				))}
 		</main>
 	)

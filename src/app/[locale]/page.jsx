@@ -1,13 +1,19 @@
 import { HiMiniBolt } from 'react-icons/hi2'
 import TextToAnimate from '../_components/TextToAnimate'
 import getMainPageData from '@/lib/getMainPageData'
+import handleParagraphToRender from '@/utils/handleParagraphToRender'
+import {
+	handleDataToDisplay,
+	handleHeadingsToDisplay,
+} from '@/utils/handleDataToDisplay'
 
 export async function generateMetadata({ params: { locale }, searchParams }) {
 	const textData = await getMainPageData(locale)
-
+	const theme = searchParams.theme || 'light'
 	const title = textData?.metatitle || 'Dominik Frackowiak'
 	const description = textData?.description || 'Dominik Frackowiak'
-	const theme = searchParams?.theme || 'light'
+
+	console.log(theme)
 
 	return {
 		title,
@@ -26,45 +32,27 @@ export default async function Home({ params, searchParams }) {
 
 	const { locale } = params
 	const textData = await getMainPageData(locale)
-	const items = textData
-		? [
-				textData.welcome,
-				textData.technologies,
-				textData.followme,
-				textData.email,
-				textData.telephone,
-				textData.languages,
-				textData.hobbies,
-				textData.music,
-				textData.film,
-		  ]
-		: []
-
-	const htmlTagRegex = /<[^>]+>/
+	const items = handleDataToDisplay(locale, textData)
 
 	const main =
 		menu !== 'true' ? (
 			<main className='main'>
 				{items.length > 0 &&
-					items.map((item, index) => (
-						<TextToAnimate
-							delay={1 + index * 0.1}
-							key={index}
-							style={{ width: '100%' }}
-						>
-							{htmlTagRegex.test(item) ? (
-								<p
-									className='paragraph'
-									dangerouslySetInnerHTML={{ __html: item }}
-								></p>
-							) : (
-								<p className='paragraph'>{item}</p>
-							)}
-							{index < items.length - 1 && <HiMiniBolt className='icon' />}
-						</TextToAnimate>
-					))}
+					items.map((item, index) => {
+						return (
+							<TextToAnimate
+								delay={1 + index * 0.1}
+								key={index}
+								style={{ width: '100%' }}
+							>
+								{handleHeadingsToDisplay(locale, index)}
+								{handleParagraphToRender(item)}
+								{index < items.length - 1 && <HiMiniBolt className='icon' />}
+							</TextToAnimate>
+						)
+					})}
 			</main>
 		) : null
 
-	return  main 
+	return main
 }

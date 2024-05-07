@@ -9,10 +9,10 @@ export default function Logo({ locale }) {
 	const searchParams = useSearchParams()
 	const theme = searchParams.get('theme') || 'light'
 
-	console.log(theme)
+	// console.log(theme)
 
 	return (
-		<Link href={`/${locale}/?theme=${theme}`}>
+		<Link href={`/${locale}/`}>
 			<TextToAnimate delay={0.2}>
 				<span className={`${styles.logo} bold dark`}>
 					&#8725;&#8725;dominik_frackowiak

@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import TextToAnimate from './TextToAnimate'
+import TextToAnimate from './TextsAndIconsAnimation'
 
 import { FaBars } from 'react-icons/fa6'
 
 export default function HamburgerIcon({ href, className }) {
 	return (
 		<TextToAnimate delay={0.6}>
-			<Link href={href} className={className}                                                      >
+			<Link href={href} className={className}>
 				<FaBars />
 			</Link>
 		</TextToAnimate>

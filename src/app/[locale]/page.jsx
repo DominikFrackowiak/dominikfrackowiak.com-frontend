@@ -1,5 +1,5 @@
 import { HiMiniBolt } from 'react-icons/hi2'
-import TextToAnimate from '../_components/TextToAnimate'
+import TextToAnimate from '../_components/TextsAndIconsAnimation'
 import getMainPageData from '@/lib/getMainPageData'
 import handleParagraphToRender from '@/utils/handleParagraphToRender'
 import {

@@ -23,11 +23,11 @@ export default function Menu({ locale }) {
 				zIndex: menu === 'true' ? 100 : 0,
 			}}
 		>
+			<Link href={`${pathname}`} >
+				<FaXmark className={styles.closeIcon} />
+			</Link>
 			<AnimatedMenu isOpen={menu}>
 				<nav className={styles.nav}>
-					<Link href={`${pathname}`}>
-						<FaXmark className={styles.closeIcon} />
-					</Link>
 					<NavigationLinks locale={locale} />
 				</nav>
 			</AnimatedMenu>

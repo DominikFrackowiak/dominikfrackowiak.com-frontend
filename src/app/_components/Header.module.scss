@@ -7,9 +7,9 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 9%;
+	// height: 9%;
 	width: 100%;
-	padding: 0 2.5%;
+	padding: 50px 2.5%;
 	background-color: $background;
 	z-index: 100;
 }
@@ -62,7 +62,7 @@
 
 @media (min-width: 992px) {
 	.header {
-		height: 12%;
+		// height: 12%;
 	}
 	.logo {
 		font-size: 45px;

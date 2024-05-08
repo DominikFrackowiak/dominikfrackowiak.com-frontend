@@ -4,7 +4,7 @@ import { FaRegSun, FaRegMoon } from 'react-icons/fa6'
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import { useRouter, usePathname } from 'next/navigation'
-import TextToAnimate from './TextToAnimate'
+import TextToAnimate from './TextsAndIconsAnimation'
 
 export default function DarkLightModeSwitcher({ className }) {
 	const [mounted, setMounted] = useState(false)

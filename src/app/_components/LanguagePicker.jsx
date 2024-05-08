@@ -1,14 +1,14 @@
 'use client'
 
 import { useRouter, usePathname } from 'next/navigation'
-import TextToAnimate from './TextToAnimate'
+import TextToAnimate from './TextsAndIconsAnimation'
 import { Roboto_Mono } from 'next/font/google'
 const robotoMono = Roboto_Mono({ subsets: ['latin'] })
 
 function useLocale() {
 	const pathname = usePathname()
 	const pathElements = pathname.split('/')
-	return pathElements[1] 
+	return pathElements[1]
 }
 
 function LanguageSwitcher({ lang, isActive, onSwitchLanguage }) {

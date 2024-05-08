@@ -5,7 +5,7 @@ import {
 	FaCodepen,
 	FaWhatsappSquare,
 } from 'react-icons/fa'
-import TextToAnimate from './TextToAnimate'
+import TextToAnimate from './TextsAndIconsAnimation'
 
 const socials = [
 	{ url: 'https://github.com/DominikFrackowiak', icon: <FaGithubSquare /> },

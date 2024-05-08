@@ -1,4 +1,4 @@
-import TextToAnimate from './TextToAnimate'
+import TextToAnimate from './TextsAndIconsAnimation'
 import LanguagePicker from './LanguagePicker'
 
 import styles from './Footer.module.scss'

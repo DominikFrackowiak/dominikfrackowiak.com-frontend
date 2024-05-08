@@ -1,11 +1,11 @@
 
-2. SEMANTIC HTML INSTEAD OF DIVS, WHEREVER IT'S NEEDED
 2. MENU x button on the same level as hamburger menu
 2. FOOTER - padding responsiveness
-2. CHECK IF SEARCHPARAMS THEME DAR/LIIGHT MODE ARE NECESSARY - and yes, it's necessary to change favicon depending on the theme, look for workaround
-2. FAVICONS I SEO
+
+2. FAVICONS & SEO
 3. DODANIE TRESCI - PROJEKTY
 4. DODANIE STRONY STACK
+5. SOCIAL ICONS, LANGUAGE PICKER AND HAMBURGER/THEME CHANGER ICON - PADDINGS TO BE ADDED
 
 
 

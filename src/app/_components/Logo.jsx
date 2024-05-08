@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import styles from './Header.module.scss'
-import TextToAnimate from './TextToAnimate'
+import TextToAnimate from './TextsAndIconsAnimation'
 import { useSearchParams } from 'next/navigation'
 
 export default function Logo({ locale }) {

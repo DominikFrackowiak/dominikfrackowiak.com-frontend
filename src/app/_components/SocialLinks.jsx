@@ -20,14 +20,14 @@ const socials = [
 export default function SocialLinks({ className }) {
 	let delayBase = 1.8
 	return (
-		<div className={className}>
+		<ul className={className}>
 			{socials.map(social => (
 				<Link key={social.url} target='_blank' href={social.url}>
 					<TextToAnimate delay={(delayBase += 0.1)}>
-						{social.icon}
+						<li>{social.icon}</li>
 					</TextToAnimate>
 				</Link>
 			))}
-		</div>
+		</ul>
 	)
 }

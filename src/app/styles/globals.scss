@@ -29,6 +29,15 @@ body {
 	color: $nightmodetxt;
 }
 
+button {
+	border: none;
+	background-color: transparent;
+}
+
+ul{
+	list-style: none;
+}
+
 .icon {
 	align-self: center;
 	margin-inline: auto;

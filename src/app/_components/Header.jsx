@@ -26,13 +26,13 @@ export default function Header({ locale }) {
 		<header className={styles.header}>
 			{!cv && <Logo locale={locale} />}
 
-			<div className={styles.headerIconsWrapper}>
+			<nav className={styles.headerIconsWrapper}>
 				<DarkLightModeSwitcher className={styles.hamburger} />
 				<HamburgerIcon
 					href={`${pathname}/?menu=true`}
 					className={styles.hamburger}
 				/>
-			</div>
+			</nav>
 		</header>
 	)
 }

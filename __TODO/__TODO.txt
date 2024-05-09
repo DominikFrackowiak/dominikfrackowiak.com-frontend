@@ -1,5 +1,5 @@
 
-2. MENU x button on the same level as hamburger menu
+
 2. FOOTER - padding responsiveness
 
 2. FAVICONS & SEO

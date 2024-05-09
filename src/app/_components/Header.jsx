@@ -26,13 +26,17 @@ export default function Header({ locale }) {
 		<header className={styles.header}>
 			{!cv && <Logo locale={locale} />}
 
-			<nav className={styles.headerIconsWrapper}>
-				<DarkLightModeSwitcher className={styles.hamburger} />
-				<HamburgerIcon
-					href={`${pathname}/?menu=true`}
-					className={styles.hamburger}
-				/>
-			</nav>
+			<ul className={styles.headerIconsWrapper}>
+				<li>
+					<DarkLightModeSwitcher className={styles.hamburger} />
+				</li>
+				<li>
+					<HamburgerIcon
+						href={`${pathname}/?menu=true`}
+						className={styles.hamburger}
+					/>
+				</li>
+			</ul>
 		</header>
 	)
 }

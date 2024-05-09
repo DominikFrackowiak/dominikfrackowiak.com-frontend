@@ -4,12 +4,13 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	line-height: 24px;
-	font-size: 16px;
+	
 }
 
 html {
 	scroll-behavior: smooth !important;
+	line-height: 24px;
+	font-size: 16px;
 }
 
 body {
@@ -45,6 +46,7 @@ ul{
 	font-size: 20px;
 
 	width: 100%;
+	
 }
 
 .paragraph {
@@ -149,6 +151,6 @@ p {
 	}
 
 	.main {
-		padding: 150px 0;
+		padding: 90px 0 120px 0;
 	}
 }

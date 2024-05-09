@@ -15,6 +15,8 @@ export default function Menu({ locale }) {
 
 	const menu = searchParams.get('menu')
 
+	console.log(pathname)
+
 	return (
 		<div
 			className={styles.menu}
@@ -23,9 +25,12 @@ export default function Menu({ locale }) {
 				zIndex: menu === 'true' ? 100 : 0,
 			}}
 		>
-			<Link href={`${pathname}`} >
-				<FaXmark className={styles.closeIcon} />
-			</Link>
+			<div className={styles.header}>
+				<Link href={pathname}>
+					<FaXmark className={styles.closeIcon} />
+				</Link>
+			</div>
+
 			<AnimatedMenu isOpen={menu}>
 				<nav className={styles.nav}>
 					<NavigationLinks locale={locale} />

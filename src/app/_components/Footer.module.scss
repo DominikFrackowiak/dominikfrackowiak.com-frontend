@@ -2,16 +2,14 @@
 
 .footer {
 	position: fixed;
-	padding: 70px 2.5vw 0 2.5vw;
+	padding: 20px 2.5vw;
 	width: 100%;
 	bottom: 0;
 	left: 0;
-	
 	background-color: $background;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	
 }
 
 [data-theme='dark'] .footer {
@@ -22,6 +20,7 @@
 .socialsLocalesWrapper {
 	display: flex;
 	gap: 20px;
+	font-size: 20px;
 }
 
 [data-theme='dark'] .socialsLocalesWrapper {
@@ -35,9 +34,20 @@
 	background-color: transparent;
 	border: 2px solid transparent;
 	cursor: pointer;
+	font-size: 20px;
 }
 
 [data-theme='dark'] .footerBtn {
 	background-color: $nightmodebg;
 	color: $nightmodetxt;
+}
+
+@media (min-width: 768px) {
+	.socialsLocalesWrapper {
+   gap: 40px;
+	}
+}
+
+@media (min-width: 992px) {
+	
 }

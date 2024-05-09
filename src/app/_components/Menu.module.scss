@@ -10,6 +10,17 @@
 	background-color: $background;
 }
 
+.header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 30px 2.5%;
+}
+
 [data-theme='dark'] .menu {
 	background-color: $nightmodebg;
 	color: $nightmodetxt;
@@ -26,8 +37,5 @@
 }
 
 .closeIcon {
-	position: fixed;
-	top: 40px;
-	right: 2.5vw;
 	cursor: pointer;
 }

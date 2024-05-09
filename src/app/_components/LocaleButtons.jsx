@@ -8,8 +8,8 @@ export default function LocaleButtons({ locales, currentLocale, className }) {
 	return (
 		<ul className={className}>
 			{locales.map(loc => (
-				<li>
-					<button key={loc} className={styles.footerBtn}>
+				<li key={loc}>
+					<button className={styles.footerBtn}>
 						<TextToAnimate delay={(delayBase += 0.1)}>
 							<LanguagePicker lang={loc} locale={currentLocale} />
 						</TextToAnimate>

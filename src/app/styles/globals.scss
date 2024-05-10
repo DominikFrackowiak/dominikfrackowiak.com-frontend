@@ -4,7 +4,6 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	
 }
 
 html {
@@ -36,7 +35,7 @@ button {
 	cursor: pointer;
 }
 
-ul{
+ul {
 	list-style: none;
 }
 
@@ -46,7 +45,6 @@ ul{
 	font-size: 20px;
 
 	width: 100%;
-	
 }
 
 .paragraph {
@@ -123,6 +121,12 @@ p {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
+}
+
+.alignItems {
+	display: flex;
+	align-items: center;
+	
 }
 
 @media (min-width: 768px) {

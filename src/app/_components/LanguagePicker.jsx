@@ -18,11 +18,10 @@ function LanguageSwitcher({ lang, isActive, onSwitchLanguage }) {
 				style={{ fontWeight: isActive ? '700' : '200' }}
 				className={robotoMono.className}
 				onClick={() => {
-					setTimeout(() => {
-						document.documentElement.lang = lang
-					}, 400)
-
+					console.log('Changing language to:', lang)
+					document.documentElement.lang = lang
 					onSwitchLanguage(lang)
+					console.log('Language changed.')
 				}}
 			>
 				{lang}

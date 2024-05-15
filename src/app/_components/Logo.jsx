@@ -12,12 +12,14 @@ export default function Logo({ locale }) {
 	// console.log(theme)
 
 	return (
-		<Link href={`/${locale}/`}>
+		
 			<TextToAnimate delay={0.2}>
+				<Link href={`/${locale}/`}>
 				<span className={`${styles.logo} bold dark`}>
 					&#8725;&#8725;dominik_frackowiak
 				</span>
+				</Link>
 			</TextToAnimate>
-		</Link>
+		
 	)
 }

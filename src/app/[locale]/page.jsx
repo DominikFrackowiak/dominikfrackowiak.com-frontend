@@ -13,7 +13,7 @@ export async function generateMetadata({ params: { locale }, searchParams }) {
 	const title = textData?.metatitle || 'Dominik Frackowiak'
 	const description = textData?.description || 'Dominik Frackowiak'
 
-	console.log(theme)
+
 
 	return {
 		title,

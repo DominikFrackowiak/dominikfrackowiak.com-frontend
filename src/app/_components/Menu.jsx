@@ -15,8 +15,6 @@ export default function Menu({ locale }) {
 
 	const menu = searchParams.get('menu')
 
-	console.log(pathname)
-
 	return (
 		<div
 			className={styles.menu}

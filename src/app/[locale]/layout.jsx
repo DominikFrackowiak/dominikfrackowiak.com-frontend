@@ -7,29 +7,19 @@ import Providers from '../providers'
 
 const robotoMono = Roboto_Mono({ subsets: ['latin'] })
 
-
-
-
-export default function RootLayout({
-	children,
-	params: { locale },
-	
-}) {
-	
+export default function RootLayout({ children, params: { locale } }) {
 	return (
-		
-		<html lang='en'>
+		<html lang={locale}>
 			<body className={robotoMono.className}>
 				<Providers>
 					<div className='wrapper'>
 						<Header locale={locale} />
-						<Menu locale={locale}/>
+						<Menu locale={locale} />
 						{children}
 						<Footer locale={locale} />
 					</div>
 				</Providers>
 			</body>
 		</html>
-		
 	)
 }

@@ -1,16 +1,16 @@
 'use client'
 import { useEffect } from 'react'
 import { useTheme } from 'next-themes'
+import { usePathname, useRouter } from 'next/navigation'
 
 import styles from './Header.module.scss'
-
-import { usePathname, useRouter } from 'next/navigation'
-import DarkLightModeSwitcher from './DarkLightModeSwitcher'
 
 // Components
 
 import Logo from './Logo'
 import HamburgerIcon from './HamburgerIcon'
+import DarkLightModeSwitcher from './DarkLightModeSwitcher'
+import DownloadPdf from './DownloadPdf'
 
 export default function Header({ locale }) {
 	const pathname = usePathname()
@@ -25,6 +25,8 @@ export default function Header({ locale }) {
 	return (
 		<header className={styles.header}>
 			{!cv && <Logo locale={locale} />}
+
+			{cv && <DownloadPdf locale={locale} className={styles.pdfDownloadLink} />}
 
 			<ul className={styles.headerIconsWrapper}>
 				<li>

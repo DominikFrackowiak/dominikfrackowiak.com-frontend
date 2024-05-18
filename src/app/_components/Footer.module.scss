@@ -2,7 +2,7 @@
 
 .footer {
 	position: fixed;
-	padding: 20px 2.5vw;
+	padding: 20px 3vw;
 	width: 100%;
 	bottom: 0;
 	left: 0;
@@ -19,8 +19,7 @@
 
 .socialsLocalesWrapper {
 	display: flex;
-	gap: 20px;
-	font-size: 20px;
+	gap: 25px;
 }
 
 [data-theme='dark'] .socialsLocalesWrapper {

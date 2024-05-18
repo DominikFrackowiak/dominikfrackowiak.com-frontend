@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes'
 import styles from './Header.module.scss'
 
 import { usePathname, useRouter } from 'next/navigation'
-import DarkLightModeSwitcher from './darkLightModeSwitcher'
+import DarkLightModeSwitcher from './DarkLightModeSwitcher'
 
 // Components
 

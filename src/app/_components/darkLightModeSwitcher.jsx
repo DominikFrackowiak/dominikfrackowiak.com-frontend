@@ -9,7 +9,7 @@ export default function DarkLightModeSwitcher({ className }) {
 	const [mounted, setMounted] = useState(false)
 	const { theme, setTheme } = useTheme('dark')
 
-	console.log('THEME: ', theme)
+	// console.log('THEME: ', theme)
 
 	useEffect(() => {
 		setMounted(true)

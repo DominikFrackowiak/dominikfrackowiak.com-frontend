@@ -10,7 +10,7 @@ import {
 	PDFViewer,
 	Font,
 } from '@react-pdf/renderer'
-import { useState, useEffect } from 'react'
+
 
 function getPDFTranslations(locale) {
 	switch (locale) {

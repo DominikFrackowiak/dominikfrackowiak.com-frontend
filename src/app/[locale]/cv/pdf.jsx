@@ -685,20 +685,10 @@ export function PDF({ locale }) {
 }
 
 export default function PDFView({ locale }) {
-	const [client, setClient] = useState(false)
-
-	useEffect(() => {
-		setClient(true)
-	}, [])
-
-	if (!client) {
-		return <div>Loading...</div>
-	}
-
 	return (
 		<PDFViewer
 			style={{ width: '100%', minHeight: '140vh' }}
-			filename='DominikFRackowiak_CV'
+			filename='DominikFrackowiak_CV'
 		>
 			<PDF locale={locale} />
 		</PDFViewer>

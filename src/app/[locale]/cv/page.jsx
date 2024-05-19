@@ -14,17 +14,17 @@ const InvoicePDF = dynamic(() => import('./pdf'), {
 })
 
 export default function View() {
-	const [client, setClient] = useState(false)
+	// const [client, setClient] = useState(false)
 	const pathname = usePathname()
 	const locale = pathname.split('/')[1]
 
-	useEffect(() => {
-		setClient(true)
-	}, [])
+	// useEffect(() => {
+	// 	setClient(true)
+	// }, [])
 
-	if (!client) {
-		return <div>Loading...</div>
-	}
+	// if (!client) {
+	// 	return <div>Loading...</div>
+	// }
 
 	return (
 		<div className={styles.pdfWrapper}>

@@ -30,6 +30,7 @@ body {
 }
 
 button {
+	font-size: 16px;
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
@@ -42,7 +43,7 @@ ul {
 .icon {
 	align-self: center;
 	margin-inline: auto;
-	font-size: 20px;
+	// font-size: 20px;
 
 	width: 100%;
 }
@@ -120,19 +121,22 @@ p {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: center;
 }
 
 .alignItems {
 	display: flex;
 	align-items: center;
-	
 }
 
 @media (min-width: 768px) {
-	* {
+	html {
 		font-size: 24px;
 		line-height: 35px;
+	}
+
+	button {
+		font-size: 24px;
 	}
 
 	.main {
@@ -141,9 +145,13 @@ p {
 }
 
 @media (min-width: 992px) {
-	* {
+	html {
 		font-size: 45px;
 		line-height: 60px;
+	}
+
+	button {
+		font-size: 45px;
 	}
 
 	.icon {

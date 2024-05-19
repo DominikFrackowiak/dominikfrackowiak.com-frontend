@@ -24,7 +24,10 @@
 	height: 45px;
 	margin-right: 3vw;
 	// font-size: 20px;
-	
+}
+
+.pdfDownloadLink {
+	font-size: 16px;
 }
 
 .headerIconsWrapper {
@@ -37,7 +40,6 @@
 	width: 15%;
 	height: 45px;
 	cursor: pointer;
-	// border: 1px solid red;
 }
 
 .hamburger {
@@ -56,6 +58,10 @@
 	}
 	.logo {
 		font-size: 30px;
+	}
+
+	.pdfDownloadLink {
+		font-size: 24px;
 	}
 
 	.headerIconsWrapper {

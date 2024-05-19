@@ -25,7 +25,11 @@ export default function DarkLightModeSwitcher({ className }) {
 
 	return (
 		<TextToAnimate delay={0.4}>
-			<button className={className} onClick={toggleTheme}>
+			<button
+				className={className}
+				onClick={toggleTheme}
+				
+			>
 				{theme === 'light' ? <FaRegMoon /> : <FaRegSun />}
 			</button>
 		</TextToAnimate>

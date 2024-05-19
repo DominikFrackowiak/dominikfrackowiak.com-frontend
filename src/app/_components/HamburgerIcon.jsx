@@ -7,7 +7,9 @@ export default function HamburgerIcon({ href, className }) {
 	return (
 		<TextToAnimate delay={0.6}>
 			<Link href={href} className={className}>
-				<FaBars />
+				<button className={className}>
+					<FaBars/>
+				</button>
 			</Link>
 		</TextToAnimate>
 	)

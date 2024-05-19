@@ -33,7 +33,7 @@
 	background-color: transparent;
 	border: 2px solid transparent;
 	cursor: pointer;
-	font-size: 20px;
+	font-size: 16px;
 }
 
 [data-theme='dark'] .footerBtn {
@@ -45,7 +45,13 @@
 	.socialsLocalesWrapper {
 		gap: 40px;
 	}
+	.footerBtn{
+		font-size: 24px;
+	}
 }
 
 @media (min-width: 992px) {
+		.footerBtn{
+		font-size: 45px;
+	}
 }

@@ -129,6 +129,14 @@ p {
 	gap: 40px;
 }
 
+code {
+	background-color: $backgroundsecondary;
+}
+
+[data-theme='dark'] code {
+	background-color: $nightmodebgsecondary;
+}
+
 .alignItems {
 	display: flex;
 	align-items: center;

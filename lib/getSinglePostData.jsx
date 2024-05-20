@@ -6,20 +6,25 @@ export default async function getSinglePostData(slug) {
 		query: gql`
 			query NewQuery {
 				posts(where: { name: "${slug}" }) {
-					nodes {
-						id
-						postId
-						slug
-						title
-						blocks(postTemplate: false)
-						PostsAdditionalFields {
-							metadescription
-							metatitle
-							en
-							es
-							pl
-						}
-					}
+			   nodes {
+      id
+      postId
+      slug
+      title
+      blocks(postTemplate: false, htmlContent: true)
+      PostsAdditionalFields {
+        metadescription
+        metatitle
+        en
+        es
+        pl
+      }
+      tags {
+        nodes {
+          name
+        }
+      }
+    }
 				}
 			}
 		`,

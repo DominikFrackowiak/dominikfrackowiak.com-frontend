@@ -7,7 +7,7 @@ export default async function AllBlogsPage({ params }) {
 
 	const data = await getAllPostsData(locale)
 	const allBlogs = data.posts.nodes
-	console.log(allBlogs)
+	// console.log(allBlogs)
 
 	return (
 		<main className='main' style={{ zIndex: 1 }}>

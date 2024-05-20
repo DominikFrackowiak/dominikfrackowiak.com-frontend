@@ -35,9 +35,9 @@ export default function DownloadPdf({ locale, className }) {
 				fontSize: '20px',
 			}}
 		>
-			<div className={`${className} bold underlined`}>
+			<button className={`${className} bold underlined`}>
 				{handleTranslation(locale)}
-			</div>
+			</button>
 		</PDFDownloadLink>
 	)
 }

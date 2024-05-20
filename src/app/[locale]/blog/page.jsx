@@ -4,14 +4,10 @@ import getAllPostsData from '@/lib/getAllPostsData'
 
 export default async function AllBlogsPage({ params }) {
 	const { locale } = params
-	
+
 	const data = await getAllPostsData(locale)
 	const allBlogs = data.posts.nodes
 	console.log(allBlogs)
-
-	
-
-	
 
 	return (
 		<main className='main' style={{ zIndex: 1 }}>
@@ -25,7 +21,7 @@ export default async function AllBlogsPage({ params }) {
 									{blog.blocks[0].attributes.content.slice(0, 20)}...
 								</small>
 							</p>
-							<small>//Read more</small>
+							<small>Read more</small>
 						</Link>
 					</li>
 				))}

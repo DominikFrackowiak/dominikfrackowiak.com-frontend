@@ -1,5 +1,5 @@
 import getSinglePostData from '@/lib/getSinglePostData'
-import React from 'react'
+import { v4 as uuid } from 'uuid'
 
 export default async function BlogPage({ params: { slug } }) {
 	const data = await getSinglePostData(slug)
@@ -11,7 +11,7 @@ console.log(blog.blocks)
 		<h1>{blog.title}</h1>
 		{blog.blocks.map(block => {
 			if(block.name==='core/paragraph'){
-				return <p>{block.attributes.content}</p>
+				return <p key={uuid()}>{block.attributes.content}</p>
 			}
 		})}
 	</main>

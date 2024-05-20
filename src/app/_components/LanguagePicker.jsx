@@ -32,6 +32,10 @@ function LanguageSwitcher({ lang, isActive, onSwitchLanguage }) {
 export default function LanguagePicker({ lang }) {
 	const locale = useLocale()
 	const router = useRouter()
+	const pathname = usePathname()
+	const pathElements = pathname.split('/')
+
+	const isPost = pathElements.length > 3 && pathElements.includes('blog')
 
 	const handleLanguageSwitch = newLang => {
 		const newPath = `/${newLang}${location.pathname.slice(locale.length + 1)}`
@@ -41,11 +45,13 @@ export default function LanguagePicker({ lang }) {
 		router.push(newPath)
 	}
 
-	return (
+	const toRender = isPost ? null : (
 		<LanguageSwitcher
 			lang={lang}
 			isActive={locale === lang}
 			onSwitchLanguage={handleLanguageSwitch}
 		/>
 	)
+
+	return toRender
 }

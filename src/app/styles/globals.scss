@@ -6,7 +6,9 @@
 	box-sizing: border-box;
 }
 
-html {
+html,
+h2,
+h1 {
 	scroll-behavior: smooth !important;
 	line-height: 24px;
 	font-size: 16px;
@@ -114,14 +116,17 @@ p {
 
 .main {
 	position: relative;
-	// top: 140px;
+	top: 0;
+	left: 0;
 	padding: 70px 0 100px 0;
+	min-height: 80vh;
 	width: 100%;
 	// max-width: 1300px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: flex-start;
+	gap: 40px;
 }
 
 .alignItems {
@@ -130,7 +135,9 @@ p {
 }
 
 @media (min-width: 768px) {
-	html {
+	html,
+	h2,
+	h1 {
 		font-size: 24px;
 		line-height: 35px;
 	}
@@ -145,7 +152,9 @@ p {
 }
 
 @media (min-width: 992px) {
-	html {
+	html,
+	h2,
+	h1 {
 		font-size: 45px;
 		line-height: 60px;
 	}

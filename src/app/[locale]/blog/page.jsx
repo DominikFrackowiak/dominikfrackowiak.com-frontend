@@ -27,7 +27,7 @@ export default async function AllBlogsPage({ params }) {
 						<div style={{display: 'flex', gap: '20px'}}>
 							
 							{blog.tags.nodes.map(tag => (
-								<button>
+								<button key={tag.name}>
 									<small>{tag.name}</small>
 								</button>
 							))}

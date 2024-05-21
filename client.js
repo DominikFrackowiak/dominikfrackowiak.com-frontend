@@ -1,9 +1,12 @@
-import { ApolloClient, InMemoryCache } from '@apollo/client'
+import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client'
 
-const client = new ApolloClient({
-	ssrMode: typeof window === 'undefined',
-	uri: process.env.WORDPRESS_GRAPHQL_ENDPOINT,
-	cache: new InMemoryCache(),
+import { registerApolloClient } from '@apollo/experimental-nextjs-app-support/rsc'
+
+export const { getClient } = registerApolloClient(() => {
+	return new ApolloClient({
+		cache: new InMemoryCache(),
+		link: new HttpLink({
+			uri: process.env.WORDPRESS_GRAPHQL_ENDPOINT,
+		}),
+	})
 })
-
-export default client

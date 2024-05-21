@@ -1,4 +1,4 @@
-import client from '@/client'
+import {getClient} from '@/client'
 import { gql } from '@apollo/client'
 
 export default async function getMainPageData(locale) {
@@ -8,7 +8,7 @@ export default async function getMainPageData(locale) {
 	// 		next: { revalidate: 10 },
 	// 	}
 
-	const { data } = await client.query({
+	const { data } = await getClient().query({
 		query: gql`
 			query NewQuery {
 				nodeByUri(uri: "/homepage/${locale}/") {

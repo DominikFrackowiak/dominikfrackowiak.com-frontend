@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'gutenberg';
 
 * {
 	margin: 0;
@@ -128,6 +129,15 @@ p {
 	align-items: flex-start;
 	gap: 40px;
 }
+
+// pre{
+// white-space: pre-wrap;
+// pointer-events: auto;
+// min-width: 1px;
+// display: block;
+// overflow-wrap: break-word;
+// user-select: text;
+// }
 
 code {
 	background-color: $backgroundsecondary;

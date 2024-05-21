@@ -32,11 +32,20 @@ export default async function BlogPage({ params: { slug } }) {
 					return <p key={uuid()}>{block.attributes.content}</p>
 				}
 				if (block.name === 'core/code') {
+					const extractedCode = extractCodeFromHTML(block.htmlContent)
+					console.log(block.htmlContent)
 					return (
-						<div
-							key={uuid()}
-							dangerouslySetInnerHTML={{ __html: block.htmlContent }}
-						/>
+						// <pre
+						// 	style={{
+						// 		border: '1px solid red',
+						// 		fontSize: '20px',
+						// 		wordWrap: 'break-word',
+						// 	}}
+						// 	key={uuid()}
+						// >
+						// 	<code>{extractedCode}</code>
+						// </pre>
+						<div key={uuid()} dangerouslySetInnerHTML={{ __html: block.htmlContent }}></div>
 					)
 				}
 				if (block.name === 'core/heading') {

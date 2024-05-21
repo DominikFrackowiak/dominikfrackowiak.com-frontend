@@ -1,8 +1,8 @@
-import client from '@/client'
+import { getClient } from '@/client'
 import { gql } from '@apollo/client'
 
 export default async function getAllPostsData(locale) {
-	const { data } = await client.query({
+	const { data } = await getClient().query({
 		query: gql`
 			query NewQuery {
 				posts(where: { categoryName: "${locale}" }) {

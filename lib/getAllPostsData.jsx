@@ -8,7 +8,6 @@ export default async function getAllPostsData(locale) {
 				posts(where: { categoryName: "${locale}" }) {
 					nodes {
      id
-      postId
       slug
       title
       blocks(postTemplate: false)
@@ -17,6 +16,11 @@ export default async function getAllPostsData(locale) {
         en
         es
         pl
+      }
+      tags {
+        nodes {
+          name
+        }
       }
     }
 				}

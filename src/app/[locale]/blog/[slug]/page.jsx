@@ -34,14 +34,15 @@ function handleHeadings(element){
 					return <p key={uuid()}>{block.attributes.content}</p>
 				}
 				if (block.name === 'core/code') {
-					block.htmlContent
-					const extractedCode = extractCodeFromHTML(block.htmlContent)
-					console.log( extractedCode)
-					return (
-						<code key={uuid()}>
-							{extractedCode}
-						</code>
-					)
+					// block.htmlContent
+					// const extractedCode = extractCodeFromHTML(block.htmlContent)
+					// console.log( extractedCode)
+					// return (
+					// 	<code key={uuid()}>
+					// 		{extractedCode}
+					// 	</code>
+					// )
+					<div dangerouslySetInnerHTML={{__html: block.htmlContent}}/> 
 				}
 				if(block.name==='core/heading'){
 					 const heading = handleHeadings(block.attributes)

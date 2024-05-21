@@ -7,7 +7,8 @@ export default async function AllBlogsPage({ params }) {
 
 	const data = await getAllPostsData(locale)
 	const allBlogs = data.posts.nodes
-	// console.log(allBlogs)
+	
+	console.log(allBlogs)
 
 	return (
 		<main className='main' style={{ zIndex: 1 }}>
@@ -18,11 +19,19 @@ export default async function AllBlogsPage({ params }) {
 							<h2>{blog.title}</h2>
 							<p>
 								<small>
-									{blog.blocks[0].attributes.content.slice(0, 20)}...
+									{blog.blocks[0].attributes.content.slice(0, 100)}...
 								</small>
 							</p>
 							<small>Read more</small>
 						</Link>
+						<div style={{display: 'flex', gap: '20px'}}>
+							
+							{blog.tags.nodes.map(tag => (
+								<button>
+									<small>{tag.name}</small>
+								</button>
+							))}
+						</div>
 					</li>
 				))}
 			</ul>

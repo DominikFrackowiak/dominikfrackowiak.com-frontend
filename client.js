@@ -8,5 +8,10 @@ export const { getClient } = registerApolloClient(() => {
 		link: new HttpLink({
 			uri: process.env.WORDPRESS_GRAPHQL_ENDPOINT,
 		}),
+		defaultOptions: {
+			query: {
+				fetchPolicy: 'no-cache',
+			},
+		},
 	})
 })

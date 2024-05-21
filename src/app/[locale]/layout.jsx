@@ -7,6 +7,8 @@ import Providers from '../providers'
 
 const robotoMono = Roboto_Mono({ subsets: ['latin'] })
 
+// export const revalidate = 3600
+
 export default function RootLayout({ children, params: { locale } }) {
 	return (
 		<html lang={locale}>

@@ -31,6 +31,7 @@ export default function Footer({ locale }) {
 				data={socials}
 				className={styles.socialsLocalesWrapper}
 				delayBase={1.8}
+				styles={{ padding: '0 5px 0 0' }}
 			>
 				{el => (
 					<Link
@@ -47,6 +48,7 @@ export default function Footer({ locale }) {
 				data={['en', 'es', 'pl']}
 				className={styles.socialsLocalesWrapper}
 				delayBase={2.0}
+				styles={{ padding: '0 0 0 5px' }}
 			>
 				{el => (
 					<button className={styles.footerBtn}>

@@ -5,13 +5,14 @@ export default function DynamicListContainer({
 	data,
 	className,
 	delayBase,
+	styles
 }) {
 	const calculateDelay = index => delayBase + 0.1 * index
 
 	return (
 		<ul className={`alignCenter ${className}`}>
 			{data.map((el, index) => (
-				<li key={el.key || index}>
+				<li key={el.key || index} style={styles}>
 					<TextToAnimate delay={calculateDelay(index)}>
 						{children(el)}
 					</TextToAnimate>

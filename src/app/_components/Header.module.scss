@@ -12,7 +12,7 @@
 	max-height: 130px;
 	width: 100%;
 	max-width: 1200px;
-	padding: 30px 0;
+	padding: 30px 3vw;
 	background-color: $background;
 	z-index: 100;
 	// border: 1px solid red;
@@ -38,7 +38,7 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-start;
-	gap: 30px;
+	// gap: 30px;
 	position: fixed;
 	right: 0;
 	width: auto;
@@ -52,14 +52,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 35px;
+	font-size: 24px;
 	padding: 0 0 20px 10px;
 	// border: 1px solid red;
 }
 
 .hamburger.darkModeSwitcher{
 	padding: 3px 0 20px 20px;
-	font-size: 30px;
+	font-size: 20px;
 	// border: 1px solid red;
 	
 }
@@ -76,6 +76,10 @@
 		font-size: 30px;
 	}
 
+	.hamburger{
+		font-size: 24px;
+	}
+
 	.pdfDownloadLink {
 		font-size: 24px;
 	}
@@ -86,8 +90,16 @@
 }
 
 @media (min-width: 992px) {
+	.hamburger{
+		font-size: 35px;
+	}
+
+	.hamburger.darkModeSwitcher{
+		font-size: 30px;
+	}
 	.header {
 		min-height: 120px;
+		padding: 30px 0;
 	}
 	.logo {
 		font-size: 30px;

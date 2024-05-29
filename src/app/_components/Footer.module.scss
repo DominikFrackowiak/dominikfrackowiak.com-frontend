@@ -2,10 +2,13 @@
 
 .footer {
 	position: fixed;
-	padding: 20px 3vw;
+	padding: 20px 0;
 	width: 100%;
+	max-width: 1200px;
+
 	bottom: 0;
-	left: 0;
+	left: 50%;
+	transform: translateX(-50%);
 	background-color: $background;
 	display: flex;
 	align-items: center;
@@ -20,6 +23,7 @@
 .socialsLocalesWrapper {
 	display: flex;
 	gap: 25px;
+	font-size: 30px;
 }
 
 [data-theme='dark'] .socialsLocalesWrapper {
@@ -45,13 +49,13 @@
 	.socialsLocalesWrapper {
 		gap: 40px;
 	}
-	.footerBtn{
+	.footerBtn {
 		font-size: 24px;
 	}
 }
 
 @media (min-width: 992px) {
-		.footerBtn{
-		font-size: 45px;
+	.footerBtn {
+		font-size: 30px;
 	}
 }

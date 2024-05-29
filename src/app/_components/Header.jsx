@@ -30,7 +30,7 @@ export default function Header({ locale }) {
 
 			<ul className={styles.headerIconsWrapper}>
 				<li>
-					<DarkLightModeSwitcher className={styles.hamburger} />
+					<DarkLightModeSwitcher className={`${styles.hamburger} ${styles.darkModeSwitcher}`} />
 				</li>
 				<li>
 					<HamburgerIcon

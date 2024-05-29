@@ -35,7 +35,7 @@ export default function LanguagePicker({ lang }) {
 	const pathname = usePathname()
 	const pathElements = pathname.split('/')
 
-	const isPost = pathElements.length > 3 && pathElements.includes('blog')
+	const isPost = pathElements.length > 2 && pathElements.includes('blog')
 
 	const handleLanguageSwitch = newLang => {
 		const newPath = `/${newLang}${location.pathname.slice(locale.length + 1)}`

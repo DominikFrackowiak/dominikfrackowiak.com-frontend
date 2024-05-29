@@ -1,6 +1,7 @@
 'use client'
 
 import { FaRegSun, FaRegMoon } from 'react-icons/fa6'
+import { IoSunnyOutline, IoMoonOutline } from 'react-icons/io5'
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import TextToAnimate from './TextsAndIconsAnimation'
@@ -25,12 +26,8 @@ export default function DarkLightModeSwitcher({ className }) {
 
 	return (
 		<TextToAnimate delay={0.4}>
-			<button
-				className={className}
-				onClick={toggleTheme}
-				
-			>
-				{theme === 'light' ? <FaRegMoon /> : <FaRegSun />}
+			<button className={className} onClick={toggleTheme}>
+				{theme === 'light' ? <IoMoonOutline /> : <IoSunnyOutline />}
 			</button>
 		</TextToAnimate>
 	)

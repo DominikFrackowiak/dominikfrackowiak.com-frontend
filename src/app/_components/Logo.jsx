@@ -13,7 +13,7 @@ export default function Logo({ locale }) {
 
 	return (
 		
-			<TextToAnimate delay={0.2}>
+			<TextToAnimate delay={0.2} width={'auto'}>
 				<Link href={`/${locale}/`}>
 				<span className={`${styles.logo} bold dark`}>
 					&#8725;&#8725;dominik_frackowiak

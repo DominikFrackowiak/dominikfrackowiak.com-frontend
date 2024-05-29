@@ -1,4 +1,5 @@
 import { HiMiniBolt } from 'react-icons/hi2'
+import { IoFlashSharp } from 'react-icons/io5'
 import TextToAnimate from '../_components/TextsAndIconsAnimation'
 import getMainPageData from '@/lib/getMainPageData'
 import handleParagraphToRender from '@/utils/handleParagraphToRender'
@@ -43,11 +44,11 @@ export default async function Home({ params, searchParams }) {
 							<TextToAnimate
 								delay={1 + index * 0.1}
 								key={index}
-								style={{ width: '100%' }}
+								style={{ width: '100%', border: '1px solid red' }}
 							>
 								{handleHeadingsToDisplay(locale, index)}
 								{handleParagraphToRender(item)}
-								{index < items.length - 1 && <HiMiniBolt className='icon' />}
+								{index < items.length - 1 && <IoFlashSharp className='icon' />}
 							</TextToAnimate>
 						)
 					})}

@@ -24,7 +24,10 @@ export default async function AllBlogsPage({
 		<main className='main' style={{ zIndex: 1 }}>
 			<ul className={styles.list}>
 				{allBlogs.map(blog => (
-					<li key={blog.id} style={{ marginBottom: '30px' }}>
+					<li
+						key={blog.id}
+						style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}
+					>
 						<Link href={`blog/${blog.slug}`}>
 							<h2 className={`${styles.heading2} underline`}>{blog.title}</h2>
 							<p className={styles.paragraph}>
@@ -32,7 +35,9 @@ export default async function AllBlogsPage({
 									{blog.blocks[0].attributes.content.slice(0, 100)}...
 								</small>
 							</p>
-							<small className={styles.readMore}>Read more</small>
+							<button className={styles.readMore}>
+								Read more
+							</button>
 						</Link>
 						<div style={{ display: 'flex', gap: '20px' }}>
 							{blog.tags.nodes.map(tag => (

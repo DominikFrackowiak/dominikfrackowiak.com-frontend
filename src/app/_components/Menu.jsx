@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useSearchParams, usePathname } from 'next/navigation'
 
 import { FaXmark } from 'react-icons/fa6'
+import { IoCloseOutline } from 'react-icons/io5'
 import styles from './Menu.module.scss'
 
 import AnimatedMenu from './AnimatedMenu'
@@ -25,7 +26,8 @@ export default function Menu({ locale }) {
 		>
 			<div className={styles.header}>
 				<Link href={pathname}>
-					<FaXmark className={styles.closeIcon} />
+					{/* <FaXmark className={styles.closeIcon} /> */}
+					<IoCloseOutline />
 				</Link>
 			</div>
 

@@ -1,5 +1,8 @@
 import getSinglePostData from '@/lib/getSinglePostData'
 import { v4 as uuid } from 'uuid'
+import parse from 'html-react-parser'
+
+import styles from '../blog.module.scss'
 
 export default async function BlogPage({ params: { slug } }) {
 	const data = await getSinglePostData(slug)
@@ -13,26 +16,39 @@ export default async function BlogPage({ params: { slug } }) {
 		return match ? match[1] : ''
 	}
 
+	function convertSpacesToNbsp(htmlContent) {
+		return htmlContent.replace(/(?<=\s)\s/g, '&nbsp;')
+	}
+
 	function handleHeadings(element) {
 		switch (element.level) {
 			case 1:
 				return <h1 key={uuid()}>{element.content}</h1>
-				return
+				break
 			case 2:
 				return <h2 key={uuid()}>{element.content}</h2>
 		}
 	}
 
-	// console.log(blog.blocks)
+	console.log(blog)
 	return (
 		<main className='main'>
 			<h1>{blog.title}</h1>
 			{blog.blocks.map(block => {
 				if (block.name === 'core/paragraph') {
-					return <p key={uuid()}>{block.attributes.content}</p>
+					return (
+						<p className={styles.paragraph} key={uuid()}>
+							{block.attributes.content}
+						</p>
+					)
 				}
 				if (block.name === 'core/code') {
 					const extractedCode = extractCodeFromHTML(block.htmlContent)
+					const extractedAndConvertedCode = convertSpacesToNbsp(
+						block.htmlContent
+					)
+
+					// console.log(extractedAndConvertedCode)
 					console.log(block.htmlContent)
 					return (
 						// <pre
@@ -43,10 +59,21 @@ export default async function BlogPage({ params: { slug } }) {
 						// 	}}
 						// 	key={uuid()}
 						// >
-						// 	<code>{extractedCode}</code>
+						// 	<code>{parse(extractedCode)}</code>
 						// </pre>
-						<div key={uuid()} dangerouslySetInnerHTML={{ __html: block.htmlContent }}></div>
+
+						// <div
+						// 	key={uuid()}
+						// 	dangerouslySetInnerHTML={{ __html: extractedAndConvertedCode }}
+						// >
+
+						// </div>
+						<div key={uuid()}>{parse(block.htmlContent)}</div>
 					)
+				}
+
+				if (block.name === 'core/preformatted') {
+					return <div key={uuid()}>{parse(block.htmlContent)}</div>
 				}
 				if (block.name === 'core/heading') {
 					const heading = handleHeadings(block.attributes)

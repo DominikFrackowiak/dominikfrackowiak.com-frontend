@@ -18,6 +18,7 @@ export default async function getSinglePostData(slug) {
         en
         es
         pl
+        
       }
       tags {
         nodes {

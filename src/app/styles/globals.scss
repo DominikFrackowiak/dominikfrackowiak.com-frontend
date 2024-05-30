@@ -36,7 +36,14 @@ button {
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
+	color: $dark;
+	
 }
+
+[data-theme='dark'] button{
+	color: $nightmodetxt;
+}
+
 
 ul {
 	list-style: none;
@@ -46,13 +53,13 @@ ul {
 	align-self: center;
 	margin-inline: auto;
 	// font-size: 20px;
-	margin: 40px auto;
+	margin: 20px auto;
 	width: 100%;
 }
 
 .paragraph {
 	width: 100%;
-	margin: 30px 0;
+	margin: 10px 0;
 	font-weight: 300;
 }
 
@@ -127,18 +134,10 @@ p {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	// border: 1px solid red;
-	// gap: 20px;
+	
 }
 
-// pre{
-// white-space: pre-wrap;
-// pointer-events: auto;
-// min-width: 1px;
-// display: block;
-// overflow-wrap: break-word;
-// user-select: text;
-// }
+
 
 code {
 	background-color: $backgroundsecondary;
@@ -163,6 +162,7 @@ code {
 
 	button {
 		font-size: 24px;
+		
 	}
 
 	.main {
@@ -180,10 +180,16 @@ code {
 
 	button {
 		font-size: 45px;
+
 	}
 
 	.icon {
 		font-size: 33px;
+		margin: 40px auto;
+	}
+
+	.paragraph{
+		margin: 30px 0;
 	}
 
 	.header {

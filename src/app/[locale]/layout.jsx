@@ -1,18 +1,18 @@
-import { Roboto_Mono } from 'next/font/google'
+import { Open_Sans } from 'next/font/google'
 import '../styles/globals.scss'
 import Footer from '../_components/Footer'
 import Header from '../_components/Header'
 import Menu from '../_components/Menu'
 import Providers from '../providers'
 
-const robotoMono = Roboto_Mono({ subsets: ['latin'] })
+const openSans = Open_Sans({ subsets: ['latin'] })
 
 export const revalidate = 1000
 
 export default function RootLayout({ children, params: { locale } }) {
 	return (
 		<html lang={locale}>
-			<body className={robotoMono.className}>
+			<body className={openSans.className}>
 				<Providers>
 					<div className='wrapper'>
 						<Header locale={locale} />

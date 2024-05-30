@@ -14,7 +14,7 @@ export default function DynamicListContainer({
 			{data.map((el, index) => (
 				<li key={el.key || index} style={styles}>
 					<TextToAnimate delay={calculateDelay(index)}>
-						{children(el)}
+						{children(el, index)}
 					</TextToAnimate>
 				</li>
 			))}

@@ -16,8 +16,10 @@
 	align-items: center;
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 50%;
+	transform: translate(-50%);
 	width: 100%;
+	max-width: 1200px;
 	padding: 30px 3vw;
 }
 

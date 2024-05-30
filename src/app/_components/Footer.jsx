@@ -3,7 +3,7 @@
 // Next modules
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Roboto_Mono } from 'next/font/google'
+// import { Roboto_Mono } from 'next/font/google'
 
 // Styles
 import styles from './Footer.module.scss'
@@ -14,9 +14,9 @@ import LanguagePicker from './LanguagePicker'
 import DynamicListContainer from './DynamicListContainer'
 
 // Constants
-import socials from '../constants/socials'
+import socials from '../../../constants/socials'
 
-const robotoMono = Roboto_Mono({ subsets: ['latin'] })
+// const robotoMono = Roboto_Mono({ subsets: ['latin'] })
 
 export default function Footer({ locale }) {
 	const pathname = usePathname()
@@ -24,7 +24,7 @@ export default function Footer({ locale }) {
 
 	return (
 		<footer
-			className={`${styles.footer} ${robotoMono.className}`}
+			className={`${styles.footer} `}
 			style={{ display: cv ? 'none' : 'flex' }}
 		>
 			<DynamicListContainer
@@ -50,11 +50,12 @@ export default function Footer({ locale }) {
 				delayBase={2.0}
 				styles={{ padding: '0 0 0 5px' }}
 			>
-				{el => (
+				{(el, index) => (
 					<button className={styles.footerBtn}>
-						<LanguagePicker lang={el} />
+						<LanguagePicker lang={el} index={index}/>
 					</button>
-				)}
+				)
+				}
 			</DynamicListContainer>
 		</footer>
 	)

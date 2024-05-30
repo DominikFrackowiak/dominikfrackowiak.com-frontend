@@ -1,5 +1,4 @@
-import { HiMiniBolt } from 'react-icons/hi2'
-import { IoFlashSharp } from 'react-icons/io5'
+import { PiCodeBold } from 'react-icons/pi'
 import TextToAnimate from '../_components/TextsAndIconsAnimation'
 import getMainPageData from '@/lib/getMainPageData'
 import handleParagraphToRender from '@/utils/handleParagraphToRender'
@@ -13,8 +12,6 @@ export async function generateMetadata({ params: { locale }, searchParams }) {
 	const theme = searchParams.theme || 'light'
 	const title = textData?.metatitle || 'Dominik Frackowiak'
 	const description = textData?.description || 'Dominik Frackowiak'
-
-
 
 	return {
 		title,
@@ -48,7 +45,7 @@ export default async function Home({ params, searchParams }) {
 							>
 								{handleHeadingsToDisplay(locale, index)}
 								{handleParagraphToRender(item)}
-								{index < items.length - 1 && <IoFlashSharp className='icon' />}
+								{index < items.length - 1 && <PiCodeBold className='icon' />}
 							</TextToAnimate>
 						)
 					})}

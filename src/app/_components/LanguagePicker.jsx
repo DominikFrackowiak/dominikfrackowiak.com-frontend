@@ -1,11 +1,14 @@
 'use client'
 
 import { useRouter, usePathname } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
+
+import { Open_Sans } from 'next/font/google'
 
 import TextToAnimate from './TextsAndIconsAnimation'
+import BackToAllPosts from './BackToAllPosts'
 
-import { Roboto_Mono } from 'next/font/google'
-const robotoMono = Roboto_Mono({ subsets: ['latin'] })
+const openSans = Open_Sans({ subsets: ['latin'] })
 
 function useLocale() {
 	const pathname = usePathname()
@@ -17,11 +20,11 @@ function LanguageSwitcher({ lang, isActive, onSwitchLanguage }) {
 	return (
 		<TextToAnimate>
 			<span
-				style={{ fontWeight: isActive ? '700' : '200' }}
-				className={robotoMono.className}
+				style={{ fontWeight: isActive ? '700' : '300' }}
 				onClick={() => {
 					onSwitchLanguage(lang)
 				}}
+				className={openSans.className}
 			>
 				{lang}
 			</span>
@@ -29,13 +32,19 @@ function LanguageSwitcher({ lang, isActive, onSwitchLanguage }) {
 	)
 }
 
-export default function LanguagePicker({ lang }) {
+export default function LanguagePicker({ lang, index }) {
+	const searchParams = useSearchParams()
+
+	const tag = searchParams.get('tag')
+	console.log(tag)
+	console.log(lang, index)
 	const locale = useLocale()
 	const router = useRouter()
 	const pathname = usePathname()
 	const pathElements = pathname.split('/')
 
-	const isPost = pathElements.length > 2 && pathElements.includes('blog')
+	const isPost =
+		(pathElements.length > 3 && pathElements.includes('blog')) || tag !== null
 
 	const handleLanguageSwitch = newLang => {
 		const newPath = `/${newLang}${location.pathname.slice(locale.length + 1)}`
@@ -45,7 +54,9 @@ export default function LanguagePicker({ lang }) {
 		router.push(newPath)
 	}
 
-	const toRender = isPost ? null : (
+	const toRender = isPost ? (
+		<BackToAllPosts locale={locale} index={index} />
+	) : (
 		<LanguageSwitcher
 			lang={lang}
 			isActive={locale === lang}

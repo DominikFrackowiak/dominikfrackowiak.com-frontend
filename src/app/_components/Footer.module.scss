@@ -9,15 +9,15 @@
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	background-color: $background;
+	background-color: $light;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
 [data-theme='dark'] .footer {
-	background-color: $nightmodebg;
-	color: $nightmodetxt;
+	background-color: $dark;
+	color: $light;
 }
 
 .socialsLocalesWrapper {
@@ -27,8 +27,8 @@
 }
 
 [data-theme='dark'] .socialsLocalesWrapper {
-	background-color: $nightmodebg;
-	color: $nightmodetxt;
+	background-color: $dark;
+	color: $light;
 }
 
 .footerBtn {
@@ -37,12 +37,12 @@
 	background-color: transparent;
 	border: 2px solid transparent;
 	cursor: pointer;
-	font-size: 20px;
+	font-size: 17px;
 }
 
 [data-theme='dark'] .footerBtn {
-	background-color: $nightmodebg;
-	color: $nightmodetxt;
+	background-color: $dark;
+	color: $light;
 }
 
 @media (min-width: 768px) {
@@ -51,7 +51,7 @@
 		font-size: 30px;
 	}
 	.footerBtn {
-		font-size: 24px;
+		font-size: 20px;
 	}
 }
 
@@ -60,6 +60,6 @@
 		padding: 20px 0;
 	}
 	.footerBtn {
-		font-size: 30px;
+		font-size: 24px;
 	}
 }

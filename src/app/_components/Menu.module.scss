@@ -7,7 +7,7 @@
 	height: 100vh;
 	width: 100vw;
 	z-index: 200;
-	background-color: $background;
+	background-color: $light;
 }
 
 .header {
@@ -24,8 +24,8 @@
 }
 
 [data-theme='dark'] .menu {
-	background-color: $nightmodebg;
-	color: $nightmodetxt;
+	background-color: $dark;
+	color: $light;
 }
 
 .nav {

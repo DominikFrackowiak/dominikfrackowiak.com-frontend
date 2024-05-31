@@ -21,14 +21,14 @@ body {
 	align-items: center;
 	width: 100vw;
 	min-height: 100vh;
-	background-color: $background;
+	background-color: $light;
 	color: $dark;
 	overflow-x: hidden;
 }
 
 [data-theme='dark'] body {
-	background-color: $nightmodebg;
-	color: $nightmodetxt;
+	background-color: $dark;
+	color: $light;
 }
 
 button {
@@ -37,13 +37,11 @@ button {
 	background-color: transparent;
 	cursor: pointer;
 	color: $dark;
-	
 }
 
-[data-theme='dark'] button{
-	color: $nightmodetxt;
+[data-theme='dark'] button {
+	color: $light;
 }
-
 
 ul {
 	list-style: none;
@@ -78,12 +76,12 @@ ul {
 
 .dark {
 	background-color: $dark;
-	color: $background;
+	color: $light;
 }
 
 [data-theme='dark'] .dark {
-	background-color: $nightmodebg;
-	color: $nightmodetxt;
+	background-color: $dark;
+	color: $light;
 }
 
 .underlined {
@@ -103,8 +101,8 @@ a {
 }
 
 [data-theme='dark'] a {
-	background-color: $nightmodebg;
-	color: $nightmodetxt;
+	background-color: $dark;
+	color: $light;
 }
 
 p {
@@ -115,11 +113,12 @@ p {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	align-items: center;
-	// width: 95%;
+	align-items: flex-start;
+	width: 100%;
+	max-width: 1200px;
 	min-height: 100vh;
 	overflow: hidden;
-	padding: 0 3vw;
+	// padding: 50px 3vw;
 }
 
 .main {
@@ -133,18 +132,8 @@ p {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: flex-start;
 	
-}
-
-
-
-code {
-	background-color: $backgroundsecondary;
-}
-
-[data-theme='dark'] code {
-	background-color: $nightmodebgsecondary;
 }
 
 .alignItems {
@@ -156,13 +145,12 @@ code {
 	html,
 	h2,
 	h1 {
-		font-size: 24px;
+		font-size: 20px;
 		line-height: 35px;
 	}
 
 	button {
 		font-size: 24px;
-		
 	}
 
 	.main {
@@ -174,22 +162,21 @@ code {
 	html,
 	h2,
 	h1 {
-		font-size: 24px;
+		font-size: 22px;
 		line-height: 150%;
 	}
 
 	button {
 		font-size: 45px;
-
 	}
 
 	.icon {
 		font-size: 33px;
-		margin: 40px auto;
+		margin: 30px auto;
 	}
 
-	.paragraph{
-		margin: 30px 0;
+	.paragraph {
+		margin: 20px 0;
 	}
 
 	.header {

@@ -18,9 +18,18 @@ export default function Logo({ locale }) {
 
 	return (
 		<TextToAnimate delay={0.2} width={'auto'}>
-			<Link href={`/${locale}/`}>
-				<span className={`${styles.logo} bold dark`}>
-					 DOMINIK FRACKOWIAK
+			<Link
+				href={`/${locale}/`}
+				style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}
+			>
+				<span
+					className={`${styles.logo} bold`}
+					style={{ height: '23px', fontWeight: 500, fontSize: '24px'}}
+				>
+					DOMINIK FRACKOWIAK
+				</span>
+				<span className={`${styles.logo}`} style={{ fontSize: '18px', fontWeight: 100, height: '22px',width: '140px' }}>
+					WEB DEVELOPER
 				</span>
 			</Link>
 		</TextToAnimate>

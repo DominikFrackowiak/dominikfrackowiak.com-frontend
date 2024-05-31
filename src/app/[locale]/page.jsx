@@ -1,4 +1,4 @@
-import { PiCodeBold } from 'react-icons/pi'
+import { PiCodeBold, PiCaretCircleDoubleDownLight, PiDotBold } from 'react-icons/pi'
 import TextToAnimate from '../_components/TextsAndIconsAnimation'
 import getMainPageData from '@/lib/getMainPageData'
 import handleParagraphToRender from '@/utils/handleParagraphToRender'
@@ -45,7 +45,9 @@ export default async function Home({ params, searchParams }) {
 							>
 								{handleHeadingsToDisplay(locale, index)}
 								{handleParagraphToRender(item)}
-								{index < items.length - 1 && <PiCodeBold className='icon' />}
+								{index < items.length - 1 && (
+									<PiDotBold className='icon' />
+								)}
 							</TextToAnimate>
 						)
 					})}

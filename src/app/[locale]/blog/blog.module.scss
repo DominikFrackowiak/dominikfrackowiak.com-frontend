@@ -6,27 +6,27 @@
 	gap: 50px;
 }
 
-h2.heading2 {
-	font-weight: 500;
-	font-size: 40px;
-}
+// h2.heading2 {
+// 	font-weight: 500;
+// 	font-size: 40px;
+// }
 
-.paragraph {
-	font-size: 35px;
-}
+// .paragraph {
+// 	font-size: 35px;
+// }
 
 .readMore,
 .button {
-	padding: 5px 10px;
-	background-color: $background;
+	padding: 2px 4px;
+	background-color: $light;
 	border: 1px solid $dark;
 	color: $dark;
-	font-size: 25px;
+	font-size: 20px;
 	font-weight: 300;
 }
 
 .readMore {
 	background-color: $dark;
 
-	color: rgba(255, 255, 255, 0.918);
+	color: $light;
 }

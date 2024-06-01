@@ -9,10 +9,8 @@
 	width: 100%;
 	max-width: 1200px;
 	bottom: 0;
-	
+	padding: 0 3vw;
 	background-color: $light;
-
-	
 }
 
 [data-theme='dark'] .footer {
@@ -48,10 +46,10 @@
 @media (min-width: 768px) {
 	.socialsLocalesWrapper {
 		gap: 40px;
-		font-size: 30px;
+		font-size: 20px;
 	}
 	.footerBtn {
-		font-size: 20px;
+		font-size: 16px;
 	}
 }
 
@@ -59,7 +57,7 @@
 	.footer {
 		padding: 20px 0;
 	}
-	.footerBtn {
-		font-size: 24px;
-	}
+	// .footerBtn {
+	// 	font-size: 20px;
+	// }
 }

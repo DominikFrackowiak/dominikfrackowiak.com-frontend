@@ -6,7 +6,7 @@
 	align-items: flex-start;
 	position: fixed;
 	top: 0;
-	
+
 	min-height: 60px;
 	max-height: 130px;
 	width: 100%;
@@ -14,7 +14,8 @@
 	padding: 30px 0;
 	background-color: $light;
 	z-index: 100;
-	
+
+	padding: 0 3vw;
 }
 
 [data-theme='dark'] .header {
@@ -45,19 +46,17 @@
 	justify-content: flex-end;
 	align-items: flex-start;
 	// gap: 30px;
-	position: absolute;
-	right: 0;
-	width: auto;
+
+	left: 0;
 	height: 45px;
 	cursor: pointer;
-	border: 1px solid gold;
 }
 
 .hamburger {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 24px;
+	font-size: 20px;
 	padding: 0 0 20px 10px;
 	// border: 1px solid red;
 }
@@ -95,12 +94,12 @@
 
 @media (min-width: 992px) {
 	.hamburger {
-		font-size: 35px;
+		font-size: 25px;
 	}
 
 	.hamburger.darkModeSwitcher {
 		padding: 3px 0 20px 20px;
-		font-size: 30px;
+		font-size: 20px;
 	}
 	.header {
 		min-height: 120px;

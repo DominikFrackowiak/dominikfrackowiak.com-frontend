@@ -24,7 +24,7 @@ export default function Header({ locale }) {
 
 	return (
 		<header className={styles.header}>
-			{!cv && <Logo locale={locale} />}
+			<Logo locale={locale} cv={cv}/>
 
 			{cv && <DownloadPdf locale={locale} className={styles.pdfDownloadLink} />}
 

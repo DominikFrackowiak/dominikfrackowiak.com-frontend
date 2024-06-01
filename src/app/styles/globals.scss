@@ -37,7 +37,7 @@ body {
 	overflow: hidden;
 	// border: 1px solid green;
 	// padding: 50px 3vw;
-	margin: 0 3vw;
+	// padding: 0 3vw;
 }
 
 .main {
@@ -48,11 +48,10 @@ body {
 	position: relative;
 	top: 0;
 	left: 0;
-	padding: 70px 0 100px 0;
+	padding: 70px 3vw 100px 3vw;
 	min-height: 80vh;
 	width: 100%;
 	max-width: 1200px;
-	border: 1px solid rgb(231, 87, 111);
 }
 
 [data-theme='dark'] body {
@@ -148,7 +147,7 @@ p {
 	h2,
 	h1 {
 		font-size: 20px;
-		line-height: 35px;
+		line-height: 150%;
 	}
 
 	button {
@@ -161,12 +160,12 @@ p {
 }
 
 @media (min-width: 992px) {
-	html,
-	h2,
-	h1 {
-		font-size: 22px;
-		line-height: 150%;
-	}
+	// html,
+	// h2,
+	// h1 {
+	// 	font-size: 22px;
+	// 	line-height: 150%;
+	// }
 
 	button {
 		font-size: 45px;

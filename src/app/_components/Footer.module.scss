@@ -5,13 +5,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	// padding: 20px 3vw;
 	width: 100%;
 	max-width: 1200px;
 	bottom: 0;
 	padding: 10px 3vw;
 	background-color: $light;
-	// border-top: 1px solid $dark;
 }
 
 [data-theme='dark'] .footer {
@@ -31,7 +29,6 @@
 }
 
 .footerBtn {
-	// padding: 10px;
 	font-weight: 100;
 	background-color: transparent;
 	border: 2px solid transparent;

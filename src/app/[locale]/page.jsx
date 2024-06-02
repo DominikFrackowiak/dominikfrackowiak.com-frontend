@@ -1,5 +1,4 @@
-import { PiCodeBold, PiCaretCircleDoubleDownLight, PiDotBold } from 'react-icons/pi'
-import TextToAnimate from '../_components/TextsAndIconsAnimation'
+import { Fragment } from 'react'
 import getMainPageData from '@/lib/getMainPageData'
 import handleParagraphToRender from '@/utils/handleParagraphToRender'
 import {
@@ -38,19 +37,10 @@ export default async function Home({ params, searchParams }) {
 				{items.length > 0 &&
 					items.map((item, index) => {
 						return (
-							// <TextToAnimate
-							// 	delay={1 + index * 0.1}
-							// 	key={index}
-							// 	style={{ width: '100%', border: '1px solid red' }}
-							// >
-							<>
+							<Fragment key={index}>
 								{handleHeadingsToDisplay(locale, index)}
 								{handleParagraphToRender(item)}
-								{/* {index < items.length - 1 && (
-									<PiDotBold className='icon' />
-								)} */}
-							</>
-							// </TextToAnimate>
+							</Fragment>
 						)
 					})}
 			</main>

@@ -2,40 +2,33 @@
 
 .header {
 	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
+	justify-content: center;
 	position: fixed;
 	top: 0;
-
-	min-height: 30px;
-	max-height: 130px;
-	width: 100%;
-	max-width: 1200px;
+	left: 0;
 	padding: 10px 0;
+	width: 100%;
 	background-color: $dark;
+	color: $light;
 	z-index: 100;
-
-	// padding: 0 3vw;
+	border-bottom: 1px solid $light;
 }
 
-// [data-theme='dark'] .header {
-// 	background-color: $light;
-// 	color: $dark;
-// }
+.headerWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 1200px;
+}
 
 .logo {
 	display: flex;
 	align-items: center;
 	gap: 5px;
-	// padding: 5px 10px;
 	color: $light;
 	background-color: $dark;
 }
-
-// [data-theme='dark'] .logo {
-// 	color: $dark;
-// 	background-color: $light;
-// }
 
 .pdfDownloadLink {
 	font-size: 16px;
@@ -44,11 +37,8 @@
 .headerIconsWrapper {
 	display: flex;
 	justify-content: flex-end;
-	align-items: flex-start;
-	// gap: 30px;
-
-	left: 0;
-	// height: 100%;
+	align-items: center;
+	gap: 25px;
 	cursor: pointer;
 	color: $light;
 }
@@ -58,14 +48,12 @@
 	justify-content: center;
 	align-items: center;
 	font-size: 20px;
-	padding: 0 0 20px 10px;
-	// border: 1px solid red;
+	height: 100%;
 }
 
 .hamburger.darkModeSwitcher {
-	padding: 0px 0 20px 20px;
+	// padding: 0 0 5px 10px;
 	// font-size: 15px;
-	// border: 1px solid red;
 }
 
 .hamburger a {
@@ -73,9 +61,6 @@
 }
 
 @media (min-width: 768px) {
-	.header {
-		// min-height: 100px;
-	}
 	.logo {
 		font-size: 24px;
 	}
@@ -99,7 +84,7 @@
 	}
 
 	.hamburger.darkModeSwitcher {
-		padding: 3px 0 20px 20px;
+		// padding: 3px 0 20px 20px;
 		font-size: 20px;
 	}
 	.header {
@@ -112,6 +97,6 @@
 
 	.headerIconsWrapper {
 		width: 9%;
-		gap: 40px;
+		// gap: 40px;
 	}
 }

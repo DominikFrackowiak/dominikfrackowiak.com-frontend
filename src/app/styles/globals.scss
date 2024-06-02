@@ -14,7 +14,9 @@ h1 {
 	font-size: 16px;
 }
 
-h2, h1{
+h2,
+h1 {
+	width: 100%;
 	font-weight: 500;
 }
 
@@ -23,7 +25,7 @@ body {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	width: 100vw;
+	width: 100%;
 	min-height: 100vh;
 	background-color: $light;
 	color: $dark;
@@ -69,7 +71,7 @@ button {
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
-	color: $dark;
+	color: $light;
 }
 
 [data-theme='dark'] button {
@@ -186,11 +188,7 @@ p {
 		margin: 20px 0;
 	}
 
-	.header {
-		height: 100px;
-	}
-
 	.main {
-		padding: 120px 0 120px 0;
+		padding: 70px 0 120px 0;
 	}
 }

@@ -24,21 +24,27 @@ export default function Header({ locale }) {
 
 	return (
 		<header className={styles.header}>
-			<Logo locale={locale} cv={cv}/>
+			<div className={styles.headerWrapper}>
+				<Logo locale={locale} cv={cv} />
 
-			{cv && <DownloadPdf locale={locale} className={styles.pdfDownloadLink} />}
+				{cv && (
+					<DownloadPdf locale={locale} className={styles.pdfDownloadLink} />
+				)}
 
-			<ul className={styles.headerIconsWrapper}>
-				<li>
-					<DarkLightModeSwitcher className={`${styles.hamburger} ${styles.darkModeSwitcher}`} />
-				</li>
-				<li>
-					<HamburgerIcon
-						href={`${pathname}/?menu=true`}
-						className={styles.hamburger}
-					/>
-				</li>
-			</ul>
+				<ul className={styles.headerIconsWrapper}>
+					<li>
+						<DarkLightModeSwitcher
+							className={`${styles.hamburger} ${styles.darkModeSwitcher}`}
+						/>
+					</li>
+					<li>
+						<HamburgerIcon
+							href={`${pathname}/?menu=true`}
+							className={styles.hamburger}
+						/>
+					</li>
+				</ul>
+			</div>
 		</header>
 	)
 }

@@ -19,15 +19,16 @@ function useLocale() {
 function LanguageSwitcher({ lang, isActive, onSwitchLanguage }) {
 	return (
 		// <TextToAnimate>
-			<span
-				style={{ fontWeight: isActive ? '700' : '300' }}
-				onClick={() => {
-					onSwitchLanguage(lang)
-				}}
-				className={openSans.className}
-			>
-				{lang.toUpperCase()}
-			</span>
+		<span
+			style={{ fontWeight: isActive ? '700' : '300' }}
+			onClick={() => {
+				onSwitchLanguage(lang)
+			}}
+			className={openSans.className}
+		>
+			{/* {lang.toUpperCase()} */}
+			{lang}
+		</span>
 		// </TextToAnimate>
 	)
 }

@@ -25,7 +25,7 @@ export default function Menu({ locale }) {
 			}}
 		>
 			<div className={styles.header}>
-				<Link href={pathname}>
+				<Link href={pathname} className={styles.closeIcon}>
 					{/* <FaXmark className={styles.closeIcon} /> */}
 					<IoCloseOutline />
 				</Link>
@@ -33,7 +33,7 @@ export default function Menu({ locale }) {
 
 			<AnimatedMenu isOpen={menu}>
 				<nav className={styles.nav}>
-					<NavigationLinks locale={locale} />
+					<NavigationLinks locale={locale} className={styles.menuLinks}/>
 				</nav>
 			</AnimatedMenu>
 		</div>

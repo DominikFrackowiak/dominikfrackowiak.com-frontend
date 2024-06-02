@@ -7,10 +7,15 @@ const links = [
 ]
 
 export default function NavigationLinks({ locale }) {
+	
 	return (
 		<>
 			{links.map(link => (
-				<Link key={link.path} href={`/${locale}${link.path}`}>
+				<Link
+					key={link.path}
+					href={`/${locale}${link.path}`}
+					
+				>
 					{link.label}
 				</Link>
 			))}

@@ -10,11 +10,19 @@
 	bottom: 0;
 	padding: 10px 3vw;
 	background-color: $light;
+
+	*{
+		color: $dark;
+	}
 }
 
 [data-theme='dark'] .footer {
 	background-color: $dark;
 	color: $light;
+
+	*{
+		color: $light;
+	}
 }
 
 .socialsLocalesWrapper {

@@ -17,7 +17,7 @@ h1 {
 h2,
 h1 {
 	font-weight: 500;
-	border-bottom: 1px solid $accent;
+	color: $accent;
 }
 
 body {
@@ -137,10 +137,10 @@ a {
 	// padding: 10px 10px 10px 0;
 }
 
-[data-theme='dark'] a {
-	background-color: $dark;
-	color: $light;
-}
+// [data-theme='dark'] a {
+// 	background-color: $dark;
+// 	color: $light;
+// }
 
 p {
 	font-weight: 300;
@@ -190,6 +190,6 @@ p {
 	}
 
 	.main {
-		padding: 120px 0 120px 0;
+		padding: 150px 0 120px 0;
 	}
 }

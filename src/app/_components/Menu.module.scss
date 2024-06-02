@@ -36,8 +36,16 @@
 	height: 100vh;
 	width: 100%;
 	gap: 20px;
+
+	*{
+		color: $accent;
+	}
+	
 }
+
+
 
 .closeIcon {
 	cursor: pointer;
+	color: $accent;
 }

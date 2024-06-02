@@ -9,8 +9,9 @@
 	width: 100%;
 	max-width: 1200px;
 	bottom: 0;
-	padding: 0 3vw;
+	padding: 10px 3vw;
 	background-color: $light;
+	// border-top: 1px solid $dark;
 }
 
 [data-theme='dark'] .footer {
@@ -55,7 +56,7 @@
 
 @media (min-width: 992px) {
 	.footer {
-		padding: 20px 0;
+		padding: 10px 0;
 	}
 	// .footerBtn {
 	// 	font-size: 20px;

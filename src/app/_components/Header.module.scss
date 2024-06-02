@@ -7,35 +7,35 @@
 	position: fixed;
 	top: 0;
 
-	min-height: 60px;
+	min-height: 30px;
 	max-height: 130px;
 	width: 100%;
 	max-width: 1200px;
-	padding: 30px 0;
-	background-color: $light;
+	padding: 10px 0;
+	background-color: $dark;
 	z-index: 100;
 
-	padding: 0 3vw;
+	// padding: 0 3vw;
 }
 
-[data-theme='dark'] .header {
-	background-color: $dark;
-	color: $light;
-}
+// [data-theme='dark'] .header {
+// 	background-color: $light;
+// 	color: $dark;
+// }
 
 .logo {
 	display: flex;
 	align-items: center;
-	gap: 10px;
+	gap: 5px;
 	// padding: 5px 10px;
 	color: $light;
 	background-color: $dark;
 }
 
-[data-theme='dark'] .logo {
-	color: $dark;
-	background-color: $light;
-}
+// [data-theme='dark'] .logo {
+// 	color: $dark;
+// 	background-color: $light;
+// }
 
 .pdfDownloadLink {
 	font-size: 16px;
@@ -48,8 +48,9 @@
 	// gap: 30px;
 
 	left: 0;
-	height: 45px;
+	// height: 100%;
 	cursor: pointer;
+	color: $light;
 }
 
 .hamburger {
@@ -73,7 +74,7 @@
 
 @media (min-width: 768px) {
 	.header {
-		min-height: 100px;
+		// min-height: 100px;
 	}
 	.logo {
 		font-size: 24px;
@@ -102,8 +103,8 @@
 		font-size: 20px;
 	}
 	.header {
-		min-height: 120px;
-		padding: 30px 0;
+		// min-height: 120px;
+		// padding: 30px 0;
 	}
 	.logo {
 		font-size: 20px;

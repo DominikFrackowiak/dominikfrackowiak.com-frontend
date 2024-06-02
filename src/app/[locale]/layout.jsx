@@ -12,16 +12,18 @@ export const revalidate = 1000
 export default function RootLayout({ children, params: { locale } }) {
 	return (
 		<html lang={locale}>
-			<Providers>
+			
 				<body className={openSans.className}>
+					<Providers>
 					<div className='wrapper'>
 						<Header locale={locale} />
 						<Menu locale={locale} />
 						{children}
 						<Footer locale={locale} />
 					</div>
+					</Providers>
 				</body>
-			</Providers>
+			
 		</html>
 	)
 }

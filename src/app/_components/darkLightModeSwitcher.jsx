@@ -25,10 +25,10 @@ export default function DarkLightModeSwitcher({ className }) {
 	}
 
 	return (
-		<TextToAnimate delay={0.4}>
+		// <TextToAnimate delay={0.4}>
 			<button className={className} onClick={toggleTheme}>
 				{theme === 'light' ? <PiMoon /> : <PiSun />}
 			</button>
-		</TextToAnimate>
+		// </TextToAnimate>
 	)
 }

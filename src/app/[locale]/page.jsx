@@ -38,17 +38,19 @@ export default async function Home({ params, searchParams }) {
 				{items.length > 0 &&
 					items.map((item, index) => {
 						return (
-							<TextToAnimate
-								delay={1 + index * 0.1}
-								key={index}
-								style={{ width: '100%', border: '1px solid red' }}
-							>
+							// <TextToAnimate
+							// 	delay={1 + index * 0.1}
+							// 	key={index}
+							// 	style={{ width: '100%', border: '1px solid red' }}
+							// >
+							<>
 								{handleHeadingsToDisplay(locale, index)}
 								{handleParagraphToRender(item)}
 								{/* {index < items.length - 1 && (
 									<PiDotBold className='icon' />
 								)} */}
-							</TextToAnimate>
+							</>
+							// </TextToAnimate>
 						)
 					})}
 			</main>

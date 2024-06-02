@@ -17,7 +17,7 @@ export default function Logo({ locale, cv}) {
 	// console.log(theme)
 
 	return (
-		<TextToAnimate delay={0.2} width={'auto'}>
+		// <TextToAnimate delay={0.2} width={'auto'}>
 			<Link
 				href={`/${locale}/`}
 				style={{ display: 'flex', flexDirection: 'column', gap: '4px', visibility: cv?'hidden':'visible' }}
@@ -25,27 +25,26 @@ export default function Logo({ locale, cv}) {
 				<span
 					className={`${styles.logo} bold`}
 					style={{
-						height: '23px',
+						
 						fontWeight: 500,
 						fontSize: '20px',
-						padding: '4px 8px',
+						
 					}}
 				>
 					DOMINIK FRACKOWIAK
 				</span>
-				<span
+				{/* <span
 					className={`${styles.logo}`}
 					style={{
 						fontSize: '14px',
 						fontWeight: 100,
-						height: '22px',
-						width: '126px',
-						padding: '4px 8px',
+						
+						
 					}}
 				>
 					WEB DEVELOPER
-				</span>
+				</span> */}
 			</Link>
-		</TextToAnimate>
+		// </TextToAnimate>
 	)
 }

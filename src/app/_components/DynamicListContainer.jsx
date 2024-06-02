@@ -13,10 +13,10 @@ export default function DynamicListContainer({
 		<ul className={`alignCenter ${className}`}>
 			{data.map((el, index) => (
 				<li key={el.key || index} style={styles}>
-					<TextToAnimate delay={calculateDelay(index)}>
+					{/* <TextToAnimate delay={calculateDelay(index)}> */}
 						{children(el, index)}
-					</TextToAnimate>
-				</li>
+					{/* </TextToAnimate> */}
+				</li> 
 			))}
 		</ul>
 	)

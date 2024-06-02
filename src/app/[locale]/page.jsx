@@ -51,6 +51,7 @@ export default async function Home({ params, searchParams }) {
 										height={640}
 										width={640}
 										className={styles.image}
+										alt="Dominik Frackowiak's portrait"
 									/>
 								)}
 								{handleParagraphToRender(item)}

@@ -25,8 +25,8 @@ export default function BackToAllPosts({ locale, index }) {
 			}}
 			href={`/${locale}/blog`}
 		>
-			<PiArrowCircleLeft />
-			<small style={{ fontSize: '18px', fontWeight: '100' }}>
+			<PiArrowCircleLeft style={{fontSize: '20px'}}/>
+			<small style={{ fontSize: '14px', fontWeight: '100' }}>
 				{handleTextContent(locale)}
 			</small>
 		</Link>

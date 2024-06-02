@@ -45,9 +45,9 @@ export default async function Home({ params, searchParams }) {
 							>
 								{handleHeadingsToDisplay(locale, index)}
 								{handleParagraphToRender(item)}
-								{index < items.length - 1 && (
+								{/* {index < items.length - 1 && (
 									<PiDotBold className='icon' />
-								)}
+								)} */}
 							</TextToAnimate>
 						)
 					})}

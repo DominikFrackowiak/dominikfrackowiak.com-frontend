@@ -19,22 +19,22 @@ export function handleDataToDisplay(locale, textData) {
 const headingsToDisplay = {
 	en: [
 		"Welcome! I'm Dominik Frąckowiak, freelance web developer based in Madrid, Spain",
-		'Technologies I work with',
+		'Technologies',
 		'Follow me',
 		'E-mail',
 		'Telephone',
-		'Languages I speak',
+		'Languages',
 		'Hobbies',
 		'Music',
 		'Film',
 	],
 	es: [
 		'¡Bienvenido! Soy Dominik Frąckowiak, desarrollador web independiente con base en Madrid, España',
-		'Tecnologías con las que trabajo',
+		'Tecnologías',
 		'Sígueme',
 		'Correo electrónico',
 		'Teléfono',
-		'Idiomas que hablo',
+		'Idiomas',
 		'Aficiones',
 		'Música',
 		'Cine',
@@ -57,7 +57,7 @@ export function handleHeadingsToDisplay(locale, index) {
 
 	if (index !== 0) {
 		return (
-			<h2 aria-label role='heading' style={{ fontSize: '0px' }}>
+			<h2 aria-label role='heading' style={{fontWeight: 600}}>
 				{heading}
 			</h2>
 		)

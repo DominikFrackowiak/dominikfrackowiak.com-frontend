@@ -36,10 +36,10 @@ export default function Logo({ locale, cv}) {
 				<span
 					className={`${styles.logo}`}
 					style={{
-						fontSize: '16px',
+						fontSize: '14px',
 						fontWeight: 100,
 						height: '22px',
-						width: '140px',
+						width: '126px',
 						padding: '4px 8px',
 					}}
 				>

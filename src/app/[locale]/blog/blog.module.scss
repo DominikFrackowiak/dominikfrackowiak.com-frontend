@@ -8,7 +8,8 @@
 
 h2.heading2 {
 	font-weight: 400;
-	 font-size: 20px;
+	font-size: 20px;
+	// color: $dark;
 }
 
 // .paragraph {
@@ -25,8 +26,20 @@ h2.heading2 {
 	font-weight: 300;
 }
 
+[data-theme='dark'] 
+.button{
+	background-color: $dark;
+	color: $light;
+	border: 1px solid $light;
+}
+
 .readMore {
 	background-color: $dark;
-
+	border: 1px solid $dark;
 	color: $light;
+}
+
+[data-theme='dark'] .readMore{
+	background-color: $light;
+	color: $dark;
 }

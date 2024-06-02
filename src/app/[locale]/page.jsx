@@ -5,6 +5,9 @@ import {
 	handleDataToDisplay,
 	handleHeadingsToDisplay,
 } from '@/utils/handleDataToDisplay'
+import Image from 'next/image'
+
+import styles from './page.module.scss'
 
 export async function generateMetadata({ params: { locale }, searchParams }) {
 	const textData = await getMainPageData(locale)
@@ -31,14 +34,25 @@ export default async function Home({ params, searchParams }) {
 	const textData = await getMainPageData(locale)
 	const items = handleDataToDisplay(locale, textData)
 
+	console.log(items)
+
 	const main =
 		menu !== 'true' ? (
 			<main className='main'>
+				
 				{items.length > 0 &&
 					items.map((item, index) => {
 						return (
 							<Fragment key={index}>
 								{handleHeadingsToDisplay(locale, index)}
+								{index === 0 && (
+									<Image
+										src={'/dominikfrackowiak2.jpg'}
+										height={640}
+										width={640}
+										className={styles.image}
+									/>
+								)}
 								{handleParagraphToRender(item)}
 							</Fragment>
 						)

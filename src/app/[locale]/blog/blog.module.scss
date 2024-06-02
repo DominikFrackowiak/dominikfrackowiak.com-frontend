@@ -34,12 +34,13 @@ h2.heading2 {
 }
 
 .readMore {
-	background-color: $dark;
-	border: 1px solid $dark;
+	background-color: $accent;
+	border: 1px solid $accent;
 	color: $light;
 }
 
 [data-theme='dark'] .readMore{
 	background-color: $light;
+	border: 1px solid $light;
 	color: $dark;
 }

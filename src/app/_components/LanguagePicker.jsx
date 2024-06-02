@@ -26,8 +26,8 @@ function LanguageSwitcher({ lang, isActive, onSwitchLanguage }) {
 			}}
 			className={openSans.className}
 		>
-			{/* {lang.toUpperCase()} */}
-			{lang}
+			{lang.toUpperCase()}
+			{/* {lang} */}
 		</span>
 		// </TextToAnimate>
 	)

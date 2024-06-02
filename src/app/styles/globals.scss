@@ -6,10 +6,13 @@
 	box-sizing: border-box;
 }
 
+html{
+ scroll-behavior: smooth !important;
+}
+
 html,
 h2,
 h1 {
-	scroll-behavior: smooth !important;
 	line-height: 24px;
 	font-size: 16px;
 }
@@ -18,6 +21,7 @@ h2,
 h1 {
 	font-weight: 500;
 	color: $accent;
+	width: 100%;
 }
 
 body {

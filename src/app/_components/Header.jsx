@@ -9,7 +9,7 @@ import styles from './Header.module.scss'
 
 import Logo from './Logo'
 import HamburgerIcon from './HamburgerIcon'
-import DarkLightModeSwitcher from './darkLightModeSwitcher'
+import DarkLightModeSwitcher from './DarkLightModeSwitcher'
 import DownloadPdf from './DownloadPdf'
 
 export default function Header({ locale }) {

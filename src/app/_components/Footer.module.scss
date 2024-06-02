@@ -6,7 +6,7 @@
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1000px;
 	bottom: 0;
 	padding: 10px 3vw;
 	background-color: $light;
@@ -53,7 +53,7 @@
 
 @media (min-width: 992px) {
 	.footer {
-		padding: 10px 0;
+		padding: 20px 0;
 	}
 	// .footerBtn {
 	// 	font-size: 20px;

@@ -17,7 +17,7 @@ export default function Logo({ locale, cv }) {
 			style={{
 				display: 'flex',
 				flexDirection: 'column',
-				gap: '4px',
+				gap: '2px',
 				visibility: cv ? 'hidden' : 'visible',
 			}}
 		>
@@ -31,10 +31,10 @@ export default function Logo({ locale, cv }) {
 				DOMINIK FRACKOWIAK
 			</span>
 			<span
-				className={`${styles.logo} bold`}
+				className={`${styles.logo}`}
 				style={{
 					fontWeight: 300,
-					fontSize: '16px',
+					fontSize: '15px',
 				}}
 			>
 				web developer

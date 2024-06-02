@@ -38,7 +38,7 @@ body {
 	justify-content: space-around;
 	align-items: flex-start;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1000px;
 	min-height: 100vh;
 	overflow: hidden;
 	// border: 1px solid green;
@@ -54,10 +54,10 @@ body {
 	position: relative;
 	top: 0;
 	left: 0;
-	padding: 70px 3vw 100px 3vw;
+	padding: 100px 3vw 100px 3vw;
 	min-height: 80vh;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1000px;
 	gap: 20px;
 }
 
@@ -95,6 +95,7 @@ ul {
 	margin: 10px 0;
 	font-weight: 300;
 	// font-size: 20px;
+	font-size: 16px;
 }
 
 .bold {
@@ -163,7 +164,7 @@ p {
 	}
 
 	.main {
-		padding: 100px 0;
+		padding: 120px 3vw;
 	}
 }
 
@@ -189,6 +190,6 @@ p {
 	}
 
 	.main {
-		padding: 70px 0 120px 0;
+		padding: 120px 0 120px 0;
 	}
 }

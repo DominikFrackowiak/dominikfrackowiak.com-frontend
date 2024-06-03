@@ -100,6 +100,16 @@ ul {
 	font-weight: 300;
 	// font-size: 20px;
 	font-size: 16px;
+
+	* {
+		color: $dark;
+	}
+}
+
+[data-theme='dark'] .paragraph {
+	* {
+		color: $light;
+	}
 }
 
 .bold {

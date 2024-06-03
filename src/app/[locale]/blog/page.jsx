@@ -4,9 +4,9 @@ import getAllPostsData from '@/lib/getAllPostsData'
 import getPostsByTag from '@/lib/getPostsByTag'
 import styles from './blog.module.scss'
 
-export async function generateStaticParams() {
-	return [{ locale: 'es' }, { locale: 'en' }, { locale: 'pl' }]
-}
+// export async function generateStaticParams() {
+// 	return [{ locale: 'es' }, { locale: 'en' }, { locale: 'pl' }]
+// }
 
 export default async function AllBlogsPage({
 	params: { locale },

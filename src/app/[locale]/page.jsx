@@ -27,9 +27,9 @@ export async function generateMetadata({ params: { locale }, searchParams }) {
 	}
 }
 
-export async function generateStaticParams(){
-	return [{locale: 'es'}, {locale: 'en'}, {locale: 'pl'}]
-}
+// export async function generateStaticParams(){
+// 	return [{locale: 'es'}, {locale: 'en'}, {locale: 'pl'}]
+// }
 
 export default async function Home({ params, searchParams }) {
 	const menu = searchParams?.menu

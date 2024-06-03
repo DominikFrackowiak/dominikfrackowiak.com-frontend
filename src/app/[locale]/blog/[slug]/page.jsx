@@ -5,12 +5,12 @@ import parse from 'html-react-parser'
 import styles from '../blog.module.scss'
 import getAllPostsSlugs from '@/lib/getAllPostsSlugs'
 
-export async function generateStaticParams() {
-	const data = await getAllPostsSlugs()
-	return data.posts.nodes.map(slug => ({
-		slug: slug.slug,
-	}))
-}
+// export async function generateStaticParams() {
+// 	const data = await getAllPostsSlugs()
+// 	return data.posts.nodes.map(slug => ({
+// 		slug: slug.slug,
+// 	}))
+// }
 
 export default async function BlogPage({ params: { slug } }) {
 	const data = await getSinglePostData(slug)

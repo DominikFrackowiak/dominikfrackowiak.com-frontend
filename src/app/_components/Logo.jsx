@@ -21,24 +21,8 @@ export default function Logo({ locale, cv }) {
 				visibility: cv ? 'hidden' : 'visible',
 			}}
 		>
-			<span
-				className={`${styles.logo} bold`}
-				style={{
-					fontWeight: 500,
-					fontSize: '17px',
-					height: '23px',
-				}}
-			>
-				DOMINIK FRACKOWIAK
-			</span>
-			<span
-				className={`${styles.logo}`}
-				style={{
-					fontWeight: 300,
-					fontSize: '14px',
-					height: '15px',
-				}}
-			>
+			<span className={`${styles.logo} bold`}>DOMINIK FRACKOWIAK</span>
+			<span className={`${styles.logo} ${styles.logoSmallSpan}`}>
 				Web Developer
 			</span>
 		</Link>

@@ -40,11 +40,12 @@
 
 	* {
 		color: $dark;
+		letter-spacing: 3px;
 	}
 }
 
-[data-theme='dark'] .nav{
-	*{
+[data-theme='dark'] .nav {
+	* {
 		color: $light;
 	}
 }

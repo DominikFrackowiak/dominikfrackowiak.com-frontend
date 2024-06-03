@@ -14,7 +14,7 @@
 	// border-bottom: 1px solid $light;
 }
 
-[data-theme='dark'] .header{
+[data-theme='dark'] .header {
 	background-color: $accentDarker;
 }
 
@@ -26,7 +26,7 @@
 	max-width: 1000px;
 	padding: 0 3vw;
 
-	*{
+	* {
 		color: $light;
 	}
 }
@@ -36,7 +36,17 @@
 	align-items: center;
 	// gap: 5px;
 	color: $light;
-	
+	letter-spacing: 2px;
+	font-weight: 500;
+	font-size: 17px;
+	height: 23px;
+}
+
+.logo.logoSmallSpan {
+	font-weight: 300;
+	font-size: 14px;
+	height: 15px;
+	letter-spacing: 1px;
 }
 
 .pdfDownloadLink {

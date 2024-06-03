@@ -6,9 +6,19 @@
 	gap: 50px;
 }
 
+[data-theme='dark'] .list{
+	*{
+		color: $light;
+	}
+}
+
+h1.heading1 {
+	margin-top: 40px;
+}
+
 h2.heading2 {
-	font-weight: 400;
-	font-size: 20px;
+	// font-weight: 400;
+	// font-size: 20px;
 	// color: $dark;
 }
 
@@ -22,12 +32,13 @@ h2.heading2 {
 	background-color: $light;
 	border: 1px solid $dark;
 	color: $dark;
-	font-size: 17px;
+	font-size: 15px;
 	font-weight: 300;
+	border-radius: 40px;
+	padding: 6px 12px;
 }
 
-[data-theme='dark'] 
-.button{
+[data-theme='dark'] .button {
 	background-color: $dark;
 	color: $light;
 	border: 1px solid $light;
@@ -37,9 +48,10 @@ h2.heading2 {
 	background-color: $accent;
 	border: 1px solid $accent;
 	color: $light;
+	margin: 5px 0 5px 0;
 }
 
-[data-theme='dark'] .readMore{
+[data-theme='dark'] .readMore {
 	background-color: $light;
 	border: 1px solid $light;
 	color: $dark;

@@ -2,6 +2,7 @@
 
 import { PDF } from '../[locale]/cv/pdf'
 import dynamic from 'next/dynamic'
+import styles from './../[locale]/cv/cv.module.scss'
 
 const handleTranslation = locale => {
 	switch (locale) {
@@ -26,14 +27,7 @@ export default function DownloadPdf({ locale, className }) {
 		<PDFDownloadLink
 			document={<PDF locale={locale} />}
 			fileName={`DominikFrackowiak_CV_${locale}.pdf`}
-			style={{
-				position: 'fixed',
-				top: '30px',
-				left: '50%',
-				transform: 'translateX(-50%)',
-				zIndex: '100',
-				fontSize: '20px',
-			}}
+			className={styles.pdfDownloadLink}
 		>
 			<button className={`${className} bold underlined`}>
 				{handleTranslation(locale)}

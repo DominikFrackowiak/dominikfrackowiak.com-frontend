@@ -39,12 +39,12 @@ export default async function BlogPage({ params: { slug } }) {
 
 	// console.log(blog)
 	return (
-		<main className='main'>
-			<h1>{blog.title}</h1>
+		<main className='main' style={{}}>
+			<h1 className={styles.heading1}>{blog.title}</h1>
 			{blog.blocks.map(block => {
 				if (block.name === 'core/paragraph') {
 					return (
-						<p className={styles.paragraph} key={uuid()}>
+						<p className='paragraph' key={uuid()}>
 							{block.attributes.content}
 						</p>
 					)

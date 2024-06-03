@@ -1,0 +1,13 @@
+@import '../styles/colors';
+
+.backToAllPosts {
+	* {
+		color: $accent;
+	}
+}
+
+[data-theme='dark'] .backToAllPosts {
+	* {
+		color: $accent;
+	}
+}

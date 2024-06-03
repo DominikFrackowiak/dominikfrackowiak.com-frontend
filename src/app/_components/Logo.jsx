@@ -25,7 +25,7 @@ export default function Logo({ locale, cv }) {
 				className={`${styles.logo} bold`}
 				style={{
 					fontWeight: 500,
-					fontSize: '20px',
+					fontSize: '17px',
 					height: '23px',
 				}}
 			>

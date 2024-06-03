@@ -23,7 +23,7 @@ export default async function AllBlogsPage({
 	// console.log(allBlogs)
 
 	return (
-		<main className='main' style={{ zIndex: 1 }}>
+		<main className='main' style={{ zIndex: 1,  }}>
 			<ul className={styles.list}>
 				{allBlogs.map(blog => (
 					<li
@@ -32,16 +32,16 @@ export default async function AllBlogsPage({
 					>
 						<Link href={`blog/${blog.slug}`}>
 							<h2 className={`${styles.heading2} underline`}>{blog.title}</h2>
-							<p className={styles.paragraph}>
-								<small>
+							<p className="paragraph">
+								
 									{blog.blocks[0].attributes.content.slice(0, 100)}...
-								</small>
+								
 							</p>
 							<button className={styles.readMore}>
 								Read more
 							</button>
 						</Link>
-						<div style={{ display: 'flex', gap: '20px' }}>
+						<div style={{ display: 'flex', gap: '15px' }}>
 							{blog.tags.nodes.map(tag => (
 								<button key={tag.name} className={styles.button}>
 									<Link href={`/${locale}/blog?tag=${tag.name}`}>

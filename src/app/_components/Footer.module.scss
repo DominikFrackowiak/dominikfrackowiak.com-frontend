@@ -11,7 +11,7 @@
 	padding: 10px 3vw;
 	background-color: $light;
 
-	*{
+	* {
 		color: $dark;
 	}
 }
@@ -20,7 +20,7 @@
 	background-color: $dark;
 	color: $light;
 
-	*{
+	* {
 		color: $light;
 	}
 }
@@ -41,7 +41,7 @@
 	background-color: transparent;
 	border: 2px solid transparent;
 	cursor: pointer;
-	font-size: 17px;
+	font-size: 16px;
 }
 
 [data-theme='dark'] .footerBtn {
@@ -54,16 +54,10 @@
 		gap: 40px;
 		font-size: 20px;
 	}
-	.footerBtn {
-		font-size: 16px;
-	}
 }
 
 @media (min-width: 992px) {
 	.footer {
 		padding: 20px 0;
 	}
-	// .footerBtn {
-	// 	font-size: 20px;
-	// }
 }

@@ -11,7 +11,6 @@ import {
 	Font,
 } from '@react-pdf/renderer'
 
-
 function getPDFTranslations(locale) {
 	switch (locale) {
 		case 'es':

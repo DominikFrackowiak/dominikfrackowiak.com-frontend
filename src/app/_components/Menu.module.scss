@@ -15,12 +15,13 @@
 	justify-content: flex-end;
 	align-items: center;
 	position: absolute;
+	min-height: 70px;
 	top: 0;
 	left: 50%;
 	transform: translate(-50%);
 	width: 100%;
 	max-width: 1000px;
-	padding: 30px 3vw;
+	padding: 0 3vw;
 }
 
 [data-theme='dark'] .menu {
@@ -37,15 +38,36 @@
 	width: 100%;
 	gap: 20px;
 
-	*{
-		color: $accent;
+	* {
+		color: $dark;
 	}
-	
 }
 
-
+[data-theme='dark'] .nav{
+	*{
+		color: $light;
+	}
+}
 
 .closeIcon {
 	cursor: pointer;
-	color: $accent;
+	color: $dark;
+	padding: 0 10px;
+	font-size: 22px;
+}
+
+[data-theme='dark'] .closeIcon {
+	color: $light;
+}
+
+@media (min-width: 768px) {
+	.header {
+		padding: 0 3vw;
+	}
+}
+
+@media (min-width: 992px) {
+	.header {
+		padding: 0 0;
+	}
 }

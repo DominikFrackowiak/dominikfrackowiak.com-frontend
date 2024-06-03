@@ -48,14 +48,13 @@ export default function Footer({ locale }) {
 				data={['en', 'es', 'pl']}
 				className={styles.socialsLocalesWrapper}
 				delayBase={2.0}
-				styles={{ padding: '0 0 0 5px' }}
+				styles={{ padding: '0 0 0 5px', fontSize: '10px' }}
 			>
 				{(el, index) => (
 					<button className={styles.footerBtn}>
-						<LanguagePicker lang={el} index={index}/>
+						<LanguagePicker lang={el} index={index} />
 					</button>
-				)
-				}
+				)}
 			</DynamicListContainer>
 		</footer>
 	)

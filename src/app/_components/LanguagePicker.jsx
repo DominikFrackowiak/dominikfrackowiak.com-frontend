@@ -37,8 +37,8 @@ export default function LanguagePicker({ lang, index }) {
 	const searchParams = useSearchParams()
 
 	const tag = searchParams.get('tag')
-	console.log(tag)
-	console.log(lang, index)
+	// console.log(tag)
+	// console.log(lang, index)
 	const locale = useLocale()
 	const router = useRouter()
 	const pathname = usePathname()

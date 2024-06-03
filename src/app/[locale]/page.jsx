@@ -27,6 +27,10 @@ export async function generateMetadata({ params: { locale }, searchParams }) {
 	}
 }
 
+export async function generateStaticParams(){
+	return [{locale: 'es'}, {locale: 'en'}, {locale: 'pl'}]
+}
+
 export default async function Home({ params, searchParams }) {
 	const menu = searchParams?.menu
 
@@ -34,7 +38,7 @@ export default async function Home({ params, searchParams }) {
 	const textData = await getMainPageData(locale)
 	const items = handleDataToDisplay(locale, textData)
 
-	console.log(items)
+	// console.log(items)
 
 	const main =
 		menu !== 'true' ? (

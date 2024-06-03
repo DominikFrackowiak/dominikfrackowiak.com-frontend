@@ -3,22 +3,29 @@ import { v4 as uuid } from 'uuid'
 import parse from 'html-react-parser'
 
 import styles from '../blog.module.scss'
+import getAllPostsSlugs from '@/lib/getAllPostsSlugs'
+
+export async function generateStaticParams() {
+	const data = await getAllPostsSlugs()
+	return data.posts.nodes.map(slug => ({
+		slug: slug.slug,
+	}))
+}
 
 export default async function BlogPage({ params: { slug } }) {
 	const data = await getSinglePostData(slug)
 
 	const blog = data.posts.nodes[0]
-	// console.log(blog)
 
-	function extractCodeFromHTML(htmlString) {
-		const regex = /<pre class="wp-block-code"><code>(.*?)<\/code><\/pre>/gs
-		const match = regex.exec(htmlString)
-		return match ? match[1] : ''
-	}
+	// function extractCodeFromHTML(htmlString) {
+	// 	const regex = /<pre class="wp-block-code"><code>(.*?)<\/code><\/pre>/gs
+	// 	const match = regex.exec(htmlString)
+	// 	return match ? match[1] : ''
+	// }
 
-	function convertSpacesToNbsp(htmlContent) {
-		return htmlContent.replace(/(?<=\s)\s/g, '&nbsp;')
-	}
+	// function convertSpacesToNbsp(htmlContent) {
+	// 	return htmlContent.replace(/(?<=\s)\s/g, '&nbsp;')
+	// }
 
 	function handleHeadings(element) {
 		switch (element.level) {
@@ -30,7 +37,7 @@ export default async function BlogPage({ params: { slug } }) {
 		}
 	}
 
-	console.log(blog)
+	// console.log(blog)
 	return (
 		<main className='main'>
 			<h1>{blog.title}</h1>
@@ -40,35 +47,6 @@ export default async function BlogPage({ params: { slug } }) {
 						<p className={styles.paragraph} key={uuid()}>
 							{block.attributes.content}
 						</p>
-					)
-				}
-				if (block.name === 'core/code') {
-					const extractedCode = extractCodeFromHTML(block.htmlContent)
-					const extractedAndConvertedCode = convertSpacesToNbsp(
-						block.htmlContent
-					)
-
-					// console.log(extractedAndConvertedCode)
-					console.log(block.htmlContent)
-					return (
-						// <pre
-						// 	style={{
-						// 		border: '1px solid red',
-						// 		fontSize: '20px',
-						// 		wordWrap: 'break-word',
-						// 	}}
-						// 	key={uuid()}
-						// >
-						// 	<code>{parse(extractedCode)}</code>
-						// </pre>
-
-						// <div
-						// 	key={uuid()}
-						// 	dangerouslySetInnerHTML={{ __html: extractedAndConvertedCode }}
-						// >
-
-						// </div>
-						<div key={uuid()}>{parse(block.htmlContent)}</div>
 					)
 				}
 

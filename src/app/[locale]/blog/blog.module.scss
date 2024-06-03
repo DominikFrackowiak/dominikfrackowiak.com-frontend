@@ -6,8 +6,8 @@
 	gap: 50px;
 }
 
-[data-theme='dark'] .list{
-	*{
+[data-theme='dark'] .list {
+	* {
 		color: $light;
 	}
 }
@@ -20,6 +20,7 @@ h2.heading2 {
 	// font-weight: 400;
 	// font-size: 20px;
 	// color: $dark;
+	color: $dark;
 }
 
 // .paragraph {

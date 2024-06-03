@@ -2,16 +2,28 @@ import Link from 'next/link'
 
 import getAllPostsData from '@/lib/getAllPostsData'
 import getPostsByTag from '@/lib/getPostsByTag'
+
 import styles from './blog.module.scss'
 
-
+function handleReadMoreButtonInternationalization(locale) {
+	switch (locale) {
+		case 'es':
+			return 'Leer más'
+			break
+		case 'pl':
+			return 'Czytaj więcej'
+			break
+		default:
+			return 'Read more'
+	}
+}
 
 export default async function AllBlogsPage({
 	params: { locale },
 	searchParams: { tag },
 }) {
 	let data
-	console.log(tag)
+
 	if (tag === undefined) {
 		data = await getAllPostsData(locale)
 	} else {
@@ -23,7 +35,7 @@ export default async function AllBlogsPage({
 	// console.log(allBlogs)
 
 	return (
-		<main className='main' style={{ zIndex: 1,  }}>
+		<main className='main' style={{ zIndex: 1 }}>
 			<ul className={styles.list}>
 				{allBlogs.map(blog => (
 					<li
@@ -32,13 +44,11 @@ export default async function AllBlogsPage({
 					>
 						<Link href={`blog/${blog.slug}`}>
 							<h2 className={`${styles.heading2} underline`}>{blog.title}</h2>
-							<p className="paragraph">
-								
-									{blog.blocks[0].attributes.content.slice(0, 100)}...
-								
+							<p className='paragraph'>
+								{blog.blocks[0].attributes.content.slice(0, 100)}...
 							</p>
 							<button className={styles.readMore}>
-								Read more
+								{handleReadMoreButtonInternationalization(locale)}
 							</button>
 						</Link>
 						<div style={{ display: 'flex', gap: '15px' }}>

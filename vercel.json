@@ -1,8 +1,0 @@
-{
-	"routes": [
-		{
-			"src": "/(.*)",
-			"dest": "https://dominikfrackowiak.github.io/dominikfrackowiak_com/"
-		}
-	]
-}

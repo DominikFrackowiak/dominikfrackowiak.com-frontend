@@ -5,9 +5,6 @@ import { useSearchParams } from 'next/navigation'
 
 import { Open_Sans } from 'next/font/google'
 
-import TextToAnimate from './TextsAndIconsAnimation'
-import BackToAllPosts from './BackToAllPosts'
-
 const openSans = Open_Sans({ subsets: ['latin'] })
 
 function useLocale() {
@@ -20,7 +17,7 @@ function LanguageSwitcher({ lang, isActive, onSwitchLanguage }) {
 	return (
 		// <TextToAnimate>
 		<span
-			style={{ fontWeight: isActive ? '700' : '300' }}
+			style={{ fontWeight: isActive ? '700' : '300', border: '1px solid red' }}
 			onClick={() => {
 				onSwitchLanguage(lang)
 			}}
@@ -55,10 +52,12 @@ export default function LanguagePicker({ lang, index }) {
 		router.push(newPath)
 	}
 
-	const toRender = isPost ? (
-		<BackToAllPosts locale={locale} index={index} />
-	) : (
-		null
+	const toRender = isPost ? null : (
+		<LanguageSwitcher
+			lang={lang}
+			isActive={locale === lang}
+			onSwitchLanguage={handleLanguageSwitch}
+		/>
 	)
 
 	return toRender

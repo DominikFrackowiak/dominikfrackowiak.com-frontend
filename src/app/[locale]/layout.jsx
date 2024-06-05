@@ -18,8 +18,8 @@ export default function RootLayout({ children, params: { locale } }) {
 					<div className='wrapper'>
 						<Menu locale={locale} />
 						{children}
+						<Footer locale={locale} />
 					</div>
-					<Footer locale={locale} />
 				</Providers>
 			</body>
 		</html>

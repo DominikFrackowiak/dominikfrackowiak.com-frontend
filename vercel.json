@@ -1,7 +1,7 @@
 {
 	"routes": [
 		{ "src": "^/en/(.*)", "dest": "/en/maintenance" },
-		{ "src": "^/de/(.*)", "dest": "/de/maintenance" },
+		{ "src": "^/es/(.*)", "dest": "/es/maintenance" },
 		{ "src": "^/pl/(.*)", "dest": "/pl/maintenance" },
 		{ "src": "/(.*)", "dest": "/en/maintenance" }
 	]

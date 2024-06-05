@@ -23,10 +23,20 @@ export default function Footer({ locale }) {
 	const cv = pathname.includes('cv')
 
 	return (
-		<footer
-			className={`${styles.footer} `}
-			style={{ display: cv ? 'none' : 'flex' }}
-		>
+		<footer className={styles.footer} style={{ display: cv ? 'none' : 'flex' }}>
+			<DynamicListContainer
+				data={['en', 'es', 'pl']}
+				className={styles.socialsLocalesWrapper}
+				delayBase={2.0}
+				styles={{ padding: '0 0 0 5px', fontSize: '10px' }}
+			>
+				{(el, index) => (
+					<button className={styles.footerBtn}>
+						<LanguagePicker lang={el} index={index} />
+					</button>
+				)}
+			</DynamicListContainer>
+
 			<DynamicListContainer
 				data={socials}
 				className={styles.socialsLocalesWrapper}
@@ -41,19 +51,6 @@ export default function Footer({ locale }) {
 					>
 						{el.icon}
 					</Link>
-				)}
-			</DynamicListContainer>
-
-			<DynamicListContainer
-				data={['en', 'es', 'pl']}
-				className={styles.socialsLocalesWrapper}
-				delayBase={2.0}
-				styles={{ padding: '0 0 0 5px', fontSize: '10px' }}
-			>
-				{(el, index) => (
-					<button className={styles.footerBtn}>
-						<LanguagePicker lang={el} index={index} />
-					</button>
 				)}
 			</DynamicListContainer>
 		</footer>

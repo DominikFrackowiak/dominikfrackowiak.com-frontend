@@ -1,13 +1,14 @@
 @import '../styles/colors';
 
 .footer {
-	position: fixed;
+	position: absolute;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
 	max-width: 1000px;
 	bottom: 0;
+	left: 0;
 	padding: 10px 3vw;
 	background-color: $light;
 
@@ -16,8 +17,10 @@
 	}
 }
 
+
+
 [data-theme='dark'] .footer {
-	background-color: $dark;
+	background-color: $accent;
 	color: $light;
 
 	* {
@@ -32,10 +35,10 @@
 	order: 1;
 }
 
-[data-theme='dark'] .socialsLocalesWrapper {
-	background-color: $dark;
-	color: $light;
-}
+// [data-theme='dark'] .socialsLocalesWrapper {
+// 	background-color: $dark;
+// 	color: $light;
+// }
 
 .footerBtn {
 	font-weight: 100;

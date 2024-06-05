@@ -1,6 +1,0 @@
-{
-	"routes": [
-		{ "src": "^/(en|es|pl)/.*", "dest": "/src/app/$1/maintenance/page.jsx" },
-		{ "src": "/(.*)", "dest": "/src/app/en/maintenance/page.jsx" }
-	]
-}

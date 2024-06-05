@@ -16,6 +16,7 @@ export default function Header({ locale }) {
 	const pathname = usePathname()
 	const route = useRouter()
 	const cv = pathname.includes('cv')
+	const maintenance = pathname.includes('maintenance')
 	const { theme, setTheme } = useTheme()
 
 	useEffect(() => {
@@ -25,7 +26,7 @@ export default function Header({ locale }) {
 	return (
 		<header className={styles.header}>
 			<div className={styles.headerWrapper}>
-				<Logo locale={locale} cv={cv} />
+				<Logo locale={locale} cv={cv} maintenance={maintenance}/>
 
 				{cv && (
 					<DownloadPdf locale={locale} className={styles.pdfDownloadLink} />
@@ -38,10 +39,10 @@ export default function Header({ locale }) {
 						/>
 					</li>
 					<li>
-						<HamburgerIcon
+						{!maintenance && <HamburgerIcon
 							href={`${pathname}/?menu=true`}
 							className={styles.hamburger}
-						/>
+						/>}
 					</li>
 				</ul>
 			</div>

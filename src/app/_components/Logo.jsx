@@ -5,7 +5,7 @@ import styles from './Header.module.scss'
 
 import { useSearchParams } from 'next/navigation'
 
-export default function Logo({ locale, cv }) {
+export default function Logo({ locale, cv, maintenance }) {
 	const searchParams = useSearchParams()
 	const theme = searchParams.get('theme') || 'light'
 
@@ -13,7 +13,7 @@ export default function Logo({ locale, cv }) {
 
 	return (
 		<Link
-			href={`/${locale}/`}
+			href={!maintenance ? `/${locale}/` : `/maintenance`}
 			style={{
 				display: 'flex',
 				flexDirection: 'column',

@@ -68,7 +68,7 @@ export function handleHeadingsToDisplay(locale, index) {
 		)
 	} else {
 		return (
-			<h1 aria-label role='heading' style={{ fontSize: '0px' }}>
+			<h1 aria-label role='heading' style={{ height: 0, fontSize: '0px' }}>
 				{heading}
 			</h1>
 		)

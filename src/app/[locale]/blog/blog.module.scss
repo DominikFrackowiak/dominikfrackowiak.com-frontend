@@ -1,6 +1,7 @@
 @import '../../styles/colors';
 
 .list {
+	margin-top: 40px;
 	display: flex;
 	flex-direction: column;
 	gap: 50px;
@@ -21,6 +22,14 @@ h2.heading2 {
 	// font-size: 20px;
 	// color: $dark;
 	color: $dark;
+}
+
+main.blogMain{
+	padding: 140px 3vw 100px 3vw;
+}
+
+main.singleBlogMain{
+	padding: 20px 3vw 100px 3vw;
 }
 
 // .paragraph {

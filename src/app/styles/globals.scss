@@ -6,9 +6,9 @@
 	box-sizing: border-box;
 }
 
-html {
-	scroll-behavior: smooth !important;
-}
+// html {
+// 	scroll-behavior: smooth !important;
+// }
 
 html,
 h2,
@@ -24,8 +24,6 @@ h1 {
 	width: 100%;
 }
 
-
-
 body {
 	display: flex;
 	flex-direction: column;
@@ -39,12 +37,12 @@ body {
 }
 
 .wrapper {
- position: relative;
- top: 0;
- left: 0;
- width: 100%;
- max-width: 1000px;
- min-height: 100vh;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: 1000px;
+	min-height: 100vh;
 	overflow: hidden;
 	// border: 1px solid green;
 	// padding: 50px 3vw;
@@ -59,14 +57,13 @@ body {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
-	
+
 	padding: 0px 3vw 150px 3vw;
 	min-height: 80vh;
 	width: 100%;
 	max-width: 1000px;
 	// border: 1px solid red;
 	// gap: 20px;
- 
 }
 
 [data-theme='dark'] body {
@@ -150,8 +147,6 @@ ul {
 
 a {
 	text-decoration: none;
-	
-	
 }
 
 p {

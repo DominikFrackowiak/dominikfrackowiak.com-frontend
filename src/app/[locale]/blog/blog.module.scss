@@ -6,7 +6,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 35px;
-	*{
+	* {
 		color: $dark;
 	}
 }
@@ -77,14 +77,12 @@ main.singleBlogMain {
 	color: $dark;
 }
 
-.codeWrapper{
-	background-color: #ffffff18;
-	overflow-x: scroll;
-	pre{
-		overflow-x: scroll;
-	}
-	*{
-		
+.codeWrapper {
+	display: block;
+	width: 100%;
+
+	* {
+		font-size: 16px;
 		overflow-x: scroll;
 	}
 }

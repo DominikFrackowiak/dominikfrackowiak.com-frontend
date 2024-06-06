@@ -22,7 +22,7 @@ const languages = [
 	},
 ]
 
-export const Basic = ({ styles }) => {
+export const PopoverLang = ({ styles }) => {
 	const pathname = usePathname()
 	console.log(pathname.split('/'))
 

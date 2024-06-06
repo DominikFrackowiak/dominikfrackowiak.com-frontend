@@ -10,7 +10,6 @@ import styles from './Footer.module.scss'
 
 // Components
 
-import LanguagePicker from './LanguagePicker'
 import DynamicListContainer from './DynamicListContainer'
 
 // Constants
@@ -24,19 +23,6 @@ export default function Footer({ locale }) {
 
 	return (
 		<footer className={styles.footer} style={{ display: cv ? 'none' : 'flex' }}>
-			<DynamicListContainer
-				data={['en', 'es', 'pl']}
-				className={styles.socialsLocalesWrapper}
-				delayBase={2.0}
-				styles={{ padding: '0 0 0 5px', fontSize: '10px' }}
-			>
-				{(el, index) => (
-					<button className={styles.footerBtn}>
-						<LanguagePicker lang={el} index={index} />
-					</button>
-				)}
-			</DynamicListContainer>
-
 			<DynamicListContainer
 				data={socials}
 				className={styles.socialsLocalesWrapper}

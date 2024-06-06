@@ -2,7 +2,7 @@ import { Open_Sans } from 'next/font/google'
 import '../styles/globals.scss'
 import Footer from '../_components/Footer'
 import Header from '../_components/Header'
-import Menu from '../_components/Menu'
+
 import Providers from '../providers'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
@@ -16,7 +16,7 @@ export default function RootLayout({ children, params: { locale } }) {
 				<Providers>
 					<Header locale={locale} />
 					<div className='wrapper'>
-						<Menu locale={locale} />
+						
 						{children}
 						<Footer locale={locale} />
 					</div>

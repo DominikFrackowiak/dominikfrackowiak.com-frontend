@@ -2,22 +2,19 @@
 import { useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import Link from 'next/link'
 
-import { PiGlobe } from 'react-icons/pi'
 
 import styles from './Header.module.scss'
 
 // Components
 
 import Logo from './Logo'
-import HamburgerIcon from './HamburgerIcon'
+
 import DarkLightModeSwitcher from './darkLightModeSwitcher'
 import DownloadPdf from './DownloadPdf'
-import LanguageMenu from './LanguageMenu'
-import DynamicListContainer from './DynamicListContainer'
-import LanguagePicker from './LanguagePicker'
-import { Basic } from './Popover'
+
+import { PopoverLang } from './PopoverLang'
+import { PopoverMenu } from './PopoverMenu'
 
 export default function Header({ locale }) {
 	const pathname = usePathname()
@@ -47,23 +44,23 @@ export default function Header({ locale }) {
 				)}
 
 				<ul className={styles.headerIconsWrapper}>
-					{!isPost && <li className={styles.languagePicker}>
-						<Basic
-							styles={`${styles.hamburger} ${styles.darkModeSwitcher}`}
-						></Basic>
-					</li>}
+					{!isPost && (
+						<li className={styles.languagePicker}>
+							<PopoverLang
+								styles={`${styles.hamburger} ${styles.darkModeSwitcher}`}
+							></PopoverLang>
+						</li>
+					)}
 					<li>
 						<DarkLightModeSwitcher
 							className={`${styles.hamburger} ${styles.darkModeSwitcher}`}
 						/>
 					</li>
-					<li>
-						{!maintenance && (
-							<HamburgerIcon
-								href={`${pathname}/?menu=true`}
-								className={styles.hamburger}
-							/>
-						)}
+					<li className={styles.languagePicker}>
+						<PopoverMenu
+							styles={`${styles.hamburger} ${styles.darkModeSwitcher}`}
+							locale={locale}
+						/>
 					</li>
 				</ul>
 			</div>

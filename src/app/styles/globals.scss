@@ -17,10 +17,7 @@ h1 {
 	font-size: 16px;
 }
 
-
-
-h2,
-h1 {
+h2 {
 	text-transform: uppercase;
 	color: $accent;
 	width: 100%;
@@ -30,7 +27,8 @@ h1 {
 	font-size: 17px;
 }
 
-[data-theme='dark'] h1, [data-theme='dark'] h2{
+[data-theme='dark'] h1,
+[data-theme='dark'] h2 {
 	color: $light;
 }
 
@@ -68,7 +66,7 @@ body {
 	justify-content: flex-start;
 	align-items: flex-start;
 
-	padding: 0px 3vw 150px 3vw;
+	padding: 10px 3vw 150px 3vw;
 	min-height: 80vh;
 	width: 100%;
 	max-width: 1000px;
@@ -172,7 +170,6 @@ p {
 	html,
 	h2,
 	h1 {
-		
 		line-height: 150%;
 	}
 
@@ -181,7 +178,7 @@ p {
 	}
 
 	.main {
-		padding: 0 3vw 160px 3vw;
+		padding: 15px 3vw 160px 3vw;
 	}
 }
 
@@ -207,6 +204,6 @@ p {
 	}
 
 	.main {
-		padding: 0px 0 180px 0;
+		padding: 20px 0 180px 0;
 	}
 }

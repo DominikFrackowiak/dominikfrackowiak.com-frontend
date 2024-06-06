@@ -22,7 +22,7 @@ const languages = [
 	},
 ]
 
-export const PopoverLang = ({ styles, locale }) => {
+export const PopoverLang = ({ styles, locale, theme }) => {
 	const pathname = usePathname()
 	console.log(pathname.split('/'))
 
@@ -31,6 +31,8 @@ export const PopoverLang = ({ styles, locale }) => {
 		pathArray[1] = language
 		return pathArray.join('/')
 	}
+
+	
 
 	return (
 		<Popover.Root>
@@ -45,10 +47,9 @@ export const PopoverLang = ({ styles, locale }) => {
 						style={{
 							display: 'flex',
 							flexDirection: 'column',
-							gap: '15px',
 							width: '120px',
-							backgroundColor: '#C94747',
-							fontSize: '18px',
+							backgroundColor: theme === 'light' ? '#1f1d1d' : '#C94747',
+							fontSize: '16px',
 							fontWeight: '300',
 						}}
 					>
@@ -62,6 +63,8 @@ export const PopoverLang = ({ styles, locale }) => {
 										display: locale === lang.value ? 'none' : 'flex',
 										justifyContent: 'center',
 										padding: '10px 0',
+										width: '100%',
+										height: '100%',
 									}}
 								>
 									<Link href={url}>{lang.label}</Link>

@@ -21,7 +21,7 @@ const links = [
 	},
 ]
 
-export const PopoverMenu = ({ styles, locale }) => {
+export const PopoverMenu = ({ styles, locale, theme }) => {
 	const pathname = usePathname()
 	const [isOpen, setIsOpen] = useState(false)
 	const popoverRef = useRef(null)
@@ -57,8 +57,8 @@ export const PopoverMenu = ({ styles, locale }) => {
 							display: 'flex',
 							flexDirection: 'column',
 							width: '170px',
-							backgroundColor: '#C94747',
-							fontSize: '18px',
+							backgroundColor: theme === 'light' ? '#1f1d1d' : '#C94747',
+							fontSize: '16px',
 							fontWeight: '300',
 						}}
 					>
@@ -71,6 +71,8 @@ export const PopoverMenu = ({ styles, locale }) => {
 										display: pathname === url ? 'none' : 'flex',
 										justifyContent: 'center',
 										padding: '10px 0',
+										width: '100%',
+										height: '100%',
 									}}
 								>
 									<Link href={url} onClick={() => handleClickLink(url)}>

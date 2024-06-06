@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
-
 import styles from './Header.module.scss'
 
 // Components
@@ -53,12 +52,17 @@ export default function Header({ locale }) {
 							<PopoverLang
 								styles={styles.hamburger}
 								locale={locale}
+								theme={theme}
 							></PopoverLang>
 						</li>
 					)}
 
 					<li className={styles.languagePicker}>
-						<PopoverMenu styles={styles.hamburger} locale={locale} />
+						<PopoverMenu
+							styles={styles.hamburger}
+							locale={locale}
+							theme={theme}
+						/>
 					</li>
 				</ul>
 			</div>

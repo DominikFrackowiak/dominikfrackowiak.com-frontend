@@ -27,7 +27,7 @@ export default function Header({ locale }) {
 
 	const isPost = pathElements.length > 3 && pathElements.includes('blog')
 
-	console.log(searchParams)
+	
 
 	useEffect(() => {
 		route.push(`${pathname}/?theme=${theme}`)

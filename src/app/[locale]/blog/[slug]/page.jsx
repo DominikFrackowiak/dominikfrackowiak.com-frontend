@@ -4,6 +4,7 @@ import parse from 'html-react-parser'
 
 import styles from '../blog.module.scss'
 import getAllPostsSlugs from '@/lib/getAllPostsSlugs'
+import BackToAllPosts from '@/src/app/_components/BackToAllPosts'
 
 // export async function generateStaticParams() {
 // 	const data = await getAllPostsSlugs()
@@ -12,7 +13,8 @@ import getAllPostsSlugs from '@/lib/getAllPostsSlugs'
 // 	}))
 // }
 
-export default async function BlogPage({ params: { slug } }) {
+export default async function BlogPage({ params }) {
+	const { slug, locale } = params
 	const data = await getSinglePostData(slug)
 
 	const blog = data.posts.nodes[0]
@@ -37,9 +39,9 @@ export default async function BlogPage({ params: { slug } }) {
 		}
 	}
 
-	// console.log(blog)
 	return (
 		<main className='main' style={{}}>
+			<BackToAllPosts locale={locale} />
 			<h1 className={styles.heading1}>{blog.title}</h1>
 			{blog.blocks.map(block => {
 				if (block.name === 'core/paragraph') {

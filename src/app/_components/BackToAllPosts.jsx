@@ -21,16 +21,17 @@ export default function BackToAllPosts({ locale, index }) {
 	return (
 		<Link
 			style={{
-				display: index !== 2 ? 'none' : 'flex',
+				display: 'flex',
 				gap: '10px',
 				alignItems: 'center',
-				color: '#e04c4c'
+				color: '#e04c4c',
+				padding: '10px 0',
 			}}
 			className={styles.backToAllPosts}
 			href={`/${locale}/blog`}
 		>
 			<PiArrowCircleLeft style={{ fontSize: '20px', color: '#e04c4c' }} />
-			<small style={{ fontSize: '14px', fontWeight: '100', color: '#e04c4c' }}>
+			<small style={{ fontSize: '15px', fontWeight: '300', color: '#e04c4c' }}>
 				{handleTextContent(locale)}
 			</small>
 		</Link>

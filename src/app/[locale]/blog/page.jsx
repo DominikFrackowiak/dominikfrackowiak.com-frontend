@@ -7,6 +7,7 @@ import styles from './blog.module.scss'
 import { createUrl } from '@/utils/createUrl'
 
 import { headers } from 'next/headers'
+import BackToAllPosts from '../../_components/BackToAllPosts'
 
 function handleReadMoreButtonInternationalization(locale) {
 	switch (locale) {
@@ -42,6 +43,7 @@ export default async function AllBlogsPage({
 
 	return (
 		<main className='main' style={{ zIndex: 1 }}>
+			{tag && <BackToAllPosts locale={locale}/>}
 			<ul className={styles.list}>
 				{allBlogs.map(blog => {
 					return (

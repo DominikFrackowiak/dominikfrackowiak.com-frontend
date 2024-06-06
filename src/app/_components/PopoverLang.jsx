@@ -24,15 +24,12 @@ const languages = [
 
 export const PopoverLang = ({ styles, locale, theme }) => {
 	const pathname = usePathname()
-	console.log(pathname.split('/'))
 
 	function handleLink(pathname, language) {
 		const pathArray = pathname.split('/')
 		pathArray[1] = language
 		return pathArray.join('/')
 	}
-
-	
 
 	return (
 		<Popover.Root>
@@ -55,7 +52,7 @@ export const PopoverLang = ({ styles, locale, theme }) => {
 					>
 						{languages.map(lang => {
 							const url = handleLink(pathname, lang.value)
-							console.log(locale, lang.value)
+
 							return (
 								<li
 									key={lang.value}

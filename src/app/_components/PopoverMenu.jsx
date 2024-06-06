@@ -3,15 +3,14 @@
 import { Popover } from '@ark-ui/react'
 import { PiList } from 'react-icons/pi'
 import Link from 'next/link'
-
 import { usePathname } from 'next/navigation'
+import { useState, useRef } from 'react'
 
 const links = [
 	{
 		value: '',
 		label: 'Home',
 	},
-
 	{
 		value: '/cv',
 		label: 'Curriculum Vitae',
@@ -24,27 +23,39 @@ const links = [
 
 export const PopoverMenu = ({ styles, locale }) => {
 	const pathname = usePathname()
+	const [isOpen, setIsOpen] = useState(false)
+	const popoverRef = useRef(null)
 
 	function handleLink(path, locale) {
 		return `/${locale}${path}`
 	}
 
-	console.log(pathname)
+	function handleToggle() {
+		setIsOpen(!isOpen)
+	}
+
+	function handleClose() {
+		setIsOpen(false)
+	}
+
+	const handleClickLink = url => {
+		setIsOpen(false)
+		window.location.href = url
+	}
 
 	return (
-		<Popover.Root>
+		<Popover.Root isOpen={isOpen} onOpenChange={setIsOpen}>
 			<Popover.Trigger>
 				<Popover.Indicator>
 					<PiList className={styles} />
 				</Popover.Indicator>
 			</Popover.Trigger>
 			<Popover.Positioner>
-				<Popover.Content>
+				<Popover.Content ref={popoverRef}>
 					<ul
 						style={{
 							display: 'flex',
 							flexDirection: 'column',
-
 							width: '170px',
 							backgroundColor: '#C94747',
 							fontSize: '18px',
@@ -53,7 +64,6 @@ export const PopoverMenu = ({ styles, locale }) => {
 					>
 						{links.map(link => {
 							const url = handleLink(link.value, locale)
-
 							return (
 								<li
 									key={link.value}
@@ -63,7 +73,9 @@ export const PopoverMenu = ({ styles, locale }) => {
 										padding: '10px 0',
 									}}
 								>
-									<Link href={url}>{link.label}</Link>
+									<Link href={url} onClick={() => handleClickLink(url)}>
+										{link.label}
+									</Link>
 								</li>
 							)
 						})}

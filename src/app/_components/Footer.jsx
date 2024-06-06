@@ -33,7 +33,7 @@ export default function Footer({ locale }) {
 					<Link
 						target='_blank'
 						href={el.url}
-						className={styles.socialsLocalesWrapper}
+						
 					>
 						{el.icon}
 					</Link>

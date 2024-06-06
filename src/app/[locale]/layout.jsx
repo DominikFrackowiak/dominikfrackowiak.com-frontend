@@ -15,13 +15,10 @@ export default function RootLayout({ children, params: { locale } }) {
 		<html lang={locale}>
 			<body className={openSans.className}>
 				<Providers>
-					<PageScrollIndicator/>
+					<PageScrollIndicator />
 					<Header locale={locale} />
-					<div className='wrapper'>
-						
-						{children}
-						<Footer locale={locale} />
-					</div>
+					<div className='wrapper'>{children}</div>
+					<Footer locale={locale} />
 				</Providers>
 			</body>
 		</html>

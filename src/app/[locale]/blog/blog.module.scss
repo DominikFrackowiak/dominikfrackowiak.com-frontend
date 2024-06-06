@@ -2,9 +2,13 @@
 
 .list {
 	// margin-top: 40px;
+	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
-	gap: 50px;
+	gap: 35px;
+	*{
+		color: $dark;
+	}
 }
 
 [data-theme='dark'] .list {
@@ -14,7 +18,12 @@
 }
 
 h1.heading1 {
-	margin-top: 40px;
+	// margin-top: 40px;
+	padding: 10px 0;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 300;
+	font-size: 17px;
 }
 
 h2.heading2 {
@@ -22,13 +31,14 @@ h2.heading2 {
 	// font-size: 20px;
 	// color: $dark;
 	color: $dark;
+	padding: 5px 0;
 }
 
-main.blogMain{
+main.blogMain {
 	padding: 140px 3vw 100px 3vw;
 }
 
-main.singleBlogMain{
+main.singleBlogMain {
 	padding: 20px 3vw 100px 3vw;
 }
 

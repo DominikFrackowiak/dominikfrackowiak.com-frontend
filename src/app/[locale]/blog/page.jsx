@@ -49,7 +49,7 @@ export default async function AllBlogsPage({
 					return (
 						<li
 							key={blog.id}
-							style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}
+							style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}
 						>
 							<Link href={`blog/${blog.slug}`}>
 								<h2 className={`${styles.heading2} underline`}>{blog.title}</h2>

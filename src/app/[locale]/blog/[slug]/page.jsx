@@ -13,6 +13,25 @@ import BackToAllPosts from '@/src/app/_components/BackToAllPosts'
 // 	}))
 // }
 
+export async function generateMetadata({ params: { slug } }, theme = 'dark') {
+	const data = await getSinglePostData(slug)
+	const textData = data.posts.nodes[0].PostsAdditionalFields
+	console.log(textData)
+	const title = textData?.metatitle || 'Dominik Frackowiak'
+	const description = textData?.metadescription || 'Dominik Frackowiak'
+
+	return {
+		title,
+		description,
+		icons: {
+			icon:
+				theme === 'dark'
+					? '/favicon-dark/favicon.ico'
+					: '/favicon-light/favicon.ico',
+		},
+	}
+}
+
 export default async function BlogPage({ params }) {
 	const { slug, locale } = params
 	const data = await getSinglePostData(slug)
@@ -53,7 +72,11 @@ export default async function BlogPage({ params }) {
 				}
 
 				if (block.name === 'core/preformatted') {
-					return <div key={uuid()}>{parse(block.htmlContent)}</div>
+					return (
+						<div className={styles.codeWrapper} key={uuid()}>
+							{parse(block.htmlContent)}
+						</div>
+					)
 				}
 				if (block.name === 'core/heading') {
 					const heading = handleHeadings(block.attributes)

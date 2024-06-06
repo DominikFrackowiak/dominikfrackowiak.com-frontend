@@ -56,11 +56,11 @@ export default async function AllBlogsPage({
 								<p className='paragraph'>
 									{blog.blocks[0].attributes.content.slice(0, 100)}...
 								</p>
-								<button className={styles.readMore}>
+								<span className='underlined'>
 									{handleReadMoreButtonInternationalization(locale)}
-								</button>
+								</span>
 							</Link>
-							<div style={{ display: 'flex', gap: '15px' }}>
+							<div style={{ display: 'flex', gap: '15px', marginTop: '15px' }}>
 								{blog.tags.nodes.map(tag => {
 									const tagSearchParams = new URLSearchParams()
 									tagSearchParams.set('tag', tag.name)

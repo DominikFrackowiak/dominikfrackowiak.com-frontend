@@ -4,12 +4,12 @@ import { Popover } from '@ark-ui/react'
 import { PiList } from 'react-icons/pi'
 import Link from 'next/link'
 
-
+import { usePathname } from 'next/navigation'
 
 const links = [
 	{
-		value: '/',
-		label: 'Start',
+		value: '',
+		label: 'Home',
 	},
 
 	{
@@ -23,11 +23,13 @@ const links = [
 ]
 
 export const PopoverMenu = ({ styles, locale }) => {
-	
+	const pathname = usePathname()
 
-	function handleLink(pathname, locale) {
-		return `/${locale}${pathname}`
+	function handleLink(path, locale) {
+		return `/${locale}${path}`
 	}
+
+	console.log(pathname)
 
 	return (
 		<Popover.Root>
@@ -51,11 +53,12 @@ export const PopoverMenu = ({ styles, locale }) => {
 					>
 						{links.map(link => {
 							const url = handleLink(link.value, locale)
+
 							return (
 								<li
 									key={link.value}
 									style={{
-										display: 'flex',
+										display: pathname === url ? 'none' : 'flex',
 										justifyContent: 'center',
 										padding: '10px 0',
 									}}

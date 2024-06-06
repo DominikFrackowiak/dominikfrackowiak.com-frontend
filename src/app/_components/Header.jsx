@@ -44,23 +44,21 @@ export default function Header({ locale }) {
 				)}
 
 				<ul className={styles.headerIconsWrapper}>
+					<li>
+						<DarkLightModeSwitcher className={styles.hamburger} />
+					</li>
+
 					{!isPost && (
 						<li className={styles.languagePicker}>
 							<PopoverLang
-								styles={`${styles.hamburger} ${styles.darkModeSwitcher}`}
+								styles={styles.hamburger}
+								locale={locale}
 							></PopoverLang>
 						</li>
 					)}
-					<li>
-						<DarkLightModeSwitcher
-							className={`${styles.hamburger} ${styles.darkModeSwitcher}`}
-						/>
-					</li>
+
 					<li className={styles.languagePicker}>
-						<PopoverMenu
-							styles={`${styles.hamburger} ${styles.darkModeSwitcher}`}
-							locale={locale}
-						/>
+						<PopoverMenu styles={styles.hamburger} locale={locale} />
 					</li>
 				</ul>
 			</div>

@@ -22,7 +22,7 @@ const languages = [
 	},
 ]
 
-export const PopoverLang = ({ styles }) => {
+export const PopoverLang = ({ styles, locale }) => {
 	const pathname = usePathname()
 	console.log(pathname.split('/'))
 
@@ -48,14 +48,22 @@ export const PopoverLang = ({ styles }) => {
 							gap: '15px',
 							width: '120px',
 							backgroundColor: '#C94747',
-       fontSize: '18px',
-       fontWeight: '300'
+							fontSize: '18px',
+							fontWeight: '300',
 						}}
 					>
 						{languages.map(lang => {
 							const url = handleLink(pathname, lang.value)
+							console.log(locale, lang.value)
 							return (
-								<li key={lang.value} style={{display: 'flex', justifyContent: 'center', padding: '10px 0'}}>
+								<li
+									key={lang.value}
+									style={{
+										display: locale === lang.value ? 'none' : 'flex',
+										justifyContent: 'center',
+										padding: '10px 0',
+									}}
+								>
 									<Link href={url}>{lang.label}</Link>
 								</li>
 							)

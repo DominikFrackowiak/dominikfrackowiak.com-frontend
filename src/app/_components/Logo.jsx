@@ -21,7 +21,7 @@ export default function Logo({ locale, cv, maintenance }) {
 				visibility: cv ? 'hidden' : 'visible',
 			}}
 		>
-			<span className={`${styles.logo} bold`}>DOMINIK FRACKOWIAK</span>
+			<span className={`${styles.logo}`}>DOMINIK FRACKOWIAK</span>
 			<span className={`${styles.logo} ${styles.logoSmallSpan}`}>
 				Web Developer
 			</span>

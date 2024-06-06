@@ -4,7 +4,7 @@
 	position: absolute;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-start;
 	width: 100%;
 	max-width: 1000px;
 	bottom: 0;
@@ -17,10 +17,8 @@
 	}
 }
 
-
-
 [data-theme='dark'] .footer {
-	background-color: $accent;
+	background-color: $dark;
 	color: $light;
 
 	* {
@@ -30,9 +28,9 @@
 
 .socialsLocalesWrapper {
 	display: flex;
-	gap: 20px;
-	font-size: 20px;
-	order: 1;
+	width: 100%;
+	justify-content: space-between;
+	font-size: 22px;
 }
 
 // [data-theme='dark'] .socialsLocalesWrapper {
@@ -55,8 +53,9 @@
 
 @media (min-width: 768px) {
 	.socialsLocalesWrapper {
-		gap: 20px;
-		font-size: 20px;
+		width: 80px;
+		font-size: 22px;
+		align-self: flex-end;
 	}
 }
 

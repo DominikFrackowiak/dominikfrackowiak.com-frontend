@@ -32,7 +32,7 @@ export default function DownloadPdf({ locale, className }) {
 			fileName={`DominikFrackowiak_CV_${locale}.pdf`}
 			className={`${styles.pdfDownloadLink}`}
 		>
-			<button className={`${className} bold underlined`}>
+			<button className={`${className}`}>
 				{handleTranslation(locale)}
 			</button>
 		</PDFDownloadLink>

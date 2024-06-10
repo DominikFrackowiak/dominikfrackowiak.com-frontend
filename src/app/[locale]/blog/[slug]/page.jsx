@@ -13,7 +13,7 @@ import BackToAllPosts from '../../../_components/BackToAllPosts'
 // 	}))
 // }
 
-export async function generateMetadata({ params: { slug } }, theme = 'dark') {
+export async function generateMetadata({ params: { slug } }) {
 	const data = await getSinglePostData(slug)
 	const textData = data.posts.nodes[0].PostsAdditionalFields
 
@@ -23,12 +23,12 @@ export async function generateMetadata({ params: { slug } }, theme = 'dark') {
 	return {
 		title,
 		description,
-		icons: {
-			icon:
-				theme === 'dark'
-					? '/favicon-dark/favicon.ico'
-					: '/favicon-light/favicon.ico',
-		},
+		// icons: {
+		// 	icon:
+		// 		theme === 'dark'
+		// 			? '/favicon-dark/favicon.ico'
+		// 			: '/favicon-light/favicon.ico',
+		// },
 	}
 }
 

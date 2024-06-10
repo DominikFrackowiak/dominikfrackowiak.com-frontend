@@ -16,9 +16,9 @@ import BackToAllPosts from '../../../_components/BackToAllPosts'
 export async function generateMetadata({ params: { slug } }, theme = 'dark') {
 	const data = await getSinglePostData(slug)
 	const textData = data.posts.nodes[0].PostsAdditionalFields
-	console.log(textData)
-	const title = textData?.metatitle || 'Dominik Frackowiak'
-	const description = textData?.metadescription || 'Dominik Frackowiak'
+
+	const title = textData?.metatitle
+	const description = textData?.metadescription
 
 	return {
 		title,

@@ -1,11 +1,13 @@
 import { Fragment } from 'react'
-import getMainPageData from '@/lib/getMainPageData'
-import handleParagraphToRender from '@/utils/handleParagraphToRender'
+import { redirect } from 'next/navigation'
+import getMainPageData from '../../../lib/getMainPageData'
+import handleParagraphToRender from '../../../utils/handleParagraphToRender'
 import {
 	handleDataToDisplay,
 	handleHeadingsToDisplay,
-} from '@/utils/handleDataToDisplay'
+} from '../../../utils/handleDataToDisplay'
 import Image from 'next/image'
+import { headers } from 'next/headers'
 
 import styles from './page.module.scss'
 
@@ -32,6 +34,17 @@ export async function generateMetadata({ params: { locale }, searchParams }) {
 // }
 
 export default async function Home({ params, searchParams }) {
+	const headersList = headers()
+	const domain = headersList.get('host') || ''
+	const fullUrl = headersList.get('referer') || ''
+
+	if (
+		fullUrl.split('/')[3]?.includes('spanish.html') ||
+		fullUrl.split('/')[3]?.includes('polish.html') ||
+		fullUrl.split('/')[3]?.includes('english.html')
+	) {
+		redirect('https://dominikfrackowiak.com')
+	}
 	const menu = searchParams?.menu
 
 	const { locale } = params
@@ -43,7 +56,6 @@ export default async function Home({ params, searchParams }) {
 	const main =
 		menu !== 'true' ? (
 			<main className='main'>
-				
 				{items.length > 0 &&
 					items.map((item, index) => {
 						return (

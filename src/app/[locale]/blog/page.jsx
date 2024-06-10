@@ -1,10 +1,10 @@
 import Link from 'next/link'
 
-import getAllPostsData from '@/lib/getAllPostsData'
-import getPostsByTag from '@/lib/getPostsByTag'
+import getAllPostsData from '../../../../lib/getAllPostsData'
+import getPostsByTag from '../../../../lib/getPostsByTag'
 
 import styles from './blog.module.scss'
-import { createUrl } from '@/utils/createUrl'
+import { createUrl } from '../../../../utils/createUrl'
 
 import { headers } from 'next/headers'
 import BackToAllPosts from '../../_components/BackToAllPosts'

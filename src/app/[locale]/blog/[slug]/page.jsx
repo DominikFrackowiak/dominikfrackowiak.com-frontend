@@ -1,10 +1,10 @@
-import getSinglePostData from '@/lib/getSinglePostData'
+import getSinglePostData from '../../../../../lib/getSinglePostData'
 import { v4 as uuid } from 'uuid'
 import parse from 'html-react-parser'
 
 import styles from '../blog.module.scss'
-import getAllPostsSlugs from '@/lib/getAllPostsSlugs'
-import BackToAllPosts from '@/src/app/_components/BackToAllPosts'
+import getAllPostsSlugs from '../../../../../lib/getAllPostsSlugs'
+import BackToAllPosts from '../../../_components/BackToAllPosts'
 
 // export async function generateStaticParams() {
 // 	const data = await getAllPostsSlugs()

@@ -5,7 +5,7 @@ import React from 'react'
 import dynamic from 'next/dynamic'
 import { usePathname } from 'next/navigation'
 
-import { useEffect, useState } from 'react'
+
 
 import styles from './cv.module.scss'
 

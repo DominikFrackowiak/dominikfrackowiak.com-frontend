@@ -25,7 +25,7 @@ function getPDFTranslations(locale) {
 				links: 'Sitio web y redes sociales',
 				profile: 'Perfil personal',
 				description:
-					'Profesional en desarrollo web con tres años de experiencia como freelancer y siete meses en Incloudforever.com como desarrollador frontend junior, especializándome en Next.js/React.js, SCSS/Tailwind, TypeScript. Reconocido por mi dedicación y capacidad de trabajar de manera independiente, con buenas evaluaciones de supervisores y colegas. Actualmente ampliando mis conocimientos en Node.js/Express.js/MongoDB/Mongoose y Prisma/PostgreSQL. Comunicativo en tres idiomas, busco una posición donde pueda aplicar mis habilidades y contribuir al éxito de proyectos innovadores.',
+					'Profesional en desarrollo web con tres años de experiencia como freelancer y ocho meses en Incloudforever.com como desarrollador frontend junior, especializándome en Next.js/React.js, SCSS/Tailwind, TypeScript. Reconocido por mi dedicación y capacidad de trabajar de manera independiente, con buenas evaluaciones de supervisores y colegas. Actualmente ampliando mis conocimientos en Node.js/Express.js/MongoDB/Mongoose y Prisma/PostgreSQL. Comunicativo en tres idiomas, busco una posición donde pueda aplicar mis habilidades y contribuir al éxito de proyectos innovadores.',
 				languages: 'Idiomas',
 				PL: 'Polaco',
 				ES: 'Español',
@@ -54,7 +54,7 @@ function getPDFTranslations(locale) {
 				links: 'Strona internetowa i media społecznościowe',
 				profile: 'Profil osobisty',
 				description:
-					'Profesjonalista w zakresie rozwoju stron internetowych z trzyletnim doświadczeniem jako freelancer i siedmiomiesięcznym stażem w Incloudforever.com jako junior frontend developer, specjalizujący się w Next.js/React.js, SCSS/Tailwind, TypeScript. Doceniany za oddanie i umiejętność samodzielnej pracy, z dobrą oceną od przełożonych i kolegów. Obecnie poszerzam swoją wiedzę w zakresie Node.js/Express.js/MongoDB/Mongoose oraz Prisma/PostgreSQL. Komunikatywny w trzech językach, szukam pozycji, gdzie mogę wykorzystać moje umiejętności i przyczynić się do sukcesu innowacyjnych projektów.',
+					'Profesjonalista w zakresie rozwoju stron internetowych z trzyletnim doświadczeniem jako freelancer i ośmiomiomiesięcznym stażem w Incloudforever.com jako junior frontend developer, specjalizujący się w Next.js/React.js, SCSS/Tailwind, TypeScript. Doceniany za oddanie i umiejętność samodzielnej pracy, z dobrą oceną od przełożonych i kolegów. Obecnie poszerzam swoją wiedzę w zakresie Node.js/Express.js/MongoDB/Mongoose oraz Prisma/PostgreSQL. Komunikatywny w trzech językach, szukam pozycji, gdzie mogę wykorzystać moje umiejętności i przyczynić się do sukcesu innowacyjnych projektów.',
 				languages: 'Języki',
 				PL: 'Polski',
 				ES: 'Hiszpański',
@@ -83,7 +83,7 @@ function getPDFTranslations(locale) {
 				links: 'Website and Social Media',
 				profile: 'Personal Profile',
 				description:
-					'Web development professional with three years of experience as a freelancer and seven months at Incloudforever.com as a junior frontend developer, specializing in Next.js/React.js, SCSS/Tailwind, TypeScript. Recognized for my dedication and ability to work independently, with good evaluations from supervisors and colleagues. Currently expanding my knowledge in Node.js/Express.js/MongoDB/Mongoose, and Prisma/PostgreSQL. Communicative in three languages, seeking a position where I can apply my skills and contribute to the success of innovative projects.',
+					'Web development professional with three years of experience as a freelancer and eight months at Incloudforever.com as a junior frontend developer, specializing in Next.js/React.js, SCSS/Tailwind, TypeScript. Recognized for my dedication and ability to work independently, with good evaluations from supervisors and colleagues. Currently expanding my knowledge in Node.js/Express.js/MongoDB/Mongoose, and Prisma/PostgreSQL. Communicative in three languages, seeking a position where I can apply my skills and contribute to the success of innovative projects.',
 				languages: 'Languages',
 				PL: 'Polish',
 				ES: 'Spanish',

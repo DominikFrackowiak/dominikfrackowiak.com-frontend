@@ -49,7 +49,7 @@ const headingsToDisplay = {
 	pl: [
 		'Witaj! Nazywam się Dominik Frąckowiak, jestem niezależnym programistą stron internetowych mieszkającym w Madrycie, Hiszpania',
 		// 'Witaj!',
-		'Technologie, z którymi pracuję',
+		'Technologie',
 		'Śledź mnie',
 		'E-mail',
 		'Telefon',

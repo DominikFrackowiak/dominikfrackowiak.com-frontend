@@ -1,3 +1,6 @@
+import Underline from "../src/app/_components/Underline"
+
+
 export function handleDataToDisplay(locale, textData) {
 	const items = textData
 		? [
@@ -62,9 +65,18 @@ export function handleHeadingsToDisplay(locale, index) {
 
 	if (index !== 0) {
 		return (
-			<h2 aria-label role='heading'>
-				{heading}
-			</h2>
+			
+				<div>
+					<h2 aria-label role='heading'>
+						{heading}
+					</h2>
+					<Underline
+						style={{
+							animationDelay: `${index * 0.2}s`,
+						}}
+					/>
+				</div>
+			
 		)
 	} else {
 		return (

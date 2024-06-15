@@ -21,6 +21,11 @@ const nextConfig = {
 				destination: '/en',
 				permanent: true,
 			},
+			{
+				source: '/index.html',
+				destination: '/en',
+				permanent: true,
+			},
 		]
 	},
 }

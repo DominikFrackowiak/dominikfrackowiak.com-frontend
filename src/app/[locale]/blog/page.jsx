@@ -8,6 +8,7 @@ import { createUrl } from '../../../../utils/createUrl'
 
 import { headers } from 'next/headers'
 import BackToAllPosts from '../../_components/BackToAllPosts'
+import Underline from '../../_components/Underline'
 
 function handleReadMoreButtonInternationalization(locale) {
 	switch (locale) {
@@ -43,7 +44,7 @@ export default async function AllBlogsPage({
 
 	return (
 		<main className='main' style={{ zIndex: 1 }}>
-			{tag && <BackToAllPosts locale={locale}/>}
+			{tag && <BackToAllPosts locale={locale} />}
 			<ul className={styles.list}>
 				{allBlogs.map(blog => {
 					return (
@@ -52,7 +53,8 @@ export default async function AllBlogsPage({
 							style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}
 						>
 							<Link href={`blog/${blog.slug}`}>
-								<h2 className={`${styles.heading2} underline`}>{blog.title}</h2>
+								<h2 className={`${styles.heading2}`}>{blog.title}</h2>
+
 								<p className='paragraph'>
 									{blog.blocks[0].attributes.content.slice(0, 100)}...
 								</p>

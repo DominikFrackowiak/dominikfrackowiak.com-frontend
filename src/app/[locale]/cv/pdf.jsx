@@ -16,30 +16,31 @@ function getPDFTranslations(locale) {
 		case 'es':
 			return {
 				skills: 'Habilidades',
-				level1: 'Hábil',
-				level2: 'Medio',
+				level1: 'Avanzado',
+				level2: 'Intermedio',
 				level3: 'Principiante',
-				experience: 'Experiencia laboral',
-				duration1: 'jul. 2023 - mar. 2024',
-				duration2: 'ene. 2020 - jul. 2023',
+				experience: 'Experiencia profesional',
+				duration1: 'oct. 2022 – mar. 2024',
+				duration2: 'oct. 2019 - oct. 2022',
 				links: 'Sitio web y redes sociales',
 				profile: 'Perfil personal',
 				description:
-					'Profesional en desarrollo web con tres años de experiencia como freelancer y ocho meses en Incloudforever.com como desarrollador frontend junior, especializándome en Next.js/React.js, SCSS/Tailwind, TypeScript. Reconocido por mi dedicación y capacidad de trabajar de manera independiente, con buenas evaluaciones de supervisores y colegas. Actualmente ampliando mis conocimientos en Node.js/Express.js/MongoDB/Mongoose y Prisma/PostgreSQL. Comunicativo en tres idiomas, busco una posición donde pueda aplicar mis habilidades y contribuir al éxito de proyectos innovadores.',
+					'Profesional en desarrollo web con tres años de experiencia como freelancer y año y medio en Incloudforever.com como desarrollador frontend junior, especializado en Next.js/React.js, SCSS/Tailwind, TypeScript. Valorado por la dedicación y la capacidad de trabajar de manera independiente, con buenas evaluaciones de superiores y colegas. Actualmente ampliando mis conocimientos en Node.js/Express.js/MongoDB/Mongoose y Prisma/PostgreSQL. Comunicativo en tres idiomas, busco un puesto donde pueda utilizar mis habilidades y contribuir al éxito de proyectos innovadores.',
 				languages: 'Idiomas',
 				PL: 'Polaco',
 				ES: 'Español',
-				EN: 'Ingles',
-				langLevel1: 'Nativo',
+				EN: 'Inglés',
+				langLevel1: 'Lengua materna',
 				langLevel2: 'C2',
 				langLevel3: 'C1',
-				hobbies: 'Pasatiempos',
+				hobbies: 'Aficiones',
 				music:
-					'Música (soy totalmente poliamoroso: escucho desde synth-pop hasta noise rock, y desde ambient hasta hardcore punk)',
-				film: 'Cine (Buñuel, Wajda, Visconti, Lynch, hermanos Coen etc.)',
+					'Música (soy completamente poliamoroso: desde synth-pop hasta noise rock, desde ambient hasta hardcore punk)',
+				film: 'Cine (Buñuel, Wajda, Visconti, Lynch, hermanos Coen, etc.)',
 				nature:
-					'Naturaleza, perros (comparto mi vida con dos bodegueros andaluces), bicicleta, viajar en mi furgoneta',
-				books: 'Literatura (non-fiction, reportaje, ensayo de temática social)',
+					'Naturaleza, perros (comparto mi vida con dos perros de la raza bodeguero andaluz), bicicleta, viajar en mi furgoneta',
+				books:
+					'Literatura (no ficción, reportaje, ensayo sobre temas sociales)',
 			}
 
 		case 'pl':
@@ -49,12 +50,12 @@ function getPDFTranslations(locale) {
 				level2: 'Średniozaawansowany',
 				level3: 'Początkujący',
 				experience: 'Doświadczenie zawodowe',
-				duration1: 'lip. 2023 - mar. 2024',
-				duration2: 'sty. 2020 - lip. 2023',
+				duration1: 'paź. 2022 – mar. 2024',
+				duration2: 'paź. 2019 - paź. 2022',
 				links: 'Strona internetowa i media społecznościowe',
 				profile: 'Profil osobisty',
 				description:
-					'Profesjonalista w zakresie rozwoju stron internetowych z trzyletnim doświadczeniem jako freelancer i ośmiomiomiesięcznym stażem w Incloudforever.com jako junior frontend developer, specjalizujący się w Next.js/React.js, SCSS/Tailwind, TypeScript. Doceniany za oddanie i umiejętność samodzielnej pracy, z dobrą oceną od przełożonych i kolegów. Obecnie poszerzam swoją wiedzę w zakresie Node.js/Express.js/MongoDB/Mongoose oraz Prisma/PostgreSQL. Komunikatywny w trzech językach, szukam pozycji, gdzie mogę wykorzystać moje umiejętności i przyczynić się do sukcesu innowacyjnych projektów.',
+					'Profesjonalista w zakresie rozwoju stron internetowych z trzy letnim doświadczeniem jako freelancer i półtorarocznym stażem w Incloudforever.com jako junior frontend developer, specjalizujący się w Next.js/React.js, SCSS/Tailwind, TypeScript. Doceniany za oddanie i umiejętność samodzielnej pracy, z dobrą oceną od przełożonych i kolegów. Obecnie poszerzam swoją wiedzę w zakresie Node.js/Express.js/MongoDB/Mongoose oraz Prisma/PostgreSQL. Komunikatywny w trzech językach, szukam pozycji, gdzie mogę wykorzystać moje umiejętności i przyczynić się do sukcesu innowacyjnych projektów.',
 				languages: 'Języki',
 				PL: 'Polski',
 				ES: 'Hiszpański',
@@ -77,27 +78,27 @@ function getPDFTranslations(locale) {
 				level1: 'Advanced',
 				level2: 'Intermediate',
 				level3: 'Beginner',
-				experience: 'Work Experience',
-				duration1: 'Jul. 2023 - Mar. 2024',
-				duration2: 'Jan. 2020 - Jul. 2023',
+				experience: 'Professional Experience',
+				duration1: 'Oct. 2022 – Mar. 2024',
+				duration2: 'Oct. 2019 - Oct. 2022',
 				links: 'Website and Social Media',
 				profile: 'Personal Profile',
 				description:
-					'Web development professional with three years of experience as a freelancer and eight months at Incloudforever.com as a junior frontend developer, specializing in Next.js/React.js, SCSS/Tailwind, TypeScript. Recognized for my dedication and ability to work independently, with good evaluations from supervisors and colleagues. Currently expanding my knowledge in Node.js/Express.js/MongoDB/Mongoose, and Prisma/PostgreSQL. Communicative in three languages, seeking a position where I can apply my skills and contribute to the success of innovative projects.',
+					'Web development professional with three years of experience as a freelancer and one and a half years at Incloudforever.com as a junior frontend developer, specializing in Next.js/React.js, SCSS/Tailwind, TypeScript. Appreciated for dedication and ability to work independently, with positive assessments from supervisors and colleagues. Currently expanding my knowledge in Node.js/Express.js/MongoDB/Mongoose and Prisma/PostgreSQL. Communicative in three languages, seeking a position where I can use my skills and contribute to the success of innovative projects.',
 				languages: 'Languages',
 				PL: 'Polish',
 				ES: 'Spanish',
 				EN: 'English',
-				langLevel1: 'Native',
+				langLevel1: 'Native Language',
 				langLevel2: 'C2',
 				langLevel3: 'C1',
 				hobbies: 'Hobbies',
 				music:
-					'Music (I am completely polyamorous: I listen from synth-pop to noise rock, and from ambient to hardcore punk)',
-				film: 'Cinema (Buñuel, Wajda, Visconti, Lynch, Coen Brothers etc.)',
+					'Music (I am completely polyamorous: from synth-pop to noise rock, from ambient to hardcore punk)',
+				film: 'Film (Buñuel, Wajda, Visconti, Lynch, Coen brothers, etc.)',
 				nature:
-					'Nature, dogs (I share my life with two Andalusian bodegueros), biking, traveling in my van',
-				books: 'Literature (non-fiction, reportage, social themed essays)',
+					'Nature, dogs (sharing my life with two Andalusian Bodeguero dogs), cycling, traveling in my van',
+				books: 'Literature (non-fiction, reportage, essay on social themes)',
 			}
 	}
 }

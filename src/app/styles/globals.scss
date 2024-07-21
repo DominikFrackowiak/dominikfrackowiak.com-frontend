@@ -184,15 +184,19 @@ p {
 }
 
 @media (min-width: 992px) {
-	// html,
-	// h2,
-	// h1 {
-	// 	font-size: 22px;
-	// 	line-height: 150%;
-	// }
+	html,
+	h2,
+	h1 {
+		font-size: 18px;
+		line-height: 150%;
+	}
 
 	button {
 		font-size: 45px;
+	}
+
+	.paragraph{
+		font-size: 18px;
 	}
 
 	.icon {

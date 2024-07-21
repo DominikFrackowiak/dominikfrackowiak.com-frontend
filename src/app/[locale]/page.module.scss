@@ -5,3 +5,10 @@
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
+@media (min-width: 992px){
+	.image{
+		width: 150px;
+		height: 150px;
+	}
+}

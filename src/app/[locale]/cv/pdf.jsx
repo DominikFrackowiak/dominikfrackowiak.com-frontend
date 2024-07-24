@@ -20,12 +20,13 @@ function getPDFTranslations(locale) {
 				level2: 'Intermedio',
 				level3: 'Principiante',
 				experience: 'Experiencia profesional',
+				duration3: 'jul. 2024 - ahora',
 				duration1: 'oct. 2022 – mar. 2024',
 				duration2: 'oct. 2019 - oct. 2022',
 				links: 'Sitio web y redes sociales',
 				profile: 'Perfil personal',
 				description:
-					'Profesional en desarrollo web con tres años de experiencia como freelancer y año y medio en Incloudforever.com como desarrollador frontend junior, especializado en Next.js/React.js, SCSS/Tailwind, TypeScript. Valorado por la dedicación y la capacidad de trabajar de manera independiente, con buenas evaluaciones de superiores y colegas. Actualmente ampliando mis conocimientos en Node.js/Express.js/MongoDB/Mongoose y Prisma/PostgreSQL. Comunicativo en tres idiomas, busco un puesto donde pueda utilizar mis habilidades y contribuir al éxito de proyectos innovadores.',
+					'Profesional en desarrollo web con tres años de experiencia como freelancer y un año y medio como desarrollador frontend junior en Incloudforever.com, especializado en Next.js/React.js, SCSS/Tailwind y TypeScript, actualmente trabajando como desarrollador frontend en Awakelab en Madrid. Reconocido por su dedicación y capacidad para trabajar de forma independiente, con altas valoraciones de supervisores y colegas. Actualmente estoy ampliando mis conocimientos en Node.js/Express.js/MongoDB/Mongoose y Prisma/PostgreSQL. Comunicativo en tres idiomas, busco una posición donde pueda utilizar mis habilidades y contribuir al éxito de proyectos innovadores.',
 				languages: 'Idiomas',
 				PL: 'Polaco',
 				ES: 'Español',
@@ -50,12 +51,13 @@ function getPDFTranslations(locale) {
 				level2: 'Średniozaawansowany',
 				level3: 'Początkujący',
 				experience: 'Doświadczenie zawodowe',
+				duration3: 'lip. 2024 - teraz',
 				duration1: 'paź. 2022 – mar. 2024',
 				duration2: 'paź. 2019 - paź. 2022',
 				links: 'Strona internetowa i media społecznościowe',
 				profile: 'Profil osobisty',
 				description:
-					'Profesjonalista w zakresie rozwoju stron internetowych z trzy letnim doświadczeniem jako freelancer i półtorarocznym stażem w Incloudforever.com jako junior frontend developer, specjalizujący się w Next.js/React.js, SCSS/Tailwind, TypeScript. Doceniany za oddanie i umiejętność samodzielnej pracy, z dobrą oceną od przełożonych i kolegów. Obecnie poszerzam swoją wiedzę w zakresie Node.js/Express.js/MongoDB/Mongoose oraz Prisma/PostgreSQL. Komunikatywny w trzech językach, szukam pozycji, gdzie mogę wykorzystać moje umiejętności i przyczynić się do sukcesu innowacyjnych projektów.',
+					'Profesjonalista w zakresie rozwoju stron internetowych z trzyletnim doświadczeniem jako freelancer i półtorarocznym stażem w Incloudforever.com jako junior frontend developer, specjalizujący się w Next.js/React.js, SCSS/Tailwind, TypeScript, aktualnie pracuję na pozycji frontend developera w Awakelab w Madrycie. Doceniany za oddanie i umiejętność samodzielnej pracy, z dobrą oceną od przełożonych i kolegów. Obecnie poszerzam swoją wiedzę w zakresie Node.js/Express.js/MongoDB/Mongoose oraz Prisma/PostgreSQL. Komunikatywny w trzech językach, szukam pozycji, gdzie mogę wykorzystać moje umiejętności i przyczynić się do sukcesu innowacyjnych projektów.',
 				languages: 'Języki',
 				PL: 'Polski',
 				ES: 'Hiszpański',
@@ -79,12 +81,13 @@ function getPDFTranslations(locale) {
 				level2: 'Intermediate',
 				level3: 'Beginner',
 				experience: 'Professional Experience',
+				duration3: 'Jul. 024 - now',
 				duration1: 'Oct. 2022 – Mar. 2024',
 				duration2: 'Oct. 2019 - Oct. 2022',
 				links: 'Website and Social Media',
 				profile: 'Personal Profile',
 				description:
-					'Web development professional with three years of experience as a freelancer and one and a half years at Incloudforever.com as a junior frontend developer, specializing in Next.js/React.js, SCSS/Tailwind, TypeScript. Appreciated for dedication and ability to work independently, with positive assessments from supervisors and colleagues. Currently expanding my knowledge in Node.js/Express.js/MongoDB/Mongoose and Prisma/PostgreSQL. Communicative in three languages, seeking a position where I can use my skills and contribute to the success of innovative projects.',
+					'A web development professional with three years of experience as a freelancer and one and a half years as a junior frontend developer at Incloudforever.com, specializing in Next.js/React.js, SCSS/Tailwind, and TypeScript, currently working as a frontend developer at Awakelab in Madrid. Recognized for dedication and the ability to work independently, with high praise from supervisors and colleagues. Currently expanding my knowledge in Node.js/Express.js/MongoDB/Mongoose and Prisma/PostgreSQL. Proficient in three languages, seeking a position where I can utilize my skills and contribute to the success of innovative projects.',
 				languages: 'Languages',
 				PL: 'Polish',
 				ES: 'Spanish',
@@ -407,6 +410,42 @@ export function PDF({ locale }) {
 						>
 							{translations.experience}
 						</Text>
+
+						<View
+							style={{
+								display: 'flex',
+								flexDirection: 'row',
+								justifyContent: 'space-between',
+								paddingBottom: '8px',
+								borderBottom: '1px dotted black',
+							}}
+						>
+							<View style={{ display: 'flex', gap: '4px' }}>
+								<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+									Frontend Developer
+								</Text>
+								<Text style={{ fontFamily: 'Roboto', fontSize: '8px' }}>
+									{translations.duration3}
+								</Text>
+							</View>
+							<Text
+								style={{
+									display: 'flex',
+									justifyContent: 'center',
+									alignItems: 'center',
+									height: '90%',
+									fontFamily: 'Roboto',
+									fontSize: '9px',
+									lineHeight: '1',
+									padding: '5px 10px',
+									borderRadius: '10px',
+									color: '#ed4b32cf',
+									backgroundColor: '#e2867885',
+								}}
+							>
+								Awakelab
+							</Text>
+						</View>
 
 						<View
 							style={{

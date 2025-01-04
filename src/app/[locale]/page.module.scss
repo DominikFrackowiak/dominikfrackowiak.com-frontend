@@ -6,12 +6,13 @@
 	border-radius: 50%;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	border: 2px  solid $accentDarker;
+	border: 1px solid $accentDarker;
 }
 
 @media (min-width: 992px){
 	.image{
 		width: 150px;
 		height: 150px;
+		border: 2px solid $accentDarker;
 	}
 }

@@ -8,8 +8,6 @@ import {
 } from '../../../utils/handleDataToDisplay'
 import Image from 'next/image'
 
-
-
 import styles from './page.module.scss'
 
 export async function generateMetadata({ params: { locale }, searchParams }) {
@@ -51,7 +49,7 @@ export default async function Home({ params, searchParams }) {
 						return (
 							<Fragment key={index}>
 								{handleHeadingsToDisplay(locale, index)}
-							
+
 								{index === 0 && (
 									<Image
 										src={'/dominikfrackowiak2.jpg'}

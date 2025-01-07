@@ -22,8 +22,8 @@ export async function generateMetadata({ params: { locale }, searchParams }) {
 		icons: {
 			icon:
 				theme === 'dark'
-					? '/favicon-dark/favicon.ico'
-					: '/favicon-light/favicon.ico',
+					? '/favicon-dark/favicon.png'
+					: '/favicon-light/favicon.png',
 		},
 	}
 }

@@ -57,7 +57,7 @@ export const PopoverMenu = ({ styles, locale, theme }) => {
 							display: 'flex',
 							flexDirection: 'column',
 							width: '170px',
-							backgroundColor: theme === 'light' ? '#1f1d1d' : '#C94747',
+							backgroundColor: theme === 'light' || theme==='system'? '#1f1d1d' : '#C94747',
 							fontSize: '16px',
 							fontWeight: '300',
 						}}

@@ -25,6 +25,8 @@ const languages = [
 export const PopoverLang = ({ styles, locale, theme }) => {
 	const pathname = usePathname()
 
+	console.log(theme)
+
 	function handleLink(pathname, language) {
 		const pathArray = pathname.split('/')
 		pathArray[1] = language
@@ -45,7 +47,7 @@ export const PopoverLang = ({ styles, locale, theme }) => {
 							display: 'flex',
 							flexDirection: 'column',
 							width: '120px',
-							backgroundColor: theme === 'light' ? '#1f1d1d' : '#C94747',
+							backgroundColor: theme === 'light' || theme==='system' ? '#1f1d1d' : '#C94747',
 							fontSize: '16px',
 							fontWeight: '300',
 						}}

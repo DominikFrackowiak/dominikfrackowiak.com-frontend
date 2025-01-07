@@ -20,7 +20,7 @@ export default function Header({ locale }) {
 	const route = useRouter()
 	const cv = pathname.includes('cv')
 	const maintenance = pathname.includes('maintenance')
-	const { theme, setTheme } = useTheme()
+	const { theme, setTheme } = useTheme(null)
 	const searchParams = useSearchParams()
 
 	const pathElements = pathname.split('/')

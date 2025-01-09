@@ -28,11 +28,13 @@ export default function View() {
 				<meta name='description' content={`Curriculum Vitae for ${locale}`} />
 				<link rel='icon' type='image/png' href={faviconUrl} />
 			</head>
-			<div className={styles.pdfWrapper}>
-				<InvoicePDF locale={locale} />
-			</div>
-			<div className={styles.pdfButtonWrapper}>
-				<DownloadPdf locale={locale} />
+			<div className={styles.pageWrapper}>
+				<div className={styles.pdfWrapper}>
+					<InvoicePDF locale={locale} />
+				</div>
+				<div className={styles.pdfButtonWrapper}>
+					<DownloadPdf locale={locale} />
+				</div>
 			</div>
 		</>
 	)

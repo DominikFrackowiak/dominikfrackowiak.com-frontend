@@ -1,7 +1,8 @@
 import { Fragment } from 'react'
-import { redirect } from 'next/navigation'
+
 import getMainPageData from '../../../lib/getMainPageData'
 import handleParagraphToRender from '../../../utils/handleParagraphToRender'
+
 import {
 	handleDataToDisplay,
 	handleHeadingsToDisplay,
@@ -28,18 +29,12 @@ export async function generateMetadata({ params: { locale }, searchParams }) {
 	}
 }
 
-// export async function generateStaticParams(){
-// 	return [{locale: 'es'}, {locale: 'en'}, {locale: 'pl'}]
-// }
-
 export default async function Home({ params, searchParams }) {
 	const menu = searchParams?.menu
 
 	const { locale } = params
 	const textData = await getMainPageData(locale)
 	const items = handleDataToDisplay(locale, textData)
-
-	// console.log(items)
 
 	const main =
 		menu !== 'true' ? (

@@ -23,6 +23,24 @@ function handleReadMoreButtonInternationalization(locale) {
 	}
 }
 
+export async function generateMetadata({ params: { locale }, searchParams }) {
+	// const textData = await getMainPageData(locale)
+	const theme = searchParams.theme || 'light'
+	const title = 'Dominik Frackowiak | Blog'
+	const description = 'Dominik Frackowiak | Blog'
+
+	return {
+		title,
+		description,
+		icons: {
+			icon:
+				theme === 'dark'
+					? '/favicon-dark/favicon.png'
+					: '/favicon-light/favicon.png',
+		},
+	}
+}
+
 export default async function AllBlogsPage({
 	params: { locale },
 	searchParams: { tag },

@@ -6,29 +6,22 @@ import styles from '../blog.module.scss'
 import getAllPostsSlugs from '../../../../../lib/getAllPostsSlugs'
 import BackToAllPosts from '../../../_components/BackToAllPosts'
 
-// export async function generateStaticParams() {
-// 	const data = await getAllPostsSlugs()
-// 	return data.posts.nodes.map(slug => ({
-// 		slug: slug.slug,
-// 	}))
-// }
-
-export async function generateMetadata({ params: { slug } }) {
+export async function generateMetadata({ params: { slug }, searchParams }) {
 	const data = await getSinglePostData(slug)
 	const textData = data.posts.nodes[0].PostsAdditionalFields
-
+	const theme = searchParams.theme || 'light'
 	const title = textData?.metatitle
 	const description = textData?.metadescription
 
 	return {
 		title,
 		description,
-		// icons: {
-		// 	icon:
-		// 		theme === 'dark'
-		// 			? '/favicon-dark/favicon.ico'
-		// 			: '/favicon-light/favicon.ico',
-		// },
+		icons: {
+			icon:
+				theme === 'dark'
+					? '/favicon-dark/favicon.png'
+					: '/favicon-light/favicon.png',
+		},
 	}
 }
 

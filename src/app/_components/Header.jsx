@@ -21,13 +21,10 @@ export default function Header({ locale }) {
 	const cv = pathname.includes('cv')
 	const maintenance = pathname.includes('maintenance')
 	const { theme, setTheme } = useTheme(null)
-	const searchParams = useSearchParams()
 
 	const pathElements = pathname.split('/')
 
 	const isPost = pathElements.length > 3 && pathElements.includes('blog')
-
-	
 
 	useEffect(() => {
 		route.push(`${pathname}/?theme=${theme}`)

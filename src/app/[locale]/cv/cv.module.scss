@@ -3,15 +3,28 @@
 
 .pdfWrapper {
 	margin-top: 20%;
-	display: flex;
+	display: none;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	
 	width: 100%;
 	max-width: 1200px;
  z-index: 10;
 	padding-bottom: 60px;
+}
+
+.pdfButtonWrapper {
+	margin-top: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 300px;
+	width: 100%;
+	max-width: 1200px;
+ z-index: 10;
+	padding-bottom: 60px;
+	background-color: $dark;
 }
 
 .pdfDownloadLink {
@@ -37,7 +50,12 @@
 
 @media (min-width: 768px) {
 	.pdfWrapper{
+		display: flex;
 		 margin-top: 20%;
+	}
+
+	.pdfButtonWrapper{
+		display: none;
 	}
 
 	.pdfDownloadLink{

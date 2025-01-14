@@ -124,8 +124,9 @@ export function PDF({ locale }) {
 				style={{
 					display: 'flex',
 					flexDirection: 'column',
-					padding: '15px',
+					padding: '10px 15px',
 					gap: '10px',
+					
 				}}
 			>
 				<View
@@ -709,9 +710,9 @@ export function PDF({ locale }) {
 								https://www.linkedin.com/in/dominik-frackowiak/
 							</Text>
 
-							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
+							{/* <Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
 								https://codepen.io/MarianKoniuszko/pens/popular
-							</Text>
+							</Text> */}
 							<Text style={{ fontFamily: 'Roboto', fontSize: '9px' }}>
 								https://dominikfrackowiak.com
 							</Text>

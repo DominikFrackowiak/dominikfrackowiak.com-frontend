@@ -53,13 +53,15 @@ export default async function AllBlogsPage({
 		data = await getPostsByTag(locale, tag)
 	}
  
-	const allBlogs = data.posts.nodes
+	const allBlogs = data.posts.nodes.filter(post =>
+		post.categories.edges.some(edge => edge.node.name === 'blog')
+	)
 
 	const headersList = headers()
 	const pathname = headersList.get('x-invoke-path') || ''
 
-	// console.log(allBlogs[0].categories.edges.filter(blog => blog.node.name==='blog'))
-	console.log(allBlogs)
+	
+
 
 	return (
 		<main className='main' style={{ zIndex: 1 }}>

@@ -11,10 +11,10 @@ const links = [
 		value: '',
 		label: 'Home',
 	},
-	{
-		value: '/cv',
-		label: 'Curriculum Vitae',
-	},
+	// {
+	// 	value: '/cv',
+	// 	label: 'Curriculum Vitae',
+	// },
 	{
 		value: '/blog',
 		label: 'Blog',
